@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History with Subrata</title>
+<style>
+*{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:#f5f1e8;color:#26231f}
+header{background:#2f241d;color:white;padding:24px 18px 20px;border-bottom:5px solid #b88746}
+header h1{margin:0;font-size:30px} header p{margin:6px 0 0;opacity:.8}
+nav{display:flex;gap:8px;overflow:auto;padding:12px;background:white;position:sticky;top:0;z-index:3}
+nav button{border:0;background:#eee6d8;padding:10px 14px;border-radius:20px;white-space:nowrap;font-weight:bold}
+nav button.active{background:#2f241d;color:white}
+main{max-width:900px;margin:auto;padding:18px}
+.hero{background:#3d3027;color:white;border-radius:18px;padding:24px;margin-bottom:18px}
+.hero h2{font-size:25px;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.card{background:white;border-radius:16px;padding:18px;box-shadow:0 3px 12px #0001;cursor:pointer}
+.card h3{margin:0 0 8px}.card p{margin:0;color:#6d655d;font-size:14px}
+.section{display:none}.section.show{display:block}
+.topic{margin:10px 0;padding:15px;background:white;border-radius:13px;box-shadow:0 2px 8px #0001}
+.topic b{display:block;margin-bottom:5px}
+.search{width:100%;padding:13px;border:1px solid #d5cbbb;border-radius:12px;margin:10px 0 15px;font-size:16px}
+.quizbox{background:white;padding:20px;border-radius:16px;box-shadow:0 3px 12px #0001}
+.option{display:block;width:100%;text-align:left;margin:8px 0;padding:12px;border:1px solid #ddd;border-radius:10px;background:#fafafa}
+.option:hover{background:#eee6d8}.option.correct{background:#b9e6c1;border-color:#4b9b5f}.option.wrong{background:#f3b6b6;border-color:#c94c4c}
+#score{font-weight:bold;margin-top:15px}
+footer{text-align:center;padding:25px;color:#756b61;font-size:13px}
+</style>
+</head>
+<body>
+<header><h1>📜 History with Subrata</h1><p>Modern Europe & India • Learn • Explore • Test</p></header>
+<nav>
+<button class="active" onclick="show('home',this)">Home</button>
+<button onclick="show('europe',this)">🇪🇺 Europe</button>
+<button onclick="show('india',this)">🇮🇳 India</button>
+<button onclick="show('timeline',this)">Timeline</button>
+<button onclick="show('quiz',this)">Quiz</button>
+</nav>
+
+<main>
+<section id="home" class="section show">
+<div class="hero"><h2>Explore Modern History</h2><p>From the Renaissance and French Revolution to the Indian freedom movement.</p></div>
+<div class="grid">
+<div class="card" onclick="show('europe')"><h3>🇪🇺 Modern Europe</h3><p>Renaissance, Revolution, Industrialisation & World Wars</p></div>
+<div class="card" onclick="show('india')"><h3>🇮🇳 Modern India</h3><p>British rule, nationalism, Gandhi & Independence</p></div>
+<div class="card" onclick="show('timeline')"><h3>📅 Timeline</h3><p>Important events in chronological order</p></div>
+<div class="card" onclick="show('quiz')"><h3>❓ MCQ Quiz</h3><p>Test your history knowledge</p></div>
+</div>
+</section>
+
+<section id="europe" class="section">
+<h2>🇪🇺 Modern European History</h2>
+<input class="search" placeholder="Search Europe topics..." oninput="filterTopics(this,'eurotopics')">
+<div id="eurotopics">
+<div class="topic"><b>Renaissance</b><span>Revival of classical learning and culture in Europe, beginning in Italy.</span></div>
+<div class="topic"><b>Reformation</b><span>A major religious movement that challenged the authority and practices of the Roman Catholic Church.</span></div>
+<div class="topic"><b>Geographical Discoveries</b><span>European maritime exploration expanded global trade, empires and cultural contacts.</span></div>
+<div class="topic"><b>Enlightenment</b><span>An intellectual movement emphasizing reason, liberty, natural rights and critical inquiry.</span></div>
+<div class="topic"><b>French Revolution</b><span>The revolution of 1789 transformed France and spread ideas of citizenship and political equality.</span></div>
+<div class="topic"><b>Industrial Revolution</b><span>Mechanisation and factory production transformed economies and societies.</span></div>
+<div class="topic"><b>Unification of Italy & Germany</b><span>Nationalist movements created unified nation-states in the nineteenth century.</span></div>
+<div class="topic"><b>World War I</b><span>The global conflict of 1914–1918 reshaped Europe and international politics.</span></div>
+<div class="topic"><b>Russian Revolution</b><span>The 1917 revolutions ended Tsarist rule and led to Bolshevik power.</span></div>
+<div class="topic"><b>World War II</b><span>The 1939–1945 conflict transformed the international order and Europe.</span></div>
+</div>
+</section>
+
+<section id="india" class="section">
+<h2>🇮🇳 Modern Indian History</h2>
+<input class="search" placeholder="Search India topics..." oninput="filterTopics(this,'indiatopics')">
+<div id="indiatopics">
+<div class="topic"><b>European Powers in India</b><span>Portuguese, Dutch, English and French trading powers established settlements and commercial networks.</span></div>
+<div class="topic"><b>British Expansion</b><span>The East India Company expanded political control through wars, diplomacy and administrative policies.</span></div>
+<div class="topic"><b>Revolt of 1857</b><span>A major uprising against Company rule that led to the transfer of power to the British Crown.</span></div>
+<div class="topic"><b>Social & Religious Reform</b><span>Reformers challenged social practices and promoted education and new religious ideas.</span></div>
+<div class="topic"><b>Indian National Congress</b><span>Founded in 1885, it became a major platform of Indian nationalism.</span></div>
+<div class="topic"><b>Swadeshi Movement</b><span>A movement encouraging indigenous goods and opposing the partition of Bengal.</span></div>
+<div class="topic"><b>Non-Cooperation Movement</b><span>Gandhi's movement of 1920–22 encouraged non-violent non-cooperation with colonial institutions.</span></div>
+<div class="topic"><b>Civil Disobedience Movement</b><span>Launched in 1930, including the Salt March, to challenge colonial laws.</span></div>
+<div class="topic"><b>Quit India Movement</b><span>Launched in 1942 with the call for an end to British rule.</span></div>
+<div class="topic"><b>Independence & Partition</b><span>India became independent in 1947 amid the Partition of British India.</span></div>
+</div>
+</section>
+
+<section id="timeline" class="section">
+<h2>📅 Key Timeline</h2>
+<div class="topic"><b>1453</b><span>Fall of Constantinople</span></div>
+<div class="topic"><b>1492</b><span>Columbus's voyage to the Americas</span></div>
+<div class="topic"><b>1517</b><span>Luther's Reformation begins</span></div>
+<div class="topic"><b>1789</b><span>French Revolution begins</span></div>
+<div class="topic"><b>1857</b><span>Revolt in India</span></div>
+<div class="topic"><b>1885</b><span>Indian National Congress founded</span></div>
+<div class="topic"><b>1914–1918</b><span>World War I</span></div>
+<div class="topic"><b>1917</b><span>Russian Revolution</span></div>
+<div class="topic"><b>1930</b><span>Salt March and Civil Disobedience Movement</span></div>
+<div class="topic"><b>1939–1945</b><span>World War II</span></div>
+<div class="topic"><b>1942</b><span>Quit India Movement</span></div>
+<div class="topic"><b>1947</b><span>Indian Independence and Partition</span></div>
+</section>
+
+<section id="quiz" class="section">
+<h2>❓ History MCQ Quiz</h2>
+<div class="quizbox">
+<div id="question"></div><div id="options"></div><div id="score"></div>
+</div>
+</section>
+</main>
+<footer>History with Subrata • Modern Europe & India</footer>
+
+<script>
+function show(id,btn){
+document.querySelectorAll('.section').forEach(x=>x.classList.remove('show'));
+document.getElementById(id).classList.add('show');
+document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));
+if(btn) btn.classList.add('active');
+if(id==='quiz') loadQuiz();
+window.scrollTo(0,0);
+}
+function filterTopics(input,id){
+let q=input.value.toLowerCase();
+document.querySelectorAll('#'+id+' .topic').forEach(x=>x.style.display=x.innerText.toLowerCase().includes(q)?'block':'none');
+}
+const qs=[
+["The French Revolution began in which year?",["1789","1815","1848","1914"],0],
+["The Indian National Congress was founded in:",["1757","1857","1885","1905"],2],
+["World War I lasted from:",["1914–1918","1939–1945","1900–1905","1917–1921"],0],
+["The Quit India Movement was launched in:",["1930","1935","1942","1947"],2],
+["The Industrial Revolution first developed on a large scale in:",["Britain","Russia","Spain","Greece"],0]
+];
+let qi=0,sc=0;
+function loadQuiz(){
+qi=0;sc=0;renderQ();
+}
+function renderQ(){
+if(qi>=qs.length){document.getElementById('question').innerHTML='<h3>Quiz Complete 🎉</h3>';document.getElementById('options').innerHTML='';document.getElementById('score').innerText='Your score: '+sc+'/'+qs.length;return;}
+let q=qs[qi];document.getElementById('question').innerHTML='<b>Question '+(qi+1)+' of '+qs.length+'</b><p>'+q[0]+'</p>';
+document.getElementById('options').innerHTML=q[1].map((o,i)=>'<button class="option" onclick="answer('+i+')">'+o+'</button>').join('');
+document.getElementById('score').innerText='';
+}
+function answer(i){
+  const buttons = document.querySelectorAll('#options .option');
+  buttons.forEach(b => b.disabled = true);
+  const correct = qs[qi][2];
+
+  if(i === correct){
+    sc++;
+    buttons[i].style.background = '#b9e7c1';
+    buttons[i].style.borderColor = '#42a85f';
+    buttons[i].style.color = '#175b29';
+  } else {
+    buttons[i].style.background = '#f4b7b7';
+    buttons[i].style.borderColor = '#d34b4b';
+    buttons[i].style.color = '#7a1717';
+    buttons[correct].style.background = '#b9e7c1';
+    buttons[correct].style.borderColor = '#42a85f';
+    buttons[correct].style.color = '#175b29';
+  }
+
+  setTimeout(() => {
+    qi++;
+    renderQ();
+  }, 900);
+}
+</script>
+</body>
+</html>
