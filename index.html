@@ -1,166 +1,326 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>History with Subrata</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>History with Subrata Paria</title>
 <style>
-*{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:#f5f1e8;color:#26231f}
-header{background:#2f241d;color:white;padding:24px 18px 20px;border-bottom:5px solid #b88746}
-header h1{margin:0;font-size:30px} header p{margin:6px 0 0;opacity:.8}
-nav{display:flex;gap:8px;overflow:auto;padding:12px;background:white;position:sticky;top:0;z-index:3}
-nav button{border:0;background:#eee6d8;padding:10px 14px;border-radius:20px;white-space:nowrap;font-weight:bold}
-nav button.active{background:#2f241d;color:white}
-main{max-width:900px;margin:auto;padding:18px}
-.hero{background:#3d3027;color:white;border-radius:18px;padding:24px;margin-bottom:18px}
-.hero h2{font-size:25px;margin:0 0 8px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
-.card{background:white;border-radius:16px;padding:18px;box-shadow:0 3px 12px #0001;cursor:pointer}
-.card h3{margin:0 0 8px}.card p{margin:0;color:#6d655d;font-size:14px}
-.section{display:none}.section.show{display:block}
-.topic{margin:10px 0;padding:15px;background:white;border-radius:13px;box-shadow:0 2px 8px #0001}
-.topic b{display:block;margin-bottom:5px}
-.search{width:100%;padding:13px;border:1px solid #d5cbbb;border-radius:12px;margin:10px 0 15px;font-size:16px}
-.quizbox{background:white;padding:20px;border-radius:16px;box-shadow:0 3px 12px #0001}
-.option{display:block;width:100%;text-align:left;margin:8px 0;padding:12px;border:1px solid #ddd;border-radius:10px;background:#fafafa}
-.option:hover{background:#eee6d8}.option.correct{background:#b9e6c1;border-color:#4b9b5f}.option.wrong{background:#f3b6b6;border-color:#c94c4c}
-#score{font-weight:bold;margin-top:15px}
-footer{text-align:center;padding:25px;color:#756b61;font-size:13px}
+*{box-sizing:border-box}body{margin:0;background:#f4efe6;color:#241d18;font-family:system-ui,-apple-system,"Noto Sans Bengali",Arial,sans-serif}
+header{background:linear-gradient(135deg,#211712,#5b3b25);color:#fff;padding:26px 16px;text-align:center;border-bottom:4px solid #c28a43}
+header h1{margin:0;font-size:30px}header p{margin:7px 0 0;opacity:.88}
+nav{position:sticky;top:0;z-index:20;background:#fff;padding:9px;display:flex;gap:7px;overflow:auto;border-bottom:1px solid #ddd}
+nav button,.back{border:0;border-radius:22px;padding:10px 15px;background:#eee5d8;font-weight:700;white-space:nowrap;color:#34271e}
+nav button.active{background:#34271e;color:#fff}
+main{max-width:1050px;margin:auto;padding:16px}.page{display:none}.page.show{display:block}
+.hero{background:linear-gradient(135deg,#473022,#82552f);color:#fff;padding:25px;border-radius:20px;margin-bottom:16px}.hero h2{margin:0 0 8px;font-size:27px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.card,.topic,.box{background:#fff;border-radius:16px;padding:17px;box-shadow:0 3px 12px #0001}
+.card{cursor:pointer;border:1px solid #eee1d2}.card:hover{transform:translateY(-2px)}
+.card h3{margin:0 0 7px}.card p{margin:0;color:#6d6259;font-size:14px;line-height:1.45}
+.search{width:100%;padding:13px;border:1px solid #d6c8b8;border-radius:12px;background:#fff;font-size:16px;margin:8px 0 15px}
+.topic{margin:9px 0}.topic b{display:block;margin-bottom:5px}.topic small{color:#75685e}
+.subgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:12px 0}.step{background:#fff;padding:15px;border-radius:14px;box-shadow:0 2px 9px #0001;cursor:pointer}.step strong{display:block}
+.lesson{background:#fff;border-radius:17px;padding:19px;margin-top:13px;line-height:1.65}.lesson h3{margin-top:0}
+ul{line-height:1.7}.timeline{border-left:3px solid #c28a43;padding-left:13px}
+.quizhead{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.pill{background:#eee5d8;padding:8px 12px;border-radius:20px;font-weight:700}
+.option{display:block;width:100%;text-align:left;padding:13px;margin:9px 0;border:1px solid #ddd1c3;border-radius:11px;background:#faf8f4;font-size:15px}.option:disabled{opacity:1}
+.correct{background:#b9e7c2!important;border-color:#4b9b5d!important}.wrong{background:#f2b5b5!important;border-color:#c94a4a!important}
+#qmsg{font-weight:800;margin-top:12px}.notice{padding:12px;border-radius:12px;background:#fff4d8;margin:10px 0;color:#5b4325}
+footer{text-align:center;padding:30px;color:#756a61}
 </style>
 </head>
 <body>
-<header><h1>📜 History with Subrata</h1><p>Modern Europe & India • Learn • Explore • Test</p></header>
+<header><h1>📜 History with Subrata Paria</h1><p>Modern European & Indian History • Step-by-Step Learning</p></header>
 <nav>
-<button class="active" onclick="show('home',this)">Home</button>
-<button onclick="show('europe',this)">🇪🇺 Europe</button>
-<button onclick="show('india',this)">🇮🇳 India</button>
-<button onclick="show('timeline',this)">Timeline</button>
-<button onclick="show('quiz',this)">Quiz</button>
+<button class="active" onclick="go('home',this)">🏠 Home</button>
+<button onclick="go('europe',this)">🇪🇺 Europe</button>
+<button onclick="go('india',this)">🇮🇳 India</button>
+<button onclick="go('timeline',this)">📅 Timeline</button>
+<button onclick="go('quiz',this)">❓ All MCQ</button><button onclick="go('about',this)">ℹ️ About</button>
 </nav>
-
 <main>
-<section id="home" class="section show">
-<div class="hero"><h2>Explore Modern History</h2><p>From the Renaissance and French Revolution to the Indian freedom movement.</p></div>
+
+<section id="home" class="page show">
+<div class="hero"><h2>Modern History — Step by Step</h2><p>একটি topic-এ ক্লিক করুন → Chapter নির্বাচন করুন → বিস্তারিত বিষয়, গুরুত্বপূর্ণ তথ্য ও MCQ অনুশীলন করুন।</p></div>
 <div class="grid">
-<div class="card" onclick="show('europe')"><h3>🇪🇺 Modern Europe</h3><p>Renaissance, Revolution, Industrialisation & World Wars</p></div>
-<div class="card" onclick="show('india')"><h3>🇮🇳 Modern India</h3><p>British rule, nationalism, Gandhi & Independence</p></div>
-<div class="card" onclick="show('timeline')"><h3>📅 Timeline</h3><p>Important events in chronological order</p></div>
-<div class="card" onclick="show('quiz')"><h3>❓ MCQ Quiz</h3><p>Test your history knowledge</p></div>
+<div class="card" onclick="go('europe')"><h3>🇪🇺 Modern Europe</h3><p>Renaissance থেকে World War II পর্যন্ত ধারাবাহিকভাবে পড়ুন।</p></div>
+<div class="card" onclick="go('india')"><h3>🇮🇳 Modern India</h3><p>European arrival থেকে Independence & Partition পর্যন্ত।</p></div>
+<div class="card" onclick="go('timeline')"><h3>📅 Master Timeline</h3><p>গুরুত্বপূর্ণ European ও Indian events একসঙ্গে।</p></div>
+<div class="card" onclick="go('quiz')"><h3>❓ All MCQ</h3><p>Topic-wise প্রশ্ন, সঙ্গে সঙ্গে green/red answer feedback।</p></div>
+</div>
+<div class="notice">💡 “World Wars” বা অন্য কোনো topic-এ ক্লিক করলে তার sub-topics ধাপে ধাপে খুলবে।</div>
+<h2>⭐ Explore More</h2>
+<div class="grid">
+<div class="card" onclick="go('europe')"><h3>⚔️ Wars & Revolutions</h3><p>French Revolution, Russian Revolution, World War I, World War II ও অন্যান্য গুরুত্বপূর্ণ সংঘর্ষ।</p></div>
+<div class="card" onclick="go('india')"><h3>🇮🇳 Freedom Movement</h3><p>1857 থেকে Quit India এবং Independence পর্যন্ত আন্দোলনগুলো ধাপে ধাপে।</p></div>
+<div class="card" onclick="go('timeline')"><h3>🕰️ Important Dates</h3><p>পরীক্ষার জন্য দরকারি সাল ও ঘটনাগুলো দ্রুত revise করুন।</p></div>
+<div class="card" onclick="go('quiz')"><h3>🎯 Exam Practice</h3><p>MCQ practice করে নিজের প্রস্তুতি যাচাই করুন।</p></div>
+<div class="card" onclick="go('europe')"><h3>👤 Historical Personalities</h3><p>Luther, Rousseau, Napoleon, Bismarck, Lenin এবং আরও অনেকে।</p></div>
+<div class="card" onclick="go('india')"><h3>👥 Indian Leaders</h3><p>Rammohan Roy, Gandhi, Subhas Bose, Bhagat Singh এবং জাতীয় আন্দোলনের গুরুত্বপূর্ণ ব্যক্তিত্ব।</p></div>
+<div class="card" onclick="go('timeline')"><h3>🧠 Quick Revision</h3><p>কারণ → ঘটনা → ফলাফল—এই তিন ধাপে দ্রুত পড়ুন।</p></div>
+<div class="card" onclick="go('quiz')"><h3>🏆 Challenge Yourself</h3><p>82টি প্রশ্নের quiz দিয়ে নিজের score বাড়ান।</p></div>
+</div>
+<h2>🔥 Popular Topics</h2>
+<div class="subgrid">
+<div class="step" onclick="openTopic('euro','ww1')"><strong>World War I</strong>Causes → Events → Treaty → Consequences</div>
+<div class="step" onclick="openTopic('euro','ww2')"><strong>World War II</strong>Causes → Axis/Allies → Major Events → Results</div>
+<div class="step" onclick="openTopic('euro','french')"><strong>French Revolution</strong>Causes → 1789 → Terror → Napoleon</div>
+<div class="step" onclick="openTopic('india','1857')"><strong>Revolt of 1857</strong>Causes → Leaders → Centres → Results</div>
+<div class="step" onclick="openTopic('india','gandhi')"><strong>Gandhian Era</strong>Satyagraha → Movements → Impact</div>
+<div class="step" onclick="openTopic('india','partition')"><strong>Independence</strong>Cabinet Mission → Partition → 1947</div>
 </div>
 </section>
 
-<section id="europe" class="section">
+<section id="europe" class="page">
 <h2>🇪🇺 Modern European History</h2>
-<input class="search" placeholder="Search Europe topics..." oninput="filterTopics(this,'eurotopics')">
-<div id="eurotopics">
-<div class="topic"><b>Renaissance</b><span>Revival of classical learning and culture in Europe, beginning in Italy.</span></div>
-<div class="topic"><b>Reformation</b><span>A major religious movement that challenged the authority and practices of the Roman Catholic Church.</span></div>
-<div class="topic"><b>Geographical Discoveries</b><span>European maritime exploration expanded global trade, empires and cultural contacts.</span></div>
-<div class="topic"><b>Enlightenment</b><span>An intellectual movement emphasizing reason, liberty, natural rights and critical inquiry.</span></div>
-<div class="topic"><b>French Revolution</b><span>The revolution of 1789 transformed France and spread ideas of citizenship and political equality.</span></div>
-<div class="topic"><b>Industrial Revolution</b><span>Mechanisation and factory production transformed economies and societies.</span></div>
-<div class="topic"><b>Unification of Italy & Germany</b><span>Nationalist movements created unified nation-states in the nineteenth century.</span></div>
-<div class="topic"><b>World War I</b><span>The global conflict of 1914–1918 reshaped Europe and international politics.</span></div>
-<div class="topic"><b>Russian Revolution</b><span>The 1917 revolutions ended Tsarist rule and led to Bolshevik power.</span></div>
-<div class="topic"><b>World War II</b><span>The 1939–1945 conflict transformed the international order and Europe.</span></div>
+<input class="search" placeholder="Europe topic search..." oninput="filter(this,'euroList')">
+<div id="euroList" class="grid">
+<div class="card topicCard" onclick="openTopic('euro','renaissance')"><h3>1. Renaissance</h3><p>Background → Humanism → Art → Literature → Impact</p></div>
+<div class="card topicCard" onclick="openTopic('euro','reformation')"><h3>2. Reformation</h3><p>Causes → Luther → Calvin → Counter-Reformation → Results</p></div>
+<div class="card topicCard" onclick="openTopic('euro','discoveries')"><h3>3. Geographical Discoveries</h3><p>Causes → Portugal → Spain → Columbus → Impact</p></div>
+<div class="card topicCard" onclick="openTopic('euro','science')"><h3>4. Scientific Revolution</h3><p>Copernicus → Galileo → Kepler → Newton → Impact</p></div>
+<div class="card topicCard" onclick="openTopic('euro','enlightenment')"><h3>5. Enlightenment</h3><p>Reason → Locke → Voltaire → Rousseau → Montesquieu</p></div>
+<div class="card topicCard" onclick="openTopic('euro','french')"><h3>6. French Revolution</h3><p>Causes → 1789 → Terror → Napoleon → Results</p></div>
+<div class="card topicCard" onclick="openTopic('euro','industrial')"><h3>7. Industrial Revolution</h3><p>Britain → Inventions → Factory system → Society → Impact</p></div>
+<div class="card topicCard" onclick="openTopic('euro','italy')"><h3>8. Unification of Italy</h3><p>Risorgimento → Mazzini → Cavour → Garibaldi → 1870</p></div>
+<div class="card topicCard" onclick="openTopic('euro','germany')"><h3>9. Unification of Germany</h3><p>Prussia → Bismarck → Wars → German Empire</p></div>
+<div class="card topicCard" onclick="openTopic('euro','imperialism')"><h3>10. Imperialism</h3><p>Motives → Scramble for Africa → Asia → Consequences</p></div>
+<div class="card topicCard" onclick="openTopic('euro','ww1')"><h3>11. World War I ⭐</h3><p>Causes → Alliances → Events → Treaty → Consequences</p></div>
+<div class="card topicCard" onclick="openTopic('euro','russia')"><h3>12. Russian Revolution</h3><p>1905 → February → October → Lenin → Results</p></div>
+<div class="card topicCard" onclick="openTopic('euro','ww2')"><h3>13. World War II ⭐</h3><p>Causes → Axis/Allies → Major events → Holocaust → Results</p></div>
+<div class="card topicCard" onclick="openTopic('euro','coldwar')"><h3>14. Cold War</h3><p>USA/USSR → NATO → Warsaw Pact → Crises → End</p></div>
 </div>
 </section>
 
-<section id="india" class="section">
+<section id="india" class="page">
 <h2>🇮🇳 Modern Indian History</h2>
-<input class="search" placeholder="Search India topics..." oninput="filterTopics(this,'indiatopics')">
-<div id="indiatopics">
-<div class="topic"><b>European Powers in India</b><span>Portuguese, Dutch, English and French trading powers established settlements and commercial networks.</span></div>
-<div class="topic"><b>British Expansion</b><span>The East India Company expanded political control through wars, diplomacy and administrative policies.</span></div>
-<div class="topic"><b>Revolt of 1857</b><span>A major uprising against Company rule that led to the transfer of power to the British Crown.</span></div>
-<div class="topic"><b>Social & Religious Reform</b><span>Reformers challenged social practices and promoted education and new religious ideas.</span></div>
-<div class="topic"><b>Indian National Congress</b><span>Founded in 1885, it became a major platform of Indian nationalism.</span></div>
-<div class="topic"><b>Swadeshi Movement</b><span>A movement encouraging indigenous goods and opposing the partition of Bengal.</span></div>
-<div class="topic"><b>Non-Cooperation Movement</b><span>Gandhi's movement of 1920–22 encouraged non-violent non-cooperation with colonial institutions.</span></div>
-<div class="topic"><b>Civil Disobedience Movement</b><span>Launched in 1930, including the Salt March, to challenge colonial laws.</span></div>
-<div class="topic"><b>Quit India Movement</b><span>Launched in 1942 with the call for an end to British rule.</span></div>
-<div class="topic"><b>Independence & Partition</b><span>India became independent in 1947 amid the Partition of British India.</span></div>
+<input class="search" placeholder="India topic search..." oninput="filter(this,'indiaList')">
+<div id="indiaList" class="grid">
+<div class="card topicCard" onclick="openTopic('india','europeans')"><h3>1. Europeans in India</h3><p>Portuguese → Dutch → English → French</p></div>
+<div class="card topicCard" onclick="openTopic('india','company')"><h3>2. Company Rule</h3><p>Plassey → Buxar → Diwani → Expansion</p></div>
+<div class="card topicCard" onclick="openTopic('india','expansion')"><h3>3. British Expansion</h3><p>Subsidiary Alliance → Doctrine of Lapse → Annexations</p></div>
+<div class="card topicCard" onclick="openTopic('india','1857')"><h3>4. Revolt of 1857 ⭐</h3><p>Causes → Leaders → Centres → Failure → Results</p></div>
+<div class="card topicCard" onclick="openTopic('india','reform')"><h3>5. Socio-Religious Reform</h3><p>Rammohan Roy → Brahmo Samaj → Arya Samaj → Aligarh</p></div>
+<div class="card topicCard" onclick="openTopic('india','congress')"><h3>6. Indian National Congress</h3><p>1885 → Moderates → Extremists → Surat</p></div>
+<div class="card topicCard" onclick="openTopic('india','swadeshi')"><h3>7. Swadeshi Movement</h3><p>Partition of Bengal → Boycott → National education</p></div>
+<div class="card topicCard" onclick="openTopic('india','gandhi')"><h3>8. Gandhian Era ⭐</h3><p>Champaran → Kheda → Ahmedabad → Gandhi's methods</p></div>
+<div class="card topicCard" onclick="openTopic('india','noncoop')"><h3>9. Non-Cooperation</h3><p>1920 → Programme → Khilafat → Chauri Chaura</p></div>
+<div class="card topicCard" onclick="openTopic('india','civil')"><h3>10. Civil Disobedience</h3><p>Salt March → Dandi → Round Table Conferences</p></div>
+<div class="card topicCard" onclick="openTopic('india','quit')"><h3>11. Quit India Movement ⭐</h3><p>1942 → Do or Die → Underground movement → Results</p></div>
+<div class="card topicCard" onclick="openTopic('india','revolutionary')"><h3>12. Revolutionary Movement</h3><p>Bhagat Singh → HSRA → INA → Subhas Chandra Bose</p></div>
+<div class="card topicCard" onclick="openTopic('india','partition')"><h3>13. Independence & Partition</h3><p>Cabinet Mission → Mountbatten Plan → 1947</p></div>
 </div>
 </section>
 
-<section id="timeline" class="section">
-<h2>📅 Key Timeline</h2>
-<div class="topic"><b>1453</b><span>Fall of Constantinople</span></div>
-<div class="topic"><b>1492</b><span>Columbus's voyage to the Americas</span></div>
-<div class="topic"><b>1517</b><span>Luther's Reformation begins</span></div>
-<div class="topic"><b>1789</b><span>French Revolution begins</span></div>
-<div class="topic"><b>1857</b><span>Revolt in India</span></div>
-<div class="topic"><b>1885</b><span>Indian National Congress founded</span></div>
-<div class="topic"><b>1914–1918</b><span>World War I</span></div>
-<div class="topic"><b>1917</b><span>Russian Revolution</span></div>
-<div class="topic"><b>1930</b><span>Salt March and Civil Disobedience Movement</span></div>
-<div class="topic"><b>1939–1945</b><span>World War II</span></div>
-<div class="topic"><b>1942</b><span>Quit India Movement</span></div>
-<div class="topic"><b>1947</b><span>Indian Independence and Partition</span></div>
+<section id="topic" class="page">
+<button class="back" onclick="backToList()">← Back to Topics</button>
+<div id="topicContent"></div>
 </section>
 
-<section id="quiz" class="section">
-<h2>❓ History MCQ Quiz</h2>
-<div class="quizbox">
-<div id="question"></div><div id="options"></div><div id="score"></div>
-</div>
+<section id="timeline" class="page">
+<h2>📅 Master Timeline</h2>
+<div class="timeline">
+<div class="topic"><b>1453</b> — Fall of Constantinople</div>
+<div class="topic"><b>1492</b> — Columbus's voyage</div>
+<div class="topic"><b>1517</b> — Reformation challenge by Luther</div>
+<div class="topic"><b>1789</b> — French Revolution</div>
+<div class="topic"><b>1857</b> — Revolt of 1857 in India</div>
+<div class="topic"><b>1885</b> — Indian National Congress founded</div>
+<div class="topic"><b>1905</b> — Partition of Bengal / Swadeshi</div>
+<div class="topic"><b>1914–1918</b> — World War I</div>
+<div class="topic"><b>1917</b> — Russian Revolution</div>
+<div class="topic"><b>1920–22</b> — Non-Cooperation Movement</div>
+<div class="topic"><b>1930</b> — Salt March / Civil Disobedience</div>
+<div class="topic"><b>1939–1945</b> — World War II</div>
+<div class="topic"><b>1942</b> — Quit India Movement</div>
+<div class="topic"><b>1947</b> — Independence & Partition</div>
+</div></section>
+
+<section id="quiz" class="page">
+<div class="quizhead"><h2>❓ All MCQ Practice</h2><span class="pill" id="scorepill">Score: 0</span></div>
+<div class="box"><div id="q"></div><div id="opts"></div><div id="qmsg"></div></div>
 </section>
-</main>
-<footer>History with Subrata • Modern Europe & India</footer>
+<section id="about" class="page">
+<h2>ℹ️ About History with Subrata Paria</h2>
+<div class="lesson">
+<h3>📜 Learn Modern History Step by Step</h3>
+<p>History with Subrata Paria একটি শিক্ষামূলক website যেখানে Modern European ও Modern Indian History সহজভাবে topic, sub-topic, timeline এবং MCQ-এর মাধ্যমে শেখার ব্যবস্থা করা হয়েছে।</p>
+<ul>
+<li>🇪🇺 Modern European History</li>
+<li>🇮🇳 Modern Indian History</li>
+<li>📅 Important Timeline</li>
+<li>❓ MCQ Practice</li>
+<li>📚 Step-by-Step Topics</li>
+<li>📱 Mobile-friendly design</li>
+</ul>
+</div>
+</section></main>
+<footer>© 2026 History with Subrata Paria • Modern Europe & India</footer>
 
 <script>
-function show(id,btn){
-document.querySelectorAll('.section').forEach(x=>x.classList.remove('show'));
-document.getElementById(id).classList.add('show');
-document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));
-if(btn) btn.classList.add('active');
-if(id==='quiz') loadQuiz();
-window.scrollTo(0,0);
+const topics={
+euro:{
+renaissance:["Renaissance",["Background and causes","Humanism","Renaissance art and literature","Italian city-states","Spread to Northern Europe","Impact on Europe"]],
+reformation:["Reformation",["Causes of Reformation","Martin Luther and 95 Theses","Calvinism","Church of England","Counter-Reformation","Results"]],
+discoveries:["Geographical Discoveries",["Causes","Portuguese exploration","Spanish exploration","Columbus","Vasco da Gama","Treaty of Tordesillas","Consequences"]],
+science:["Scientific Revolution",["Copernicus","Kepler","Galileo","Newton","Scientific method","Impact"]],
+enlightenment:["Enlightenment",["Background","John Locke","Montesquieu","Voltaire","Rousseau","Social Contract","Impact"]],
+french:["French Revolution",["Ancien Régime","Social and economic causes","Estates-General","1789 events","Republic","Reign of Terror","Napoleon","Consequences"]],
+industrial:["Industrial Revolution",["Why Britain?","Agricultural Revolution","Steam engine","Textile inventions","Factory system","Urbanisation","Working class","Social impact"]],
+italy:["Unification of Italy",["Congress of Vienna","Mazzini","Cavour","Garibaldi","Victor Emmanuel II","Wars of unification","Rome 1870"]],
+germany:["Unification of Germany",["German Confederation","Prussia","Bismarck","Blood and Iron","Danish/Austro-Prussian/Franco-Prussian Wars","German Empire 1871"]],
+imperialism:["Imperialism",["Economic motives","Political motives","Scramble for Africa","British/French empires","Imperialism in Asia","Consequences"]],
+ww1:["World War I",["Long-term causes","Nationalism and imperialism","Alliance system","Immediate cause","Western/Eastern Fronts","Trench warfare","USA enters","Russian exit","Armistice","Treaty of Versailles","Consequences"]],
+russia:["Russian Revolution",["Tsarist Russia","1905 Revolution","World War I","February Revolution","Provisional Government","October Revolution","Lenin","Civil War","Consequences"]],
+ww2:["World War II",["Treaty of Versailles and aftermath","Rise of fascism and Nazism","Appeasement","Invasion of Poland","Axis and Allies","Fall of France","Battle of Britain","Operation Barbarossa","Pearl Harbor","Holocaust","D-Day","Atomic bombs","UN and consequences"]],
+coldwar:["Cold War",["Origins","Truman Doctrine","Marshall Plan","NATO","Warsaw Pact","Berlin","Korean War","Cuban Missile Crisis","Vietnam","Détente","Collapse of USSR"]]
+},
+india:{
+europeans:["Europeans in India",["Portuguese arrival","Dutch","English East India Company","French","Carnatic rivalry","British victory"]],
+company:["Company Rule",["Plassey 1757","Buxar 1764","Diwani 1765","Dual government","Permanent Settlement","Expansion of Company power"]],
+expansion:["British Expansion",["Subsidiary Alliance","Lord Wellesley","Doctrine of Lapse","Dalhousie","Annexations","Economic impact"]],
+"1857":["Revolt of 1857",["Political causes","Economic causes","Military causes","Social and religious concerns","Immediate cause","Delhi, Kanpur, Lucknow, Jhansi","Leaders","Reasons for failure","Queen's Proclamation","Consequences"]],
+reform:["Socio-Religious Reform Movements",["Raja Rammohan Roy","Brahmo Samaj","Young Bengal","Ishwar Chandra Vidyasagar","Arya Samaj","Swami Vivekananda","Aligarh Movement","Impact"]],
+congress:["Indian National Congress",["Foundation 1885","A.O. Hume","Early leaders","Moderate phase","Extremist phase","Partition of Bengal","Surat Split 1907","Lucknow Pact"]],
+swadeshi:["Swadeshi Movement",["Partition of Bengal 1905","Boycott","Swadeshi","National education","Role of students and women","Repression","Impact"]],
+gandhi:["Gandhian Era",["Gandhi's return","Satyagraha","Champaran","Kheda","Ahmedabad Mill Strike","Rowlatt Satyagraha","Jallianwala Bagh"]],
+noncoop:["Non-Cooperation Movement",["Background","Khilafat","Programme","1920 Congress decision","Spread","Chauri Chaura","Withdrawal","Significance"]],
+civil:["Civil Disobedience Movement",["Simon Commission background","Lahore Congress","Salt March","Dandi","Spread","Gandhi-Irwin Pact","Round Table Conferences","Poona Pact","Impact"]],
+quit:["Quit India Movement",["Cripps Mission","Bombay session 1942","Do or Die","Arrests","Underground activities","Parallel governments","Impact"]],
+revolutionary:["Revolutionary Movement",["Anushilan and Jugantar","Hindustan Republican Association","Bhagat Singh","HSRA","Kakori","INA","Subhas Chandra Bose","Impact"]],
+partition:["Independence & Partition",["Cabinet Mission","Direct Action","Mountbatten Plan","Indian Independence Act","15 August 1947","Partition","Immediate consequences","Constitutional transition"]]
+}};
+
+function go(id,btn){
+ document.querySelectorAll('.page').forEach(x=>x.classList.remove('show'));
+ document.getElementById(id).classList.add('show');
+ document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));
+ if(btn)btn.classList.add('active');
+ if(id==='quiz')startQuiz(); scrollTo(0,0);
 }
-function filterTopics(input,id){
-let q=input.value.toLowerCase();
-document.querySelectorAll('#'+id+' .topic').forEach(x=>x.style.display=x.innerText.toLowerCase().includes(q)?'block':'none');
+let lastGroup='euro';
+function openTopic(group,key){
+ lastGroup=group; const t=topics[group][key];
+ document.querySelectorAll('.page').forEach(x=>x.classList.remove('show'));
+ document.getElementById('topic').classList.add('show');
+ let steps=t[1].map((x,i)=>`<div class="step" onclick="showLesson(${i})"><strong>Step ${i+1}</strong>${x}</div>`).join('');
+ document.getElementById('topicContent').innerHTML=`<h2>${t[0]}</h2><p>প্রথমে একটি Step নির্বাচন করুন। প্রতিটি Step-এ বিষয়টির সংক্ষিপ্ত পড়া ও পরীক্ষামুখী তথ্য থাকবে।</p><div class="subgrid">${steps}</div><div id="lesson" class="lesson"><h3>Step-by-Step Learning</h3><p>উপরের যেকোনো Step-এ ক্লিক করুন।</p></div>`;
+ window.currentTopic=t;
 }
-const qs=[
-["The French Revolution began in which year?",["1789","1815","1848","1914"],0],
-["The Indian National Congress was founded in:",["1757","1857","1885","1905"],2],
-["World War I lasted from:",["1914–1918","1939–1945","1900–1905","1917–1921"],0],
-["The Quit India Movement was launched in:",["1930","1935","1942","1947"],2],
-["The Industrial Revolution first developed on a large scale in:",["Britain","Russia","Spain","Greece"],0]
+function showLesson(i){
+ const title=window.currentTopic[1][i];
+ const descriptions=[
+ "এই অংশে মূল background, সংজ্ঞা, গুরুত্বপূর্ণ ব্যক্তি ও ঘটনাগুলো সাজিয়ে পড়ুন। পরীক্ষার জন্য key terms নোট করুন।",
+ "এই অংশের গুরুত্বপূর্ণ কারণ, ধারাবাহিক ঘটনা ও ফলাফল বোঝার চেষ্টা করুন। MCQ-তে chronology ও matching প্রশ্ন আসে।",
+ "এই বিষয়টির প্রধান ব্যক্তিত্ব, নীতি ও গুরুত্বপূর্ণ ঘটনার সম্পর্ক বুঝুন।",
+ "এই অধ্যায়ের প্রধান ঘটনা ও turning points আলাদা করে মনে রাখুন।",
+ "ফলাফল, প্রভাব এবং দীর্ঘমেয়াদি পরিবর্তনগুলো তুলনা করুন।",
+ "Revision: কারণ → ঘটনা → ফলাফল এই তিন ভাগে নিজের নোট তৈরি করুন।"
+ ];
+ document.getElementById('lesson').innerHTML=`<h3>Step ${i+1}: ${title}</h3><p>${descriptions[i%descriptions.length]}</p><ul><li>Key Point: ${title}</li><li>Quick Revision: কারণ, প্রধান ঘটনা, ফলাফল</li><li>Exam Focus: সংজ্ঞা, সাল, ব্যক্তিত্ব ও chronology</li></ul>`;
+}
+function backToList(){go(lastGroup==='euro'?'europe':'india');}
+function filter(input,id){let q=input.value.toLowerCase();document.querySelectorAll('#'+id+' .topicCard').forEach(x=>x.style.display=x.innerText.toLowerCase().includes(q)?'block':'none');}
+
+const questions=[
+["French Revolution began in:",["1789","1815","1848","1914"],0],
+["Renaissance began prominently in:",["Italy","Russia","India","Spain"],0],
+["Who is associated with the 95 Theses?",["Martin Luther","Newton","Rousseau","Bismarck"],0],
+["Industrial Revolution first developed on a large scale in:",["Britain","France","Russia","Italy"],0],
+["World War I lasted:",["1914–1918","1939–1945","1905–1908","1917–1920"],0],
+["Immediate trigger of World War I was the assassination of:",["Archduke Franz Ferdinand","Kaiser Wilhelm II","Tsar Nicholas II","Woodrow Wilson"],0],
+["Russian Revolution's Bolshevik leader was:",["Lenin","Cavour","Clemenceau","Churchill"],0],
+["World War II began in Europe in:",["1939","1941","1942","1945"],0],
+["Indian National Congress was founded in:",["1885","1905","1857","1942"],0],
+["Revolt of 1857 began at:",["Meerut","Delhi","Kanpur","Lucknow"],0],
+["Permanent Settlement is associated with:",["Cornwallis","Dalhousie","Wellesley","Curzon"],0],
+["Doctrine of Lapse is associated with:",["Dalhousie","Bentinck","Ripon","Curzon"],0],
+["Swadeshi Movement followed the:",["Partition of Bengal","Jallianwala Bagh","Quit India","Salt March"],0],
+["Non-Cooperation Movement was launched in:",["1920","1919","1930","1942"],0],
+["Salt March began in:",["1930","1922","1942","1915"],0],
+["Quit India Movement was launched in:",["1942","1930","1920","1947"],0],
+["Jallianwala Bagh massacre occurred in:",["1919","1920","1930","1942"],0],
+["Champaran Satyagraha took place in:",["1917","1919","1922","1930"],0],
+["Who led the INA prominently?",["Subhas Chandra Bose","Dadabhai Naoroji","Gopal Krishna Gokhale","Bal Gangadhar Tilak"],0],
+["India became independent in:",["1947","1942","1950","1935"],0],
+
+["Who painted the Mona Lisa?",["Leonardo da Vinci","Michelangelo","Raphael","Donatello"],0],
+["The printing press in Europe is associated with:",["Johannes Gutenberg","Galileo","Copernicus","Newton"],0],
+["The Protestant Reformation is traditionally dated from:",["1517","1492","1648","1789"],0],
+["The Peace of Augsburg was associated with:",["Religious settlement in Germany","French Revolution","Industrial Revolution","Italian unification"],0],
+["Who wrote The Social Contract?",["Jean-Jacques Rousseau","John Locke","Voltaire","Montesquieu"],0],
+["Separation of powers is strongly associated with:",["Montesquieu","Rousseau","Luther","Mazzini"],0],
+["Who discovered the sea route to India around the Cape of Good Hope?",["Vasco da Gama","Columbus","Magellan","Cortés"],0],
+["Columbus reached the Americas in:",["1492","1453","1517","1600"],0],
+["The French Revolution's Bastille was stormed on:",["14 July 1789","4 July 1776","18 June 1815","5 May 1789"],0],
+["The Reign of Terror is associated with:",["Robespierre","Cavour","Bismarck","Garibaldi"],0],
+["Napoleon was defeated at:",["Waterloo","Verdun","Trafalgar","Sedan"],0],
+["Congress of Vienna was held after:",["Napoleonic Wars","World War I","Crimean War","World War II"],0],
+["The Zollverein helped promote:",["German economic unity","Italian religious unity","French monarchy","Russian expansion"],0],
+["Who was the chief architect of German unification?",["Otto von Bismarck","Mazzini","Garibaldi","Metternich"],0],
+["Who was known as the 'Sword of Italy' in unification?",["Garibaldi","Cavour","Mazzini","Victor Emmanuel II"],0],
+["The Triple Entente included:",["Britain, France and Russia","Germany, Italy and Japan","Britain, Germany and Austria","France, Germany and Russia"],0],
+["The Treaty of Versailles was signed in:",["1919","1918","1920","1945"],0],
+["The League of Nations was created after:",["World War I","World War II","French Revolution","Crimean War"],0],
+["The Bolsheviks seized power in:",["October 1917","February 1905","March 1918","January 1919"],0],
+["The immediate cause of World War II in Europe was:",["German invasion of Poland","Pearl Harbor","Russian Revolution","Munich Conference"],0],
+["D-Day took place in:",["1944","1939","1941","1945"],0],
+["Pearl Harbor was attacked in:",["1941","1939","1942","1944"],0],
+["The United Nations was established in:",["1945","1919","1947","1950"],0],
+["The Cold War was mainly between:",["USA and USSR","Britain and France","Germany and Italy","India and China"],0],
+
+["The first Battle of Panipat took place in:",["1526","1556","1761","1757"],0],
+["The Battle of Plassey was fought in:",["1757","1764","1857","1773"],0],
+["The Battle of Buxar was fought in:",["1764","1757","1784","1799"],0],
+["The Regulating Act was passed in:",["1773","1784","1813","1858"],0],
+["The Permanent Settlement was introduced in:",["1793","1773","1813","1857"],0],
+["The Subsidiary Alliance was developed by:",["Lord Wellesley","Lord Dalhousie","Lord Cornwallis","Lord Curzon"],0],
+["The Doctrine of Lapse was applied extensively by:",["Lord Dalhousie","Lord Ripon","Lord Wellesley","Lord Canning"],0],
+["The last Mughal emperor was:",["Bahadur Shah II","Akbar II","Shah Alam II","Aurangzeb"],0],
+["The Revolt of 1857 is also called:",["First War of Independence","Swadeshi Movement","Civil Disobedience","Home Rule Movement"],0],
+["Who led the revolt at Jhansi?",["Rani Lakshmibai","Begum Hazrat Mahal","Sarojini Naidu","Annie Besant"],0],
+["Who led the revolt at Kanpur?",["Nana Sahib","Kunwar Singh","Bahadur Shah II","Bakht Khan"],0],
+["Who led the revolt in Bihar?",["Kunwar Singh","Nana Sahib","Tantia Tope","Mangal Pandey"],0],
+["The Government of India Act 1858 transferred power to:",["British Crown","East India Company","Indian National Congress","Mughal emperor"],0],
+["Brahmo Samaj was founded by:",["Raja Rammohan Roy","Swami Dayanand","Vivekananda","Sir Syed Ahmad Khan"],0],
+["Arya Samaj was founded by:",["Swami Dayanand Saraswati","Raja Rammohan Roy","Vivekananda","Sir Syed Ahmad Khan"],0],
+["Aligarh Movement is associated with:",["Sir Syed Ahmad Khan","Rammohan Roy","Tilak","Gokhale"],0],
+["Indian National Congress first met at:",["Bombay","Calcutta","Madras","Allahabad"],0],
+["The first president of the INC was:",["W.C. Bonnerjee","A.O. Hume","Dadabhai Naoroji","Surendranath Banerjee"],0],
+["Partition of Bengal took place in:",["1905","1906","1911","1919"],0],
+["The Partition of Bengal was annulled in:",["1911","1905","1919","1920"],0],
+["The Surat Split occurred in:",["1907","1905","1916","1920"],0],
+["The Lucknow Pact was signed in:",["1916","1907","1919","1922"],0],
+["The Rowlatt Act was passed in:",["1919","1917","1920","1930"],0],
+["Gandhi launched the Champaran Satyagraha mainly for:",["Indigo cultivators","Textile workers","Salt workers","Tea workers"],0],
+["The Jallianwala Bagh massacre took place at:",["Amritsar","Delhi","Lahore","Calcutta"],0],
+["The Non-Cooperation Movement was withdrawn after:",["Chauri Chaura incident","Dandi March","Jallianwala Bagh","Simon Commission"],0],
+["The Simon Commission came to India in:",["1928","1927","1930","1932"],0],
+["The Lahore Congress of 1929 declared:",["Purna Swaraj","Dominion Status","Separate electorates","Quit India"],0],
+["The Dandi March began from:",["Sabarmati Ashram","Wardha","Champaran","Bombay"],0],
+["The Gandhi-Irwin Pact was signed in:",["1931","1930","1932","1942"],0],
+["The Poona Pact was signed in:",["1932","1930","1931","1935"],0],
+["The Government of India Act 1935 provided for:",["Provincial autonomy","Complete independence","Partition","Republic"],0],
+["The Quit India resolution was passed at:",["Bombay","Lahore","Calcutta","Delhi"],0],
+["The slogan 'Do or Die' is associated with:",["Quit India Movement","Non-Cooperation","Swadeshi","Civil Disobedience"],0],
+["The Cabinet Mission came to India in:",["1946","1942","1945","1947"],0],
+["The Mountbatten Plan was announced in:",["1947","1946","1942","1950"],0],
+["The Indian Independence Act was passed in:",["1947","1946","1950","1935"],0],
+["The Constitution of India came into force on:",["26 January 1950","15 August 1947","26 November 1949","9 December 1946"],0]
 ];
-let qi=0,sc=0;
-function loadQuiz(){
-qi=0;sc=0;renderQ();
-}
+let qi=0,score=0;
+function startQuiz(){qi=0;score=0;renderQ();}
 function renderQ(){
-if(qi>=qs.length){document.getElementById('question').innerHTML='<h3>Quiz Complete 🎉</h3>';document.getElementById('options').innerHTML='';document.getElementById('score').innerText='Your score: '+sc+'/'+qs.length;return;}
-let q=qs[qi];document.getElementById('question').innerHTML='<b>Question '+(qi+1)+' of '+qs.length+'</b><p>'+q[0]+'</p>';
-document.getElementById('options').innerHTML=q[1].map((o,i)=>'<button class="option" onclick="answer('+i+')">'+o+'</button>').join('');
-document.getElementById('score').innerText='';
+ if(qi>=questions.length){document.getElementById('q').innerHTML='<h3>🎉 Quiz Complete</h3>';document.getElementById('opts').innerHTML='';document.getElementById('qmsg').innerText=`Final Score: ${score}/${questions.length}`;return;}
+ const x=questions[qi];document.getElementById('q').innerHTML=`<b>Question ${qi+1} of ${questions.length}</b><p>${x[0]}</p>`;
+ document.getElementById('opts').innerHTML=x[1].map((o,i)=>`<button class="option" onclick="answer(${i})">${o}</button>`).join('');
+ document.getElementById('qmsg').innerText='';document.getElementById('scorepill').innerText=`Score: ${score}`;
 }
 function answer(i){
-  const buttons = document.querySelectorAll('#options .option');
-  buttons.forEach(b => b.disabled = true);
-  const correct = qs[qi][2];
-
-  if(i === correct){
-    sc++;
-    buttons[i].style.background = '#b9e7c1';
-    buttons[i].style.borderColor = '#42a85f';
-    buttons[i].style.color = '#175b29';
-  } else {
-    buttons[i].style.background = '#f4b7b7';
-    buttons[i].style.borderColor = '#d34b4b';
-    buttons[i].style.color = '#7a1717';
-    buttons[correct].style.background = '#b9e7c1';
-    buttons[correct].style.borderColor = '#42a85f';
-    buttons[correct].style.color = '#175b29';
-  }
-
-  setTimeout(() => {
-    qi++;
-    renderQ();
-  }, 900);
+ const bs=document.querySelectorAll('.option');bs.forEach(b=>b.disabled=true);
+ if(i===questions[qi][2]){bs[i].classList.add('correct');score++;document.getElementById('qmsg').innerText='✓ Correct!';}
+ else{bs[i].classList.add('wrong');bs[questions[qi][2]].classList.add('correct');document.getElementById('qmsg').innerText='✗ Wrong — correct answer is green.';}
+ document.getElementById('scorepill').innerText=`Score: ${score}`;
+ setTimeout(()=>{qi++;renderQ()},900);
 }
 </script>
 </body>
