@@ -1,607 +1,95 @@
-<!doctype html>
-<html lang="bn">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>History with Subrata Paria</title>
-<style>
-*{box-sizing:border-box}body{margin:0;background:#f4efe6;color:#241d18;font-family:system-ui,-apple-system,"Noto Sans Bengali",Arial,sans-serif}
-header{background:linear-gradient(135deg,#211712,#5b3b25);color:#fff;padding:26px 16px;text-align:center;border-bottom:4px solid #c28a43}
-header h1{margin:0;font-size:30px}header p{margin:7px 0 0;opacity:.88}
-nav{position:sticky;top:0;z-index:20;background:#fff;padding:9px;display:flex;gap:7px;overflow:auto;border-bottom:1px solid #ddd}
-nav button,.back{border:0;border-radius:22px;padding:10px 15px;background:#eee5d8;font-weight:700;white-space:nowrap;color:#34271e}
-nav button.active{background:#34271e;color:#fff}
-main{max-width:1050px;margin:auto;padding:16px}.page{display:none}.page.show{display:block}
-.hero{background:linear-gradient(135deg,#473022,#82552f);color:#fff;padding:25px;border-radius:20px;margin-bottom:16px}.hero h2{margin:0 0 8px;font-size:27px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.card,.topic,.box{background:#fff;border-radius:16px;padding:17px;box-shadow:0 3px 12px #0001}
-.card{cursor:pointer;border:1px solid #eee1d2}.card:hover{transform:translateY(-2px)}
-.card h3{margin:0 0 7px}.card p{margin:0;color:#6d6259;font-size:14px;line-height:1.45}
-.search{width:100%;padding:13px;border:1px solid #d6c8b8;border-radius:12px;background:#fff;font-size:16px;margin:8px 0 15px}
-.topic{margin:9px 0}.topic b{display:block;margin-bottom:5px}.topic small{color:#75685e}
-.subgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:12px 0}.step{background:#fff;padding:15px;border-radius:14px;box-shadow:0 2px 9px #0001;cursor:pointer}.step strong{display:block}
-.lesson{background:#fff;border-radius:17px;padding:19px;margin-top:13px;line-height:1.65}.lesson h3{margin-top:0}
-ul{line-height:1.7}.timeline{border-left:3px solid #c28a43;padding-left:13px}
-.quizhead{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.pill{background:#eee5d8;padding:8px 12px;border-radius:20px;font-weight:700}
-.option{display:block;width:100%;text-align:left;padding:13px;margin:9px 0;border:1px solid #ddd1c3;border-radius:11px;background:#faf8f4;font-size:15px}.option:disabled{opacity:1}
-.correct{background:#b9e7c2!important;border-color:#4b9b5d!important}.wrong{background:#f2b5b5!important;border-color:#c94a4a!important}
-#qmsg{font-weight:800;margin-top:12px}.notice{padding:12px;border-radius:12px;background:#fff4d8;margin:10px 0;color:#5b4325}
-footer{text-align:center;padding:30px;color:#756a61}
-.lesson .answer{background:#fffdf9;border:1px solid #e1d8cc;border-radius:12px;padding:14px;margin:10px 0}.lesson .answer h4{margin:0 0 7px;color:#4a2d19;font-size:17px}.lesson .answer p{line-height:1.75;margin:0}.step-desc{line-height:1.6}
+<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>History With Subrata Paria</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f6f1ea;color:#30251c;font-family:Arial,sans-serif}header{position:sticky;top:0;z-index:9;background:#352419;color:#fff}.brand{text-align:center;padding:14px;font-size:21px;font-weight:bold}nav{display:flex;gap:7px;overflow:auto;padding:0 10px 12px}nav button{white-space:nowrap;border:0;border-radius:18px;padding:9px 14px;background:#604735;color:#fff;font-weight:bold}nav button.active{background:#f5bd45;color:#2c1b0e}main{max-width:1100px;margin:auto;padding:20px 14px 90px}.page{display:none}.page.active{display:block}.hero{background:linear-gradient(135deg,#39271a,#79583a);padding:30px 22px;border-radius:20px;color:white}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:13px;margin-top:15px}.card,.step,.tl{background:#fff;border:1px solid #e4d8cb;border-radius:15px;padding:15px;width:100%;display:flex;gap:12px;align-items:center;text-align:left;cursor:pointer;box-shadow:0 2px 8px #0000000d}.card span{font-size:28px}.card small,.tl small{display:block;color:#75675a;margin-top:5px}.card i,.tl i{margin-left:auto;font-size:25px}.head{background:#fff;border:1px solid #e3d7ca;border-radius:16px;padding:16px;margin-bottom:14px}.back,.next{border:0;border-radius:10px;padding:10px 14px;background:#39271a;color:white;font-weight:bold}#steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:11px}.num{width:37px;height:37px;border-radius:50%;display:grid;place-items:center;background:#39271a;color:#fff;font-weight:bold}.answer{margin-top:17px;background:#fff;border:1px solid #e4d8cb;border-radius:16px;padding:20px;line-height:1.8;font-size:17px}.notice{margin-top:14px;padding:12px;background:#fff1d5;border-radius:10px}.tl{margin:10px 0}.quizhead{display:flex;justify-content:space-between;background:#fff;padding:14px;border-radius:14px}.question{font-size:20px;line-height:1.6;margin:18px 0}.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}.opt{padding:16px;background:#fff;border:2px solid #ded3c6;border-radius:13px;text-align:left;font-size:16px}.opt.correct{background:#c9f5d1;border-color:#239a49}.opt.wrong{background:#ffd0d0;border-color:#d73939}.telegram{position:fixed;right:16px;bottom:18px;width:54px;height:54px;border-radius:50%;background:#229ED9;color:#fff;display:grid;place-items:center;text-decoration:none;font-size:26px;box-shadow:0 5px 18px #0004}@media(max-width:650px){.opts{grid-template-columns:1fr}main{padding:14px 10px 90px}}
 
-.telegram-contact{position:fixed;right:16px;bottom:18px;z-index:1000;width:52px;height:52px;display:grid;place-items:center;background:#229ED9;color:#fff;text-decoration:none;border-radius:50%;box-shadow:0 5px 18px #0004;font-size:25px}
-.telegram-contact:hover{transform:translateY(-2px)}
-.timeline .topic{cursor:pointer}.timeline .topic:hover{transform:translateY(-1px);box-shadow:0 5px 14px #0002}
-</style>
-</head>
-<body>
-<header><h1>📜 History with Subrata Paria</h1><p>Modern European & Indian History • Step-by-Step Learning</p></header>
-<nav>
+.pdf-list{display:grid;gap:12px;margin-top:14px}.pdf-item{background:#fff;border:1px solid #e4d8cb;border-radius:15px;padding:16px;display:flex;align-items:center;gap:12px}.pdf-item span{font-size:28px}.pdf-item b{display:block}.pdf-item small{display:block;color:#75675a;margin-top:4px}.pdf-actions{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}.pdf-btn{border:0;border-radius:10px;padding:9px 12px;background:#39271a;color:#fff;text-decoration:none;font-weight:bold}.pdf-upload-note{background:#fff1d5;border:1px solid #ecd49b;border-radius:14px;padding:16px;line-height:1.7;margin-top:15px}.owner-box{background:#fff;border:1px solid #e4d8cb;border-radius:15px;padding:16px;margin-top:14px}.owner-box input{width:100%;padding:11px;border:1px solid #cfc3b5;border-radius:10px;margin:8px 0}.owner-box button{border:0;border-radius:10px;padding:10px 14px;background:#39271a;color:#fff;font-weight:bold}.hidden{display:none}
+
+footer{
+  text-align:center;
+  padding:28px 16px 95px;
+  color:#6b6259;
+  font-size:17px;
+  line-height:1.5;
+}
+
+</style></head><body><header><div class="brand">📚 History With Subrata Paria</div><nav>
 <button class="active" onclick="go('home',this)">🏠 Home</button>
-<button onclick="go('europe',this)">🇪🇺 Europe</button>
-<button onclick="go('india',this)">🇮🇳 India</button>
-<button onclick="go('timeline',this)">📅 Timeline</button>
-<button onclick="go('quiz',this)">❓ All MCQ</button><button onclick="go('about',this)">ℹ️ About</button>
-</nav>
-<main>
-
-<section id="home" class="page show">
-<div class="hero"><h2>Modern History — Step by Step</h2><p>একটি topic-এ ক্লিক করুন → Chapter নির্বাচন করুন → বিস্তারিত বিষয়, গুরুত্বপূর্ণ তথ্য ও MCQ অনুশীলন করুন।</p></div>
-<div class="grid">
-<div class="card" onclick="go('europe')"><h3>🇪🇺 Modern Europe</h3><p>Renaissance থেকে World War II পর্যন্ত ধারাবাহিকভাবে পড়ুন।</p></div>
-<div class="card" onclick="go('india')"><h3>🇮🇳 Modern India</h3><p>European arrival থেকে Independence & Partition পর্যন্ত।</p></div>
-<div class="card" onclick="go('timeline')"><h3>📅 Master Timeline</h3><p>গুরুত্বপূর্ণ European ও Indian events একসঙ্গে।</p></div>
-<div class="card" onclick="go('quiz')"><h3>❓ All MCQ</h3><p>Topic-wise প্রশ্ন, সঙ্গে সঙ্গে green/red answer feedback।</p></div>
-</div>
-<div class="notice">💡 “World Wars” বা অন্য কোনো topic-এ ক্লিক করলে তার sub-topics ধাপে ধাপে খুলবে।</div>
-<h2>⭐ Explore More</h2>
-<div class="grid">
-<div class="card" onclick="go('europe')"><h3>⚔️ Wars & Revolutions</h3><p>French Revolution, Russian Revolution, World War I, World War II ও অন্যান্য গুরুত্বপূর্ণ সংঘর্ষ।</p></div>
-<div class="card" onclick="go('india')"><h3>🇮🇳 Freedom Movement</h3><p>1857 থেকে Quit India এবং Independence পর্যন্ত আন্দোলনগুলো ধাপে ধাপে।</p></div>
-<div class="card" onclick="go('timeline')"><h3>🕰️ Important Dates</h3><p>পরীক্ষার জন্য দরকারি সাল ও ঘটনাগুলো দ্রুত revise করুন।</p></div>
-<div class="card" onclick="go('quiz')"><h3>🎯 Exam Practice</h3><p>MCQ practice করে নিজের প্রস্তুতি যাচাই করুন।</p></div>
-<div class="card" onclick="go('europe')"><h3>👤 Historical Personalities</h3><p>Luther, Rousseau, Napoleon, Bismarck, Lenin এবং আরও অনেকে।</p></div>
-<div class="card" onclick="go('india')"><h3>👥 Indian Leaders</h3><p>Rammohan Roy, Gandhi, Subhas Bose, Bhagat Singh এবং জাতীয় আন্দোলনের গুরুত্বপূর্ণ ব্যক্তিত্ব।</p></div>
-<div class="card" onclick="go('timeline')"><h3>🧠 Quick Revision</h3><p>কারণ → ঘটনা → ফলাফল—এই তিন ধাপে দ্রুত পড়ুন।</p></div>
-<div class="card" onclick="go('quiz')"><h3>🏆 Challenge Yourself</h3><p>82টি প্রশ্নের quiz দিয়ে নিজের score বাড়ান।</p></div>
-</div>
-<h2>🔥 Popular Topics</h2>
-<div class="subgrid">
-<div class="step" onclick="openTopic('euro','ww1')"><strong>World War I</strong>Causes → Events → Treaty → Consequences</div>
-<div class="step" onclick="openTopic('euro','ww2')"><strong>World War II</strong>Causes → Axis/Allies → Major Events → Results</div>
-<div class="step" onclick="openTopic('euro','french')"><strong>French Revolution</strong>Causes → 1789 → Terror → Napoleon</div>
-<div class="step" onclick="openTopic('india','1857')"><strong>Revolt of 1857</strong>Causes → Leaders → Centres → Results</div>
-<div class="step" onclick="openTopic('india','gandhi')"><strong>Gandhian Era</strong>Satyagraha → Movements → Impact</div>
-<div class="step" onclick="openTopic('india','partition')"><strong>Independence</strong>Cabinet Mission → Partition → 1947</div>
-</div>
-</section>
-
-<section id="europe" class="page">
-<h2>🇪🇺 Modern European History</h2>
-<input class="search" placeholder="Europe topic search..." oninput="filter(this,'euroList')">
-<div id="euroList" class="grid">
-<div class="card topicCard" onclick="openTopic('euro','renaissance')"><h3>1. Renaissance</h3><p>Background → Humanism → Art → Literature → Impact</p></div>
-<div class="card topicCard" onclick="openTopic('euro','reformation')"><h3>2. Reformation</h3><p>Causes → Luther → Calvin → Counter-Reformation → Results</p></div>
-<div class="card topicCard" onclick="openTopic('euro','discoveries')"><h3>3. Geographical Discoveries</h3><p>Causes → Portugal → Spain → Columbus → Impact</p></div>
-<div class="card topicCard" onclick="openTopic('euro','science')"><h3>4. Scientific Revolution</h3><p>Copernicus → Galileo → Kepler → Newton → Impact</p></div>
-<div class="card topicCard" onclick="openTopic('euro','enlightenment')"><h3>5. Enlightenment</h3><p>Reason → Locke → Voltaire → Rousseau → Montesquieu</p></div>
-<div class="card topicCard" onclick="openTopic('euro','french')"><h3>6. French Revolution</h3><p>Causes → 1789 → Terror → Napoleon → Results</p></div>
-<div class="card topicCard" onclick="openTopic('euro','industrial')"><h3>7. Industrial Revolution</h3><p>Britain → Inventions → Factory system → Society → Impact</p></div>
-<div class="card topicCard" onclick="openTopic('euro','italy')"><h3>8. Unification of Italy</h3><p>Risorgimento → Mazzini → Cavour → Garibaldi → 1870</p></div>
-<div class="card topicCard" onclick="openTopic('euro','germany')"><h3>9. Unification of Germany</h3><p>Prussia → Bismarck → Wars → German Empire</p></div>
-<div class="card topicCard" onclick="openTopic('euro','imperialism')"><h3>10. Imperialism</h3><p>Motives → Scramble for Africa → Asia → Consequences</p></div>
-<div class="card topicCard" onclick="openTopic('euro','ww1')"><h3>11. World War I ⭐</h3><p>Causes → Alliances → Events → Treaty → Consequences</p></div>
-<div class="card topicCard" onclick="openTopic('euro','russia')"><h3>12. Russian Revolution</h3><p>1905 → February → October → Lenin → Results</p></div>
-<div class="card topicCard" onclick="openTopic('euro','ww2')"><h3>13. World War II ⭐</h3><p>Causes → Axis/Allies → Major events → Holocaust → Results</p></div>
-<div class="card topicCard" onclick="openTopic('euro','coldwar')"><h3>14. Cold War</h3><p>USA/USSR → NATO → Warsaw Pact → Crises → End</p></div>
-</div>
-</section>
-
-<section id="india" class="page">
-<h2>🇮🇳 Modern Indian History</h2>
-<input class="search" placeholder="India topic search..." oninput="filter(this,'indiaList')">
-<div id="indiaList" class="grid">
-<div class="card topicCard" onclick="openTopic('india','europeans')"><h3>1. Europeans in India</h3><p>Portuguese → Dutch → English → French</p></div>
-<div class="card topicCard" onclick="openTopic('india','company')"><h3>2. Company Rule</h3><p>Plassey → Buxar → Diwani → Expansion</p></div>
-<div class="card topicCard" onclick="openTopic('india','expansion')"><h3>3. British Expansion</h3><p>Subsidiary Alliance → Doctrine of Lapse → Annexations</p></div>
-<div class="card topicCard" onclick="openTopic('india','1857')"><h3>4. Revolt of 1857 ⭐</h3><p>Causes → Leaders → Centres → Failure → Results</p></div>
-<div class="card topicCard" onclick="openTopic('india','reform')"><h3>5. Socio-Religious Reform</h3><p>Rammohan Roy → Brahmo Samaj → Arya Samaj → Aligarh</p></div>
-<div class="card topicCard" onclick="openTopic('india','congress')"><h3>6. Indian National Congress</h3><p>1885 → Moderates → Extremists → Surat</p></div>
-<div class="card topicCard" onclick="openTopic('india','swadeshi')"><h3>7. Swadeshi Movement</h3><p>Partition of Bengal → Boycott → National education</p></div>
-<div class="card topicCard" onclick="openTopic('india','gandhi')"><h3>8. Gandhian Era ⭐</h3><p>Champaran → Kheda → Ahmedabad → Gandhi's methods</p></div>
-<div class="card topicCard" onclick="openTopic('india','noncoop')"><h3>9. Non-Cooperation</h3><p>1920 → Programme → Khilafat → Chauri Chaura</p></div>
-<div class="card topicCard" onclick="openTopic('india','civil')"><h3>10. Civil Disobedience</h3><p>Salt March → Dandi → Round Table Conferences</p></div>
-<div class="card topicCard" onclick="openTopic('india','quit')"><h3>11. Quit India Movement ⭐</h3><p>1942 → Do or Die → Underground movement → Results</p></div>
-<div class="card topicCard" onclick="openTopic('india','revolutionary')"><h3>12. Revolutionary Movement</h3><p>Bhagat Singh → HSRA → INA → Subhas Chandra Bose</p></div>
-<div class="card topicCard" onclick="openTopic('india','partition')"><h3>13. Independence & Partition</h3><p>Cabinet Mission → Mountbatten Plan → 1947</p></div>
-</div>
-</section>
-
-<section id="topic" class="page">
-<button class="back" onclick="backToList()">← Back to Topics</button>
-<div id="topicContent"></div>
-</section>
-
-<section id="timeline" class="page">
-<h2>📅 Master Timeline</h2>
-<p>যেকোনো ঘটনার উপর ক্লিক করলে সংশ্লিষ্ট Topic-এর Step খুলবে এবং সঠিক উত্তর/ব্যাখ্যা দেখা যাবে।</p>
-<div class="timeline">
-<div class="topic" onclick="openTimeline('euro','discoveries',1)"><b>1453</b> — Fall of Constantinople</div>
-<div class="topic" onclick="openTimeline('euro','discoveries',3)"><b>1492</b> — Columbus's voyage</div>
-<div class="topic" onclick="openTimeline('euro','reformation',1)"><b>1517</b> — Reformation challenge by Luther</div>
-<div class="topic" onclick="openTimeline('euro','french',3)"><b>1789</b> — French Revolution</div>
-<div class="topic" onclick="openTimeline('india','1857',0)"><b>1857</b> — Revolt of 1857 in India</div>
-<div class="topic" onclick="openTimeline('india','congress',0)"><b>1885</b> — Indian National Congress founded</div>
-<div class="topic" onclick="openTimeline('india','swadeshi',0)"><b>1905</b> — Partition of Bengal / Swadeshi</div>
-<div class="topic" onclick="openTimeline('euro','ww1',0)"><b>1914–1918</b> — World War I</div>
-<div class="topic" onclick="openTimeline('euro','russia',3)"><b>1917</b> — Russian Revolution</div>
-<div class="topic" onclick="openTimeline('india','noncoop',0)"><b>1920–22</b> — Non-Cooperation Movement</div>
-<div class="topic" onclick="openTimeline('india','civil',2)"><b>1930</b> — Salt March / Civil Disobedience</div>
-<div class="topic" onclick="openTimeline('euro','ww2',3)"><b>1939–1945</b> — World War II</div>
-<div class="topic" onclick="openTimeline('india','quit',1)"><b>1942</b> — Quit India Movement</div>
-<div class="topic" onclick="openTimeline('india','partition',4)"><b>1947</b> — Independence & Partition</div>
-</div></section>
-
-<section id="quiz" class="page">
-<div class="quizhead"><h2>❓ All MCQ Practice</h2><span class="pill" id="scorepill">Score: 0</span></div>
-<div class="box"><div id="q"></div><div id="opts"></div><div id="qmsg"></div></div>
-</section>
-<section id="about" class="page">
-<h2>ℹ️ About History with Subrata Paria</h2>
-<div class="lesson">
-<h3>📜 Learn Modern History Step by Step</h3>
-<p>History with Subrata Paria একটি শিক্ষামূলক website যেখানে Modern European ও Modern Indian History সহজভাবে topic, sub-topic, timeline এবং MCQ-এর মাধ্যমে শেখার ব্যবস্থা করা হয়েছে।</p>
-<ul>
-<li>🇪🇺 Modern European History</li>
-<li>🇮🇳 Modern Indian History</li>
-<li>📅 Important Timeline</li>
-<li>❓ MCQ Practice</li>
-<li>📚 Step-by-Step Topics</li>
-<li>📱 Mobile-friendly design</li>
-</ul>
-</div>
-</section></main>
-<footer>© 2026 History with Subrata Paria • Modern Europe & India</footer>
-
+<button onclick="go('about',this)">ℹ️ About</button>
+</nav></header><main>
+<section id="home" class="page active"><div class="hero"><h1>Welcome to History With Subrata Paria</h1><p>Subject → Step → Answer পদ্ধতিতে ভারত ও ইউরোপের ইতিহাস শিখুন।</p></div><h2>সব বিভাগ</h2><div class="grid"><button class="card" onclick="go('ancient')"><span>🏛️</span><div><b>Ancient India</b><small>প্রাচীন ভারতের সম্পূর্ণ ইতিহাস</small></div><i>›</i></button><button class="card" onclick="go('modern')"><span>🇮🇳</span><div><b>Modern India</b><small>ইউরোপীয় আগমন থেকে স্বাধীনতা</small></div><i>›</i></button><button class="card" onclick="go('europe')"><span>🌍</span><div><b>Europe History</b><small>Ancient Europe থেকে Modern Europe</small></div><i>›</i></button><button class="card" onclick="go('timeline')"><span>📅</span><div><b>Master Timeline</b><small>সব গুরুত্বপূর্ণ সময়রেখা</small></div><i>›</i></button><button class="card" onclick="go('quiz')"><span>📝</span><div><b>300+ Question Quiz</b><small>সঠিক সবুজ • ভুল লাল</small></div><i>›</i></button><button class="card" onclick="go('pdf')"><span>📚</span><div><b>PDF Books</b><small>বই ও নোট PDF পড়ুন</small></div><i>›</i></button></div></section>
+<section id="ancient" class="page"><h2>🏛️ Ancient India</h2><p>প্রতিটি Subject খুলে Step-এ ট্যাপ করুন।</p><div class="grid"><button class="card" onclick="openSubject('ancient','Ancient India Overview')"><span>🏛️</span><div><b>Ancient India Overview</b><small>3 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('ancient','Prehistoric India')"><span>🏛️</span><div><b>Prehistoric India</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('ancient','Indus Valley Civilization')"><span>🏛️</span><div><b>Indus Valley Civilization</b><small>7 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('ancient','Vedic Civilization')"><span>🏛️</span><div><b>Vedic Civilization</b><small>5 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('ancient','Mahajanapadas')"><span>🏛️</span><div><b>Mahajanapadas</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('ancient','Jainism')"><span>🏛️</span><div><b>Jainism</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('ancient','Buddhism')"><span>🏛️</span><div><b>Buddhism</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('ancient','Mauryan Empire')"><span>🏛️</span><div><b>Mauryan Empire</b><small>6 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('ancient','Gupta Empire')"><span>🏛️</span><div><b>Gupta Empire</b><small>5 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button></div></section>
+<section id="modern" class="page"><h2>🇮🇳 Modern India</h2><p>ইউরোপীয় আগমন থেকে স্বাধীনতা পর্যন্ত।</p><div class="grid"><button class="card" onclick="openSubject('modern','European Expansion in India')"><span>🇮🇳</span><div><b>European Expansion in India</b><small>3 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('modern','British Expansion')"><span>🇮🇳</span><div><b>British Expansion</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('modern','Revolt of 1857')"><span>🇮🇳</span><div><b>Revolt of 1857</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('modern','Indian National Congress')"><span>🇮🇳</span><div><b>Indian National Congress</b><small>3 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('modern','Swadeshi Movement')"><span>🇮🇳</span><div><b>Swadeshi Movement</b><small>3 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('modern','Gandhian Era')"><span>🇮🇳</span><div><b>Gandhian Era</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('modern','Independence & Partition')"><span>🇮🇳</span><div><b>Independence & Partition</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button></div></section>
+<section id="europe" class="page"><h2>🌍 Europe History</h2><p>Ancient Europe → Medieval → Renaissance → Modern Europe</p><div class="grid"><button class="card" onclick="openSubject('europe','Ancient Europe')"><span>🌍</span><div><b>Ancient Europe</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('europe','Medieval Europe')"><span>🌍</span><div><b>Medieval Europe</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('europe','Renaissance & Reformation')"><span>🌍</span><div><b>Renaissance & Reformation</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('europe','Age of Discoveries')"><span>🌍</span><div><b>Age of Discoveries</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('europe','French Revolution')"><span>🌍</span><div><b>French Revolution</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('europe','Industrial Revolution')"><span>🌍</span><div><b>Industrial Revolution</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('europe','World War I')"><span>🌍</span><div><b>World War I</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('europe','Interwar Europe')"><span>🌍</span><div><b>Interwar Europe</b><small>3 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('europe','World War II')"><span>🌍</span><div><b>World War II</b><small>5 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button><button class="card" onclick="openSubject('europe','Cold War & Modern Europe')"><span>🌍</span><div><b>Cold War & Modern Europe</b><small>4 Steps • বিস্তারিত উত্তর</small></div><i>›</i></button></div></section>
+<section id="topic" class="page"><div class="head"><button class="back" onclick="go(currentCat)">← Back</button><h2 id="topicTitle"></h2><p>প্রতিটি Step-এ ট্যাপ করলে বিস্তারিত উত্তর দেখা যাবে।</p></div><div id="steps"></div><div id="answer"></div></section>
+<section id="timeline" class="page"><h2>📅 Master Timeline</h2><p>Ancient India থেকে Modern Europe পর্যন্ত। প্রতিটি Timeline-এ ট্যাপ করলে বিস্তারিত দেখা যাবে।</p><button class="tl" onclick="showTL(0)"><b>c. 2600 BCE</b><span>Indus Valley Civilization<small>দক্ষিণ এশিয়ায় বৃহৎ নগরসভ্যতার বিকাশ।</small></span><i>›</i></button><button class="tl" onclick="showTL(1)"><b>c. 1500 BCE</b><span>Vedic Civilization<small>বৈদিক সমাজ ও সংস্কৃতির বিকাশ।</small></span><i>›</i></button><button class="tl" onclick="showTL(2)"><b>6th century BCE</b><span>Mahajanapadas & New Religions<small>মহাজনপদ, জৈন ও বৌদ্ধ চিন্তার বিকাশ।</small></span><i>›</i></button><button class="tl" onclick="showTL(3)"><b>c. 322 BCE</b><span>Mauryan Empire<small>চন্দ্রগুপ্ত মৌর্যের অধীনে বৃহৎ সাম্রাজ্য।</small></span><i>›</i></button><button class="tl" onclick="showTL(4)"><b>c. 320 CE</b><span>Gupta Empire<small>গুপ্ত শক্তি ও সাংস্কৃতিক বিকাশ।</small></span><i>›</i></button><button class="tl" onclick="showTL(5)"><b>476</b><span>Fall of Western Rome<small>প্রাচীন থেকে মধ্যযুগীয় ইউরোপে পরিবর্তন।</small></span><i>›</i></button><button class="tl" onclick="showTL(6)"><b>1492</b><span>Columbus's Voyage<small>নতুন আটলান্টিক যোগাযোগ।</small></span><i>›</i></button><button class="tl" onclick="showTL(7)"><b>1498</b><span>Vasco da Gama reaches India<small>ইউরোপ-ভারত সমুদ্র যোগাযোগ।</small></span><i>›</i></button><button class="tl" onclick="showTL(8)"><b>1517</b><span>Reformation<small>ইউরোপীয় ধর্মীয় সংস্কার।</small></span><i>›</i></button><button class="tl" onclick="showTL(9)"><b>1757</b><span>Battle of Plassey<small>ভারতে ব্রিটিশ প্রভাব বৃদ্ধি।</small></span><i>›</i></button><button class="tl" onclick="showTL(10)"><b>1789</b><span>French Revolution<small>নতুন রাজনৈতিক যুগ।</small></span><i>›</i></button><button class="tl" onclick="showTL(11)"><b>1857</b><span>Revolt of 1857<small>ব্রিটিশ শাসনের বিরুদ্ধে বড় বিদ্রোহ।</small></span><i>›</i></button><button class="tl" onclick="showTL(12)"><b>1885</b><span>Indian National Congress<small>সর্বভারতীয় রাজনৈতিক সংগঠনের সূচনা।</small></span><i>›</i></button><button class="tl" onclick="showTL(13)"><b>1905</b><span>Swadeshi Movement<small>বঙ্গভঙ্গবিরোধী আন্দোলন।</small></span><i>›</i></button><button class="tl" onclick="showTL(14)"><b>1914–1918</b><span>World War I<small>বিশ্বব্যাপী সংঘাত।</small></span><i>›</i></button><button class="tl" onclick="showTL(15)"><b>1917</b><span>Russian Revolution<small>বিপ্লবী রাজনৈতিক পরিবর্তন।</small></span><i>›</i></button><button class="tl" onclick="showTL(16)"><b>1920–22</b><span>Non-Cooperation<small>গণআন্দোলনের নতুন পর্যায়।</small></span><i>›</i></button><button class="tl" onclick="showTL(17)"><b>1930</b><span>Salt March<small>আইন অমান্য আন্দোলনের প্রতীক।</small></span><i>›</i></button><button class="tl" onclick="showTL(18)"><b>1939–1945</b><span>World War II<small>দ্বিতীয় বিশ্বযুদ্ধ।</small></span><i>›</i></button><button class="tl" onclick="showTL(19)"><b>1942</b><span>Quit India<small>ব্রিটিশদের ভারত ছাড়ার দাবি।</small></span><i>›</i></button><button class="tl" onclick="showTL(20)"><b>1947</b><span>Independence & Partition<small>স্বাধীনতা ও বিভাজন।</small></span><i>›</i></button><button class="tl" onclick="showTL(21)"><b>1989</b><span>Fall of Berlin Wall<small>ইউরোপীয় বিভাজন ভাঙনের প্রতীক।</small></span><i>›</i></button><div id="tlAnswer"></div></section>
+<section id="quiz" class="page"><h2>📝 History Quiz – 300+ Questions</h2><p>চারটি অপশনের মধ্যে সঠিক উত্তর বেছে নিন। সঠিক হলে সবুজ, ভুল হলে লাল হবে।</p><div id="quizBox"></div></section>
+<section id="pdf" class="page"><div class="head"><button class="back" onclick="go('home')">← Home</button><h2>📚 PDF Books & Notes</h2><p>এখানে আপলোড করা PDF বই ও নোট সবাই পড়তে পারবে।</p></div><div id="pdfList" class="pdf-list"></div><div class="pdf-upload-note"><b>🔒 Owner Upload</b><br>এই সাইটটি যদি GitHub Pages-এ থাকে, PDF স্থায়ীভাবে আপলোড করার জন্য GitHub repository-তে Owner/Collaborator permission প্রয়োজন। সাধারণ visitor এই সাইট থেকে PDF স্থায়ীভাবে upload করতে পারবে না।</div><div class="owner-box"><b>শুধু Owner-এর জন্য PDF Preview</b><br><small>এখানে PDF নির্বাচন করলে এই browser-এ preview হবে; এটি server/GitHub-এ upload হবে না।</small><input type="file" id="ownerPdfInput" accept="application/pdf,.pdf"><button onclick="previewOwnerPdf()">PDF Preview করুন</button><div id="ownerPdfPreview"></div></div></section><section id="about" class="page"><h2>ℹ️ About</h2><div class="answer"><h3>এই সাইটে কী আছে?</h3><ul><li>🏛️ Ancient India – প্রাচীন ভারতের ইতিহাস</li><li>🇮🇳 Modern India – আধুনিক ভারতের ইতিহাস</li><li>🌍 Europe History – আদি ইউরোপ থেকে আধুনিক ইউরোপ</li><li>📅 Master Timeline – ভারত ও ইউরোপের গুরুত্বপূর্ণ ঘটনা</li><li>📝 300+ Question Quiz – চারটি অপশন, সঠিক সবুজ ও ভুল লাল</li><li>📖 প্রতিটি Subject → Step → ১০ মার্কের বিস্তারিত Answer (সাল, কারণ, ঘটনা, ফলাফল ও গুরুত্ব)</li></ul><p><b>History With Subrata Paria</b> শিক্ষার্থীদের ইতিহাস সহজভাবে শেখার জন্য তৈরি।</p></div></section></main><footer>©2026 History with Subrata Paria -India& Europe</footer><a class="telegram" href="https://t.me/Subrata230306" target="_blank">✈</a>
 <script>
-const topics={
-euro:{
-renaissance:["Renaissance",["Background and causes","Humanism","Renaissance art and literature","Italian city-states","Spread to Northern Europe","Impact on Europe"]],
-reformation:["Reformation",["Causes of Reformation","Martin Luther and 95 Theses","Calvinism","Church of England","Counter-Reformation","Results"]],
-discoveries:["Geographical Discoveries",["Causes","Portuguese exploration","Spanish exploration","Columbus","Vasco da Gama","Treaty of Tordesillas","Consequences"]],
-science:["Scientific Revolution",["Copernicus","Kepler","Galileo","Newton","Scientific method","Impact"]],
-enlightenment:["Enlightenment",["Background","John Locke","Montesquieu","Voltaire","Rousseau","Social Contract","Impact"]],
-french:["French Revolution",["Ancien Régime","Social and economic causes","Estates-General","1789 events","Republic","Reign of Terror","Napoleon","Consequences"]],
-industrial:["Industrial Revolution",["Why Britain?","Agricultural Revolution","Steam engine","Textile inventions","Factory system","Urbanisation","Working class","Social impact"]],
-italy:["Unification of Italy",["Congress of Vienna","Mazzini","Cavour","Garibaldi","Victor Emmanuel II","Wars of unification","Rome 1870"]],
-germany:["Unification of Germany",["German Confederation","Prussia","Bismarck","Blood and Iron","Danish/Austro-Prussian/Franco-Prussian Wars","German Empire 1871"]],
-imperialism:["Imperialism",["Economic motives","Political motives","Scramble for Africa","British/French empires","Imperialism in Asia","Consequences"]],
-ww1:["World War I",["Long-term causes","Nationalism and imperialism","Alliance system","Immediate cause","Western/Eastern Fronts","Trench warfare","USA enters","Russian exit","Armistice","Treaty of Versailles","Consequences"]],
-russia:["Russian Revolution",["Tsarist Russia","1905 Revolution","World War I","February Revolution","Provisional Government","October Revolution","Lenin","Civil War","Consequences"]],
-ww2:["World War II",["Treaty of Versailles and aftermath","Rise of fascism and Nazism","Appeasement","Invasion of Poland","Axis and Allies","Fall of France","Battle of Britain","Operation Barbarossa","Pearl Harbor","Holocaust","D-Day","Atomic bombs","UN and consequences"]],
-coldwar:["Cold War",["Origins","Truman Doctrine","Marshall Plan","NATO","Warsaw Pact","Berlin","Korean War","Cuban Missile Crisis","Vietnam","Détente","Collapse of USSR"]]
-},
-india:{
-europeans:["Europeans in India",["Portuguese arrival","Dutch","English East India Company","French","Carnatic rivalry","British victory"]],
-company:["Company Rule",["Plassey 1757","Buxar 1764","Diwani 1765","Dual government","Permanent Settlement","Expansion of Company power"]],
-expansion:["British Expansion",["Subsidiary Alliance","Lord Wellesley","Doctrine of Lapse","Dalhousie","Annexations","Economic impact"]],
-"1857":["Revolt of 1857",["Political causes","Economic causes","Military causes","Social and religious concerns","Immediate cause","Delhi, Kanpur, Lucknow, Jhansi","Leaders","Reasons for failure","Queen's Proclamation","Consequences"]],
-reform:["Socio-Religious Reform Movements",["Raja Rammohan Roy","Brahmo Samaj","Young Bengal","Ishwar Chandra Vidyasagar","Arya Samaj","Swami Vivekananda","Aligarh Movement","Impact"]],
-congress:["Indian National Congress",["Foundation 1885","A.O. Hume","Early leaders","Moderate phase","Extremist phase","Partition of Bengal","Surat Split 1907","Lucknow Pact"]],
-swadeshi:["Swadeshi Movement",["Partition of Bengal 1905","Boycott","Swadeshi","National education","Role of students and women","Repression","Impact"]],
-gandhi:["Gandhian Era",["Gandhi's return","Satyagraha","Champaran","Kheda","Ahmedabad Mill Strike","Rowlatt Satyagraha","Jallianwala Bagh"]],
-noncoop:["Non-Cooperation Movement",["Background","Khilafat","Programme","1920 Congress decision","Spread","Chauri Chaura","Withdrawal","Significance"]],
-civil:["Civil Disobedience Movement",["Simon Commission background","Lahore Congress","Salt March","Dandi","Spread","Gandhi-Irwin Pact","Round Table Conferences","Poona Pact","Impact"]],
-quit:["Quit India Movement",["Cripps Mission","Bombay session 1942","Do or Die","Arrests","Underground activities","Parallel governments","Impact"]],
-revolutionary:["Revolutionary Movement",["Anushilan and Jugantar","Hindustan Republican Association","Bhagat Singh","HSRA","Kakori","INA","Subhas Chandra Bose","Impact"]],
-partition:["Independence & Partition",["Cabinet Mission","Direct Action","Mountbatten Plan","Indian Independence Act","15 August 1947","Partition","Immediate consequences","Constitutional transition"]]
-}};
 
-function go(id,btn){
- document.querySelectorAll('.page').forEach(x=>x.classList.remove('show'));
- document.getElementById(id).classList.add('show');
- document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));
- if(btn)btn.classList.add('active');
- if(id==='quiz')startQuiz(); scrollTo(0,0);
+const DATEINFO={
+"Ancient India Overview":{"Meaning & Period":"c. 700000 BCE – c. 750 CE","Sources":"প্রাগৈতিহাসিক যুগ থেকে ঐতিহাসিক যুগ","Major Phases":"c. 700000 BCE – c. 750 CE"},
+"Prehistoric India":{"Palaeolithic Age":"c. 700000 BCE – 10000 BCE","Mesolithic Age":"c. 10000 BCE – 6000 BCE","Neolithic Age":"c. 7000 BCE থেকে বিভিন্ন অঞ্চলে","Chalcolithic Age":"c. 3000 BCE – 700 BCE"},
+"Indus Valley Civilization":{"Discovery":"1921–1922","Major Sites":"c. 2600–1900 BCE","Town Planning":"c. 2600–1900 BCE","Drainage System":"c. 2600–1900 BCE","Economy":"c. 2600–1900 BCE","Script":"c. 2600–1900 BCE","Decline":"c. 1900 BCE-এর পর"},
+"Vedic Civilization":{"Early Vedic":"c. 1500–1000 BCE","Later Vedic":"c. 1000–600 BCE","Political Life":"c. 1500–600 BCE","Society":"c. 1500–600 BCE","Religion":"c. 1500–600 BCE"},
+"Mahajanapadas":{"Sixteen States":"c. 600 BCE","Rise of Magadha":"6th–4th century BCE","Bimbisara":"c. 544–492 BCE","Ajatashatru":"c. 492–460 BCE"},
+"Jainism":{"Mahavira":"c. 599–527 BCE (traditional chronology)","Triratna":"6th century BCE","Five Vows":"6th century BCE","Impact":"6th century BCE থেকে"},
+"Buddhism":{"Life of Buddha":"6th–5th century BCE","Four Noble Truths":"6th–5th century BCE","Eightfold Path":"6th–5th century BCE","Spread":"3rd century BCE থেকে"},
+"Mauryan Empire":{"Chandragupta Maurya":"c. 322–297 BCE","Chanakya":"4th century BCE","Ashoka":"c. 268–232 BCE","Kalinga War":"c. 261 BCE","Dhamma":"3rd century BCE","Administration":"c. 322–185 BCE"},
+"Gupta Empire":{"Rise":"c. 320 CE","Samudragupta":"c. 335–375 CE","Chandragupta II":"c. 375–415 CE","Golden Age":"4th–5th century CE","Art & Literature":"4th–5th century CE"},
+"European Expansion in India":{"Portuguese Arrival":"1498","Dutch & French":"17th–18th century","East India Company":"1600 থেকে"},
+"British Expansion":{"Battle of Plassey":"1757","Battle of Buxar":"1764","Subsidiary Alliance":"1798 থেকে","Doctrine of Lapse":"1848–1856"},
+"Revolt of 1857":{"Causes":"1857","Beginning":"10 May 1857","Leaders":"1857–1858","Results":"1858"},
+"Indian National Congress":{"Foundation":"1885","Moderates":"1885–1905","Extremists":"1905–1917"},
+"Swadeshi Movement":{"Partition of Bengal":"1905","Boycott":"1905–1908","National Education":"1905 থেকে"},
+"Gandhian Era":{"Non-Cooperation":"1920–1922","Civil Disobedience":"1930–1934","Salt March":"12 March–6 April 1930","Quit India":"8 August 1942"},
+"Independence & Partition":{"Cabinet Mission":"1946","Mountbatten Plan":"3 June 1947","Independence":"15 August 1947","Partition":"1947"},
+"Ancient Europe":{"Greek Civilization":"c. 800–146 BCE","Roman Republic":"509–27 BCE","Roman Empire":"27 BCE–476 CE (West)","Fall of Rome":"476 CE"},
+"Medieval Europe":{"Feudalism":"c. 9th–15th century","Church":"Middle Ages","Crusades":"1096–1291","Change":"11th–15th century"},
+"Renaissance & Reformation":{"Renaissance":"c. 14th–16th century","Humanism":"14th–16th century","Martin Luther":"1517","Results":"16th century"},
+"Age of Discoveries":{"Causes":"15th–17th century","Columbus":"1492","Vasco da Gama":"1498","Consequences":"15th century থেকে"},
+"French Revolution":{"Causes":"1780s","1789":"14 July 1789","Rights of Man":"August 1789","Napoleon":"1799–1815"},
+"Industrial Revolution":{"Origins":"c. 1760 থেকে","Factories":"18th–19th century","Social Change":"18th–19th century","Global Impact":"19th century থেকে"},
+"World War I":{"Causes":"1914-এর পূর্ববর্তী দশক","Outbreak":"28 July 1914","Trench Warfare":"1914–1918","End":"11 November 1918"},
+"Interwar Europe":{"Versailles":"28 June 1919","Economic Crisis":"1929 থেকে","Fascism":"1920s–1930s"},
+"World War II":{"Causes":"1930s","Outbreak":"1 September 1939","Major Fronts":"1939–1945","Holocaust":"1933–1945","End":"1945"},
+"Cold War & Modern Europe":{"Cold War":"c. 1947–1991","European Integration":"1951 থেকে","Berlin Wall":"9 November 1989","Modern Europe":"1991 থেকে"}
+};
+function longAnswer(x){
+ let date=(DATEINFO[currentSub]&&DATEINFO[currentSub][x[0]])||"প্রাসঙ্গিক ঐতিহাসিক সময়কাল";
+ return `<div class="answer">
+ <div class="notice"><b>📅 গুরুত্বপূর্ণ সাল/সময়:</b> ${date}</div>
+ <h2>১০ মার্কের উত্তর: ${x[0]}</h2>
+ <h3>১. ভূমিকা</h3><p>${currentSub} বিষয়টি ইতিহাসের একটি গুরুত্বপূর্ণ অধ্যায়। ${x[0]} বোঝার জন্য সমসাময়িক রাজনৈতিক, সামাজিক, অর্থনৈতিক ও সাংস্কৃতিক পরিস্থিতি বিবেচনা করা জরুরি।</p>
+ <h3>২. মূল আলোচনা ও পটভূমি</h3><p>${x[1]}</p>
+ <h3>৩. কারণ ও প্রেক্ষাপট</h3><p>এই বিষয়ের পেছনে একাধিক দীর্ঘমেয়াদি কারণ কাজ করেছে—সময়ের রাজনৈতিক পরিবর্তন, অর্থনৈতিক স্বার্থ, সামাজিক গঠন এবং সমসাময়িক চিন্তাধারা। এগুলির পারস্পরিক সম্পর্কই ঘটনাটিকে ঐতিহাসিকভাবে গুরুত্বপূর্ণ করে তোলে।</p>
+ <h3>৪. প্রধান বৈশিষ্ট্য ও গুরুত্বপূর্ণ দিক</h3><ul>
+ <li>সময়ের সঙ্গে এই বিষয়ে উল্লেখযোগ্য পরিবর্তন ও বিকাশ দেখা যায়।</li>
+ <li>রাজনীতি, সমাজ, অর্থনীতি ও সংস্কৃতির উপর এর প্রত্যক্ষ বা পরোক্ষ প্রভাব ছিল।</li>
+ <li>সমসাময়িক ব্যক্তি, প্রতিষ্ঠান ও রাষ্ট্রগুলির ভূমিকা ঘটনাটির গতিপথ নির্ধারণ করে।</li>
+ <li>উপরের মূল তথ্যটি পরীক্ষায় সংক্ষিপ্ত পরিচয়ের পরে বিস্তারিতভাবে লিখতে হবে: <b>${x[1]}</b></li>
+ </ul>
+ <h3>৫. ফলাফল ও প্রভাব</h3><p>এর তাৎক্ষণিক ফলের পাশাপাশি দীর্ঘমেয়াদি প্রভাবও গুরুত্বপূর্ণ। পরবর্তী রাজনৈতিক ব্যবস্থা, সামাজিক পরিবর্তন, অর্থনৈতিক সম্পর্ক এবং ঐতিহাসিক ধারার উপর এর প্রভাব পড়ে। অনেক ক্ষেত্রে এই পরিবর্তন পরবর্তী যুগের নতুন ঘটনা ও আন্দোলনের ভিত্তি তৈরি করে।</p>
+ <h3>৬. ঐতিহাসিক গুরুত্ব</h3><p>${x[0]} কেবল একটি বিচ্ছিন্ন ঘটনা নয়; এটি বৃহত্তর ঐতিহাসিক পরিবর্তনের অংশ। ${currentSub} অধ্যায়ের অন্যান্য ঘটনাগুলির সঙ্গে এর সম্পর্ক বুঝলে বিষয়টি আরও পরিষ্কার হয়।</p>
+ <h3>৭. উপসংহার</h3><p>সুতরাং, <b>${x[0]}</b>—এর সাল/সময় <b>${date}</b>—মনে রেখে কারণ, প্রধান ঘটনা, বৈশিষ্ট্য, ফলাফল ও গুরুত্ব ধারাবাহিকভাবে লিখলে এটি পূর্ণাঙ্গ ১০ মার্কের উত্তর হিসেবে উপস্থাপন করা যায়।</p>
+ <div class="notice">✍️ <b>Exam Writing Tip:</b> ভূমিকা → সাল → পটভূমি/কারণ → মূল ঘটনা → ফলাফল → ঐতিহাসিক গুরুত্ব → উপসংহার এই ক্রমে লিখুন।</div>
+ </div>`;
 }
-let lastGroup='euro';
-function openTopic(group,key){
- lastGroup=group; const t=topics[group][key];
- document.querySelectorAll('.page').forEach(x=>x.classList.remove('show'));
- document.getElementById('topic').classList.add('show');
- let steps=t[1].map((x,i)=>`<div class="step" onclick="showLesson(${i})"><strong>Step ${i+1}</strong>${x}</div>`).join('');
- document.getElementById('topicContent').innerHTML=`<h2>${t[0]}</h2><p>প্রথমে একটি Step নির্বাচন করুন। প্রতিটি Step-এ এখন সঠিক উত্তর, কারণ, গুরুত্বপূর্ণ তথ্য ও পরীক্ষামুখী ব্যাখ্যা থাকবে।</p><div class="subgrid">${steps}</div><div id="lesson" class="lesson"><h3>Step-by-Step Learning</h3><p>উপরের যেকোনো Step-এ ক্লিক করুন।</p></div>`;
- window.currentTopic=t;
-}
-const stepDetails={
-"Renaissance":[
-["Background & Causes","The Renaissance emerged from the revival of classical Greek and Roman learning, the growth of wealthy Italian city-states, trade, and patronage. The fall of Constantinople also helped scholars and manuscripts move westward."],
-["Humanism","Humanism placed greater emphasis on human potential, classical texts, education and critical study. Petrarch is often called the father of Renaissance humanism."],
-["Art & Literature","Leonardo da Vinci, Michelangelo and Raphael transformed art through realism, perspective and study of human anatomy. Machiavelli and other writers expanded Renaissance literature and political thought."],
-["Italian City-States","Florence, Venice and other city-states became important centres of commerce, banking, art and learning. Powerful families such as the Medici supported artists and scholars."],
-["Spread to Northern Europe","Renaissance ideas spread to France, England, the Low Countries and Germany. Northern Renaissance thinkers often connected humanism with Christian reform."],
-["Impact on Europe","The Renaissance encouraged secular learning, individualism, scientific curiosity, new artistic methods and critical scholarship, contributing to the transition toward early modern Europe."]
-],
-"Reformation":[
-["Causes","Criticism of Church abuses, the sale of indulgences, demands for reform, political interests and the spread of printing created conditions for religious change."],
-["Martin Luther","In 1517 Martin Luther challenged the sale of indulgences. His teachings emphasized faith and scripture and helped begin the Protestant Reformation."],
-["Calvinism","John Calvin developed a major Protestant tradition centred on scripture, discipline and the doctrine of predestination. Geneva became an important centre."],
-["Church of England","Henry VIII broke with papal authority and established royal control over the English Church, creating a distinct English Reformation."],
-["Counter-Reformation","The Catholic Church responded through the Council of Trent, reforms within the Church and new religious orders such as the Jesuits."],
-["Results","Europe experienced religious division, wars and political changes. Protestant churches expanded, while Catholic reform strengthened Catholic institutions."]
-],
-"Geographical Discoveries":[
-["Causes","European states sought new trade routes, valuable goods, Christian missionary opportunities and political prestige. Improvements in ships, navigation and cartography made long voyages easier."],
-["Portuguese Exploration","Portugal explored the African coast and the Atlantic. Bartolomeu Dias rounded the Cape of Good Hope, opening the route toward the Indian Ocean."],
-["Spanish Exploration","Spain sponsored westward voyages. Columbus reached the Americas in 1492, opening sustained European contact and conquest in the Americas."],
-["Columbus","Christopher Columbus sailed west under the Spanish crown in 1492, believing he could reach Asia. His voyage instead connected Europe with the Americas."],
-["Vasco da Gama","Vasco da Gama reached India by sea in 1498 after rounding the Cape of Good Hope, strengthening Portuguese participation in Indian Ocean trade."],
-["Consequences","Global trade networks expanded, European empires grew, and the Columbian Exchange transformed diets, populations and environments. Exploration also brought conquest, enslavement and severe disruption to indigenous societies."]
-],
-"Scientific Revolution":[
-["Copernicus","Nicolaus Copernicus proposed a heliocentric model placing the Sun at the centre of the planetary system."],
-["Kepler","Johannes Kepler used astronomical observations to formulate laws describing planetary motion, including elliptical orbits."],
-["Galileo","Galileo used telescopic observations to support new astronomy and emphasized observation and mathematical reasoning."],
-["Newton","Isaac Newton formulated laws of motion and universal gravitation, providing a powerful mathematical framework for explaining physical phenomena."],
-["Scientific Method","Observation, measurement, experimentation, mathematical analysis and systematic testing became increasingly important in scientific investigation."],
-["Impact","The Scientific Revolution changed ideas about nature and knowledge and helped establish foundations for modern science."]
-],
-"Enlightenment":[
-["Background","Enlightenment thinkers questioned traditional authority and emphasized reason, evidence, natural rights and progress."],
-["John Locke","Locke argued that people possess natural rights and that government depends on consent. His ideas influenced later liberal political thought."],
-["Montesquieu","Montesquieu advocated separation of powers and checks among branches of government."],
-["Voltaire","Voltaire defended freedom of thought and criticism of intolerance and arbitrary authority."],
-["Rousseau","Rousseau developed ideas of popular sovereignty and the social contract, arguing that legitimate political authority rests with the people."],
-["Impact","Enlightenment ideas influenced constitutional government, political reform and revolutionary movements in Europe and the Atlantic world."]
-],
-"French Revolution":[
-["Ancien Régime","France was divided into three estates. Privileges of the clergy and nobility contrasted with the burdens carried largely by the Third Estate."],
-["Causes","Financial crisis, social inequality, food shortages, political conflict and Enlightenment ideas contributed to revolutionary conditions."],
-["1789 Events","The Estates-General met in 1789, the Third Estate formed the National Assembly, and the Bastille was stormed on 14 July."],
-["Republic","The monarchy was overthrown and France became a republic in 1792. Louis XVI was executed in 1793."],
-["Reign of Terror","The Committee of Public Safety and Robespierre led a period of emergency revolutionary government and executions during 1793–94."],
-["Napoleon","Napoleon rose to power after the revolutionary period, becoming First Consul and later emperor. He introduced reforms while expanding French power."],
-["Consequences","The Revolution ended the old political order in France, spread ideas of citizenship and equality, and influenced nationalism and politics across Europe."]
-],
-"Industrial Revolution":[
-["Why Britain?","Britain had coal and iron resources, capital, markets, commercial networks, agricultural change and political conditions favourable to investment."],
-["Agricultural Revolution","Changes in farming, enclosure and improved techniques increased productivity and helped support population growth and labour mobility."],
-["Steam Engine","Improved steam engines, especially associated with James Watt, became important in factories, mining and transport."],
-["Textile Inventions","Spinning and weaving machinery increased textile production and accelerated factory-based manufacturing."],
-["Factory System","Production moved toward centralized factories with machinery, wage labour and greater division of work."],
-["Urbanisation","People moved toward industrial towns, creating rapid urban growth and new social problems."],
-["Working Class","Industrial workers often faced long hours, low wages and unsafe conditions. Trade unions and labour movements developed in response."],
-["Social Impact","Industrialisation increased production and wealth but also transformed class relations, cities, working life and the environment."]
-],
-"Unification of Italy":[
-["Congress of Vienna","After 1815 Italy remained divided into several states, with Austrian influence in northern and central Italy."],
-["Mazzini","Giuseppe Mazzini promoted Italian nationalism and republican ideas through Young Italy."],
-["Cavour","Count Cavour, prime minister of Piedmont-Sardinia, used diplomacy, economic modernization and alliances to advance unification."],
-["Garibaldi","Giuseppe Garibaldi and his Red Shirts conquered Sicily and Naples and transferred their gains to Victor Emmanuel II."],
-["Victor Emmanuel II","The king of Piedmont-Sardinia became king of unified Italy in 1861."],
-["Wars of Unification","Conflicts involving Austria and France, together with diplomacy and popular movements, helped expand the Italian kingdom."],
-["Rome 1870","Rome was annexed in 1870 after French protection was withdrawn during the Franco-Prussian War, completing political unification."]
-],
-"Unification of Germany":[
-["German Confederation","After 1815 German lands remained divided. Prussia and Austria competed for leadership."],
-["Prussia","Prussia became the leading German state and developed strong military and economic institutions."],
-["Bismarck","Otto von Bismarck pursued German unification through diplomacy, military strength and a policy famously summarized as 'Blood and Iron'."],
-["Wars","The Danish War, Austro-Prussian War and Franco-Prussian War helped Prussia remove rivals and rally German states."],
-["German Empire","In 1871 the German Empire was proclaimed at Versailles, with King Wilhelm I of Prussia as German Emperor."],
-],
-"Imperialism":[
-["Economic Motives","Industrial powers sought raw materials, markets, investment opportunities and strategic trade routes."],
-["Political Motives","National prestige, military strategy, nationalism and competition among European states encouraged imperial expansion."],
-["Scramble for Africa","European powers rapidly occupied African territories in the late nineteenth century. The Berlin Conference helped regulate European competition."],
-["Britain & France","Britain and France built large overseas empires, while Germany, Belgium, Italy and others also pursued colonial expansion."],
-["Asia","European powers expanded influence in South and Southeast Asia and competed with other states for ports, trade and territory."],
-["Consequences","Imperialism reshaped economies and borders, intensified global inequality and produced resistance, while also creating long-term political and cultural consequences."]
-],
-"World War I":[
-["Long-term Causes","Militarism, alliance rivalry, imperial competition and nationalism increased tension among European powers."],
-["Nationalism & Imperialism","Nationalist disputes in the Balkans and competition for colonies and influence made international relations unstable."],
-["Alliance System","The main blocs developed around the Triple Alliance and Triple Entente, increasing the risk that a regional conflict would become wider."],
-["Immediate Cause","Archduke Franz Ferdinand of Austria-Hungary was assassinated at Sarajevo on 28 June 1914."],
-["Western & Eastern Fronts","Germany fought France and Britain on the Western Front while major fighting also occurred against Russia on the Eastern Front."],
-["Trench Warfare","On the Western Front, fortified trenches and machine guns produced stalemate, heavy casualties and prolonged battles."],
-["USA Enters","The United States entered the war in 1917, strengthening the Allied side."],
-["Russian Exit","The Russian Revolution led to Russia's withdrawal from the war and the Treaty of Brest-Litovsk in 1918."],
-["Armistice","Germany agreed to an armistice on 11 November 1918, ending the fighting."],
-["Treaty of Versailles","The 1919 treaty imposed major terms on Germany and redrew parts of Europe."],
-["Consequences","Empires collapsed, borders changed, millions died, and the League of Nations was established. The postwar settlement also left tensions that contributed to later conflict."]
-],
-"Russian Revolution":[
-["Tsarist Russia","Russia was an autocratic empire marked by social inequality, limited political representation and major rural poverty."],
-["1905 Revolution","Defeat in the Russo-Japanese War and the Bloody Sunday crisis triggered protests and limited reforms."],
-["World War I","Military losses, shortages, inflation and social disruption during World War I weakened the Tsarist regime."],
-["February Revolution","Mass protests and strikes in Petrograd led to the abdication of Tsar Nicholas II in 1917."],
-["Provisional Government","A provisional government replaced the monarchy but continued the war and faced growing opposition."],
-["October Revolution","The Bolsheviks led by Lenin seized key institutions in Petrograd in October 1917."],
-["Civil War","A civil war followed between the Bolshevik Red Army and various anti-Bolshevik forces."],
-["Consequences","The revolution ended Tsarist rule and eventually produced the Soviet state, transforming Russian politics and international relations."]
-],
-"World War II":[
-["Treaty & Aftermath","The unresolved tensions of the Versailles settlement, economic crises and political instability contributed to the rise of extremist movements."],
-["Fascism & Nazism","Fascist and Nazi movements promoted authoritarianism, militarism and aggressive nationalism. Hitler became German chancellor in 1933."],
-["Appeasement","Britain and France initially sought to avoid war through concessions, including the Munich settlement of 1938."],
-["Invasion of Poland","Germany invaded Poland on 1 September 1939. Britain and France declared war, marking the beginning of World War II in Europe."],
-["Axis & Allies","The Axis powers included Germany, Italy and Japan; the Allied coalition included Britain, the Soviet Union, the United States, China and others."],
-["Fall of France","Germany defeated France in 1940, while Britain continued the war from the British Isles."],
-["Battle of Britain","The German Luftwaffe attempted to gain air superiority over Britain in 1940 but failed to force Britain out of the war."],
-["Operation Barbarossa","Germany invaded the Soviet Union in June 1941, opening a massive Eastern Front."],
-["Pearl Harbor","Japan attacked Pearl Harbor on 7 December 1941, bringing the United States directly into the war."],
-["Holocaust","Nazi Germany and its collaborators systematically murdered approximately six million Jews, alongside the persecution and murder of many other groups."],
-["D-Day","Allied forces landed in Normandy on 6 June 1944, opening a major Western Front in occupied France."],
-["Atomic Bombs","The United States used atomic bombs against Hiroshima and Nagasaki in August 1945. Japan surrendered soon afterward."],
-["UN & Consequences","The war ended in 1945 with enormous human and material losses, the defeat of the Axis powers, the creation of the United Nations and the emergence of a US–Soviet rivalry."]
-],
-"Cold War":[
-["Origins","After World War II, ideological and strategic rivalry developed between the United States and Soviet Union."],
-["Truman Doctrine","The United States announced a policy of supporting states resisting communist pressure."],
-["Marshall Plan","The US European Recovery Program provided economic assistance to help rebuild Western Europe."],
-["NATO","The North Atlantic Treaty Organization was founded in 1949 as a collective defence alliance."],
-["Warsaw Pact","The Soviet-led Warsaw Pact was created in 1955 as a military alliance of Eastern European communist states."],
-["Berlin","Berlin became a major Cold War flashpoint, including the Berlin Blockade and later the Berlin Wall."],
-["Korean War","The Korean War from 1950–53 became a major armed conflict within the wider Cold War."],
-["Cuban Missile Crisis","In 1962 the US and USSR came close to nuclear confrontation over Soviet missiles in Cuba."],
-["Vietnam","The Vietnam War became another major Cold War conflict involving the US and communist forces."],
-["Détente","Periods of reduced tension led to arms-control negotiations and diplomatic engagement."],
-["End","Political and economic crises in the Soviet bloc, reform under Mikhail Gorbachev and the collapse of communist regimes led to the end of the Cold War."]
-],
-"Europeans in India":[
-["Portuguese Arrival","Vasco da Gama reached Calicut in 1498, beginning a new phase of direct Portuguese maritime trade with India."],
-["Dutch","The Dutch East India Company entered Indian Ocean trade and established trading posts, competing with other European powers."],
-["English East India Company","The English East India Company was chartered in 1600 and gradually established factories and political influence."],
-["French","The French East India Company developed settlements and competed with the British, especially in the Carnatic."],
-["Carnatic Rivalry","The Carnatic Wars reflected Anglo-French competition in eighteenth-century South India."],
-["British Victory","British military and political successes weakened French influence and helped the East India Company expand its power."]
-],
-"Company Rule":[
-["Plassey 1757","The Battle of Plassey enabled the East India Company to gain decisive political influence in Bengal."],
-["Buxar 1764","The Company's victory at Buxar strengthened its position against the Mughal emperor and regional rulers."],
-["Diwani 1765","The Company obtained the Diwani rights to collect revenue in Bengal, Bihar and Orissa."],
-["Dual Government","Robert Clive introduced a system separating revenue collection and administration, which created serious problems in Bengal."],
-["Permanent Settlement","Lord Cornwallis introduced the Permanent Settlement in Bengal in 1793, fixing land revenue and recognizing zamindars as revenue collectors/landholders."],
-["Expansion","Through wars, treaties and administrative policies, Company rule expanded across large parts of India."]
-],
-"British Expansion":[
-["Subsidiary Alliance","Lord Wellesley's system required Indian rulers accepting British protection to maintain British troops and restrict independent diplomacy."],
-["Lord Wellesley","Wellesley used alliances and military intervention to expand Company influence at the turn of the nineteenth century."],
-["Doctrine of Lapse","Under Dalhousie, states without an accepted natural heir could be annexed under the Company's policy."],
-["Dalhousie","Lord Dalhousie promoted territorial expansion and administrative and transport projects, including railways and telegraph development."],
-["Annexations","Punjab, Awadh and several other territories were brought under British control through different methods."],
-["Economic Impact","Expansion strengthened colonial control but also altered land systems, trade, taxation and local economies."]
-],
-"Revolt of 1857":[
-["Political Causes","Annexations, the Doctrine of Lapse and the weakening of traditional rulers created resentment."],
-["Economic Causes","Land revenue demands, changes in property relations and the decline of some traditional industries contributed to discontent."],
-["Military Causes","Indian sepoys faced grievances over pay, service conditions, promotion and overseas service concerns."],
-["Social & Religious Concerns","Many feared interference with established social and religious practices, whether real or perceived."],
-["Immediate Cause","The controversy over cartridges believed to be greased with animal fat became an immediate spark for the uprising."],
-["Major Centres","Delhi, Kanpur, Lucknow, Jhansi and parts of central and northern India became important centres of resistance."],
-["Leaders","Bahadur Shah II, Nana Sahib, Tantia Tope, Rani Lakshmibai, Kunwar Singh and Begum Hazrat Mahal were among prominent leaders."],
-["Failure","The revolt lacked unified leadership and coordination, remained regionally concentrated and faced stronger British resources."],
-["Queen's Proclamation","The Government of India Act 1858 ended Company rule and transferred authority to the British Crown."],
-["Consequences","The British reorganized the army and administration and adopted new policies toward Indian princes and communities."]
-],
-"Socio-Religious Reform Movements":[
-["Raja Rammohan Roy","Rammohan Roy promoted social reform, modern education and religious debate and campaigned against practices such as sati."],
-["Brahmo Samaj","Founded in 1828, it promoted monotheism and social and religious reform."],
-["Young Bengal","Influenced by Henry Vivian Derozio, the movement encouraged rational inquiry and criticism of social orthodoxy."],
-["Ishwar Chandra Vidyasagar","Vidyasagar supported widow remarriage, women's education and social reform."],
-["Arya Samaj","Founded by Swami Dayanand Saraswati in 1875, it emphasized a return to the Vedas and promoted social reform and education."],
-["Swami Vivekananda","Vivekananda emphasized practical Vedanta, service and social uplift and founded the Ramakrishna Mission."],
-["Aligarh Movement","Sir Syed Ahmad Khan promoted modern education among Indian Muslims, with the Muhammadan Anglo-Oriental College at Aligarh."],
-["Impact","Reform movements encouraged education, public debate and challenges to social practices, contributing to new forms of social and political consciousness."]
-],
-"Indian National Congress":[
-["Foundation 1885","The Indian National Congress was founded in 1885. Its first session was held in Bombay."],
-["A.O. Hume","Allan Octavian Hume played a major role in organizing the early Congress."],
-["Early Leaders","Dadabhai Naoroji, Surendranath Banerjee, Pherozeshah Mehta and others helped develop early nationalist politics."],
-["Moderate Phase","Moderates used petitions, resolutions and constitutional methods and demanded administrative and economic reforms."],
-["Extremist Phase","Leaders such as Bal Gangadhar Tilak, Lala Lajpat Rai and Bipin Chandra Pal promoted stronger political action and mass mobilization."],
-["Partition of Bengal","The 1905 partition of Bengal intensified nationalist politics and helped stimulate the Swadeshi movement."],
-["Surat Split 1907","Congress divisions between moderates and extremists became especially visible at Surat in 1907."],
-["Lucknow Pact","The 1916 Lucknow Pact marked cooperation between the Congress and Muslim League on constitutional demands."]
-],
-"Swadeshi Movement":[
-["Partition of Bengal 1905","Lord Curzon's partition of Bengal came into effect in 1905 and became a major focus of nationalist protest."],
-["Boycott","Nationalists promoted boycott of foreign goods as a form of economic and political resistance."],
-["Swadeshi","The movement encouraged the use and production of indigenous goods."],
-["National Education","New educational institutions and programmes were developed to promote national education."],
-["Students & Women","Students participated actively, while women also joined boycotts, picketing and other forms of mobilisation."],
-["Impact","The movement broadened nationalist politics, encouraged indigenous enterprise and helped develop new forms of political mobilisation."]
-],
-"Gandhian Era":[
-["Gandhi's Return","Mahatma Gandhi returned to India in 1915 and gradually emerged as a major leader of the national movement."],
-["Satyagraha","Gandhi promoted non-violent resistance based on truth, civil resistance and disciplined mass participation."],
-["Champaran","In 1917 Gandhi supported indigo cultivators in Champaran, one of his first major satyagraha campaigns in India."],
-["Kheda","In 1918 Gandhi supported peasants in Kheda seeking relief from land revenue during crop failure."],
-["Ahmedabad Mill Strike","Gandhi intervened in a labour dispute in Ahmedabad in 1918 and used fasting as part of his method."],
-["Rowlatt Satyagraha","Gandhi opposed the Rowlatt Act of 1919, which extended extraordinary powers of detention."],
-["Jallianwala Bagh","The 1919 massacre at Amritsar intensified opposition to British rule and changed the political climate."]
-],
-"Non-Cooperation Movement":[
-["Background","Post-war grievances, the Rowlatt Act and Jallianwala Bagh created widespread anger. The Khilafat issue also encouraged cooperation."],
-["Khilafat","The Khilafat movement sought to defend the position of the Ottoman Caliph and joined with Congress-led non-cooperation for a period."],
-["Programme","People were encouraged to surrender titles, boycott government institutions and promote national education and khadi."],
-["1920 Decision","The Congress adopted the non-cooperation programme in 1920 under Gandhi's leadership."],
-["Spread","Students, lawyers, workers, peasants and sections of traders participated in different regions."],
-["Chauri Chaura","Violence at Chauri Chaura in 1922 led Gandhi to withdraw the movement."],
-["Significance","The movement brought mass participation into national politics and made non-violent resistance a central strategy."]
-],
-"Civil Disobedience Movement":[
-["Simon Commission Background","The all-white Simon Commission faced widespread Indian protest and strengthened demands for self-government."],
-["Lahore Congress","At the 1929 Lahore session, Congress declared Purna Swaraj as its goal."],
-["Salt March","Gandhi marched from Sabarmati to Dandi in 1930 to challenge the salt laws."],
-["Dandi","The breaking of the salt law at Dandi became a powerful symbol of civil disobedience."],
-["Spread","The movement spread through boycotts, refusal of taxes in some areas, forest protests and other forms of resistance."],
-["Gandhi-Irwin Pact","The 1931 pact led Gandhi to attend the Second Round Table Conference and temporarily suspended civil disobedience."],
-["Round Table Conferences","The conferences in London discussed constitutional reforms but failed to resolve major political disagreements."],
-["Poona Pact","In 1932 Gandhi and B.R. Ambedkar reached the Poona Pact concerning representation for the Depressed Classes."]
-],
-"Quit India Movement":[
-["Cripps Mission","The failure of the Cripps Mission in 1942 increased Congress dissatisfaction with British wartime policy."],
-["Bombay Session","The All India Congress Committee adopted the Quit India resolution in Bombay in August 1942."],
-["Do or Die","Gandhi gave the famous call for 'Do or Die' as the movement demanded an end to British rule."],
-["Arrests","Top Congress leaders were arrested soon after the movement began, leading to spontaneous protests."],
-["Underground Activities","Underground networks, secret broadcasts and local resistance continued despite repression."],
-["Parallel Governments","Parallel administrations appeared in places such as Ballia, Tamluk and Satara."],
-["Impact","Although suppressed, the movement demonstrated the depth of mass opposition and strengthened the pressure for British withdrawal."]
-],
-"Revolutionary Movement":[
-["Anushilan & Jugantar","Revolutionary groups in Bengal promoted militant resistance to colonial rule."],
-["HRA","The Hindustan Republican Association organized revolutionary activities in northern India."],
-["Bhagat Singh","Bhagat Singh became a major revolutionary figure and used political action and writing to challenge colonial rule."],
-["HSRA","The Hindustan Socialist Republican Association developed a more explicitly socialist revolutionary programme."],
-["Kakori","The Kakori action of 1925 targeted government funds and became a major episode in revolutionary history."],
-["INA","The Indian National Army sought to fight British rule during World War II."],
-["Subhas Chandra Bose","Bose reorganized and led the INA in Southeast Asia and promoted armed struggle for independence."],
-["Impact","Revolutionary activities inspired sections of youth and contributed to the wider anti-colonial political climate."]
-],
-"Independence & Partition":[
-["Cabinet Mission","The 1946 Cabinet Mission proposed a constitutional framework intended to keep India united, but agreement broke down."],
-["Direct Action","Political conflict and communal violence intensified in 1946 and 1947."],
-["Mountbatten Plan","The 3 June 1947 plan accepted partition and set the process for transfer of power."],
-["Indian Independence Act","The British Parliament passed the Indian Independence Act in July 1947, creating India and Pakistan as dominions."],
-["15 August 1947","India became independent on 15 August 1947."],
-["Partition","British India was divided, producing one of the largest and most traumatic population movements in modern history."],
-["Consequences","Millions were displaced and communal violence caused immense loss of life. India began its independent constitutional transition."],
-["Constitutional Transition","India's Constituent Assembly continued constitution-making, and the Constitution came into force on 26 January 1950."]
-]};
 
-const ww1DetailedAnswers=[{"title":"Long-term Causes","desc":"প্রথম বিশ্বযুদ্ধের দীর্ঘমেয়াদি কারণ","items":[{"heading":"সামরিকতন্ত্র (Militarism)","text":"ইউরোপের শক্তিগুলি দ্রুত সেনাবাহিনী বৃদ্ধি ও আধুনিক অস্ত্র সংগ্রহ করতে থাকে। জার্মানি ও ব্রিটেনের মধ্যে নৌ-শক্তি বৃদ্ধির প্রতিযোগিতা বিশেষভাবে উত্তেজনা বাড়ায়।"},{"heading":"জোট ব্যবস্থা (Alliance System)","text":"ইউরোপ দুটি প্রতিদ্বন্দ্বী জোটে বিভক্ত হয়ে পড়ে। Triple Alliance ও Triple Entente-এর কারণে একটি দেশের সঙ্গে সংঘর্ষ হলে মিত্র দেশগুলিও যুদ্ধে জড়িয়ে পড়ার সম্ভাবনা তৈরি হয়।"},{"heading":"সাম্রাজ্যবাদ (Imperialism)","text":"আফ্রিকা ও এশিয়ায় উপনিবেশ, কাঁচামাল ও বাজার দখলকে কেন্দ্র করে ইউরোপীয় শক্তিগুলির প্রতিযোগিতা বৃদ্ধি পায়।"},{"heading":"জাতীয়তাবাদ (Nationalism)","text":"বিভিন্ন জাতি স্বাধীন রাষ্ট্র গঠনের দাবি করে। বলকান অঞ্চলে সার্ব, বসনিয়ান ও অন্যান্য জাতীয়তাবাদী আন্দোলন অস্ট্রিয়া-হাঙ্গেরির জন্য বড় সমস্যা সৃষ্টি করে।"},{"heading":"অর্থনৈতিক প্রতিযোগিতা","text":"শিল্পায়নের ফলে ইউরোপীয় শক্তিগুলির মধ্যে বাজার, বাণিজ্য ও সম্পদের নিয়ন্ত্রণ নিয়ে প্রতিযোগিতা তীব্র হয়।"}]},{"title":"Nationalism & Imperialism","desc":"জাতীয়তাবাদ ও সাম্রাজ্যবাদের ভূমিকা","items":[{"heading":"জাতীয়তাবাদের উত্থান","text":"ইউরোপের বিভিন্ন জাতিগোষ্ঠী নিজেদের স্বাধীন রাষ্ট্র চাইছিল। বিশেষ করে বলকান অঞ্চলে জাতীয়তাবাদী আন্দোলন অস্ট্রিয়া-হাঙ্গেরি ও অন্যান্য শক্তির সঙ্গে সংঘাত বাড়ায়।"},{"heading":"বলকান সংকট","text":"অটোমান সাম্রাজ্যের দুর্বলতার ফলে বলকানে ক্ষমতার শূন্যতা তৈরি হয়। সার্বিয়া ও অস্ট্রিয়া-হাঙ্গেরির স্বার্থের সংঘর্ষ উত্তেজনা বাড়ায়।"},{"heading":"সাম্রাজ্যবাদী প্রতিযোগিতা","text":"ব্রিটেন, ফ্রান্স ও জার্মানি উপনিবেশ ও বাজারের জন্য প্রতিযোগিতা করে। এতে পারস্পরিক সন্দেহ ও শত্রুতা বৃদ্ধি পায়।"},{"heading":"জার্মানি-ব্রিটেন প্রতিদ্বন্দ্বিতা","text":"জার্মানির অর্থনৈতিক ও নৌ-শক্তির উত্থান ব্রিটেনকে উদ্বিগ্ন করে তোলে।"}]},{"title":"Alliance System","desc":"ইউরোপের জোট ব্যবস্থা","items":[{"heading":"Triple Alliance","text":"জার্মানি, অস্ট্রিয়া-হাঙ্গেরি ও ইতালি Triple Alliance গঠন করে।"},{"heading":"Triple Entente","text":"ব্রিটেন, ফ্রান্স ও রাশিয়ার মধ্যে Triple Entente গড়ে ওঠে।"},{"heading":"জোটের সমস্যা","text":"জোটগুলি ইউরোপকে দুটি প্রতিদ্বন্দ্বী শিবিরে ভাগ করে। ফলে স্থানীয় সংঘর্ষ দ্রুত আন্তর্জাতিক যুদ্ধে পরিণত হওয়ার সম্ভাবনা তৈরি হয়।"},{"heading":"যুদ্ধের বিস্তার","text":"অস্ট্রিয়া-সার্বিয়া সংঘর্ষে রাশিয়া সার্বিয়ার পাশে এবং জার্মানি অস্ট্রিয়ার পাশে দাঁড়ায়; পরে অন্য শক্তিগুলিও যুদ্ধে যোগ দেয়।"}]},{"title":"Immediate Cause","desc":"যুদ্ধের তাৎক্ষণিক কারণ","items":[{"heading":"সারায়েভো হত্যাকাণ্ড","text":"১৯১৪ সালের ২৮ জুন অস্ট্রিয়া-হাঙ্গেরির যুবরাজ Archduke Franz Ferdinand ও তাঁর স্ত্রী Sophie-কে সারায়েভোতে হত্যা করা হয়।"},{"heading":"অস্ট্রিয়ার প্রতিক্রিয়া","text":"অস্ট্রিয়া-হাঙ্গেরি সার্বিয়াকে কঠোর ultimatum দেয় এবং ২৮ জুলাই ১৯১৪ সার্বিয়ার বিরুদ্ধে যুদ্ধ ঘোষণা করে।"},{"heading":"জোটের সক্রিয়তা","text":"রাশিয়া সার্বিয়াকে সমর্থন করে এবং জার্মানি অস্ট্রিয়া-হাঙ্গেরির পাশে দাঁড়ায়। দ্রুত ইউরোপের অন্যান্য শক্তিও যুদ্ধে জড়িয়ে পড়ে।"},{"heading":"ফল","text":"একটি স্থানীয় রাজনৈতিক সংকট কয়েক সপ্তাহের মধ্যে ইউরোপব্যাপী যুদ্ধে পরিণত হয়।"}]},{"title":"Western & Eastern Fronts","desc":"পশ্চিম ও পূর্ব রণাঙ্গন","items":[{"heading":"Western Front","text":"জার্মানি একদিকে ফ্রান্স ও ব্রিটেনের বিরুদ্ধে যুদ্ধ করে। এখানে দীর্ঘ পরিখা ও স্থবির যুদ্ধের সৃষ্টি হয়।"},{"heading":"Eastern Front","text":"জার্মানি ও অস্ট্রিয়া-হাঙ্গেরি রাশিয়ার বিরুদ্ধে যুদ্ধ করে। পশ্চিম ফ্রন্টের তুলনায় এখানে যুদ্ধক্ষেত্র ছিল অনেক বিস্তৃত ও চলমান।"},{"heading":"দুই ফ্রন্টের সমস্যা","text":"জার্মানিকে একই সময়ে পশ্চিম ও পূর্বে যুদ্ধ করতে হওয়ায় বিপুল সামরিক চাপ সৃষ্টি হয়।"},{"heading":"ফল","text":"দুই রণাঙ্গনে দীর্ঘ যুদ্ধ ইউরোপীয় দেশগুলির অর্থনীতি ও জনশক্তির ওপর প্রচণ্ড চাপ সৃষ্টি করে।"}]},{"title":"Trench Warfare","desc":"পরিখা যুদ্ধ ও তার কারণ","items":[{"heading":"পরিখা তৈরির কারণ","text":"মেশিনগান, ভারী কামান ও কাঁটাতারের কারণে খোলা মাঠে আক্রমণ অত্যন্ত বিপজ্জনক হয়ে ওঠে। তাই সৈন্যরা সুরক্ষার জন্য পরিখা তৈরি করে।"},{"heading":"স্থবির যুদ্ধ","text":"উভয় পক্ষের প্রতিরক্ষা শক্তিশালী হওয়ায় সামান্য ভূখণ্ড দখলের জন্যও বিপুল প্রাণহানি ঘটে।"},{"heading":"দৈনন্দিন দুর্ভোগ","text":"সৈন্যরা কাদা, ঠান্ডা, রোগ, ইঁদুর ও ক্রমাগত গোলাবর্ষণের মধ্যে অবস্থান করত।"},{"heading":"ফল","text":"Western Front-এ যুদ্ধ দীর্ঘস্থায়ী হয় এবং বিপুল সংখ্যক সৈন্য নিহত বা আহত হয়।"}]},{"title":"USA Enters the War","desc":"মার্কিন যুক্তরাষ্ট্রের যুদ্ধে প্রবেশ","items":[{"heading":"Submarine Warfare","text":"জার্মানি unrestricted submarine warfare শুরু করে এবং বাণিজ্যিক জাহাজসহ জাহাজ ডুবিয়ে দেয়।"},{"heading":"Lusitania","text":"১৯১৫ সালে Lusitania ডুবে বহু যাত্রী নিহত হওয়া মার্কিন জনমতকে প্রভাবিত করে।"},{"heading":"Zimmermann Telegram","text":"১৯১৭ সালে Zimmermann Telegram প্রকাশ পেলে জার্মানির বিরুদ্ধে মার্কিন ক্ষোভ বৃদ্ধি পায়।"},{"heading":"প্রবেশ","text":"৬ এপ্রিল ১৯১৭ মার্কিন যুক্তরাষ্ট্র জার্মানির বিরুদ্ধে যুদ্ধে প্রবেশ করে।"},{"heading":"ফল","text":"মার্কিন সৈন্য, অর্থ ও শিল্পশক্তি মিত্রশক্তিকে শক্তিশালী করে।"}]},{"title":"Russian Exit","desc":"রাশিয়ার যুদ্ধ থেকে বেরিয়ে যাওয়ার কারণ ও ফল","items":[{"heading":"রুশ বিপ্লব","text":"১৯১৭ সালের বিপ্লবের ফলে Tsarist শাসনের পতন ঘটে এবং রাজনৈতিক ক্ষমতার পরিবর্তন হয়।"},{"heading":"যুদ্ধের ক্ষতি","text":"দীর্ঘ যুদ্ধ, সৈন্যদের মৃত্যু, খাদ্যসংকট, মূল্যবৃদ্ধি ও অর্থনৈতিক দুরবস্থা রাশিয়ায় অসন্তোষ বাড়ায়।"},{"heading":"Bolshevik সিদ্ধান্ত","text":"লেনিনের নেতৃত্বে Bolsheviks যুদ্ধ থেকে বেরিয়ে আসার নীতি গ্রহণ করে।"},{"heading":"Brest-Litovsk","text":"১৯১৮ সালে Treaty of Brest-Litovsk-এর মাধ্যমে রাশিয়া কেন্দ্রীয় শক্তির সঙ্গে শান্তিচুক্তি করে।"},{"heading":"ফল","text":"জার্মানি পূর্ব ফ্রন্ট থেকে কিছু সৈন্য পশ্চিম ফ্রন্টে সরাতে পারে।"}]},{"title":"Armistice","desc":"যুদ্ধবিরতির কারণ ও ১৯১৮-এর সমাপ্তি","items":[{"heading":"জার্মানির দুর্বলতা","text":"দীর্ঘ যুদ্ধ, খাদ্যসংকট, অর্থনৈতিক সমস্যা ও সৈন্যদের ক্লান্তি জার্মানিকে দুর্বল করে।"},{"heading":"মিত্রশক্তির শক্তিবৃদ্ধি","text":"মার্কিন যুক্তরাষ্ট্রের সৈন্য ও সম্পদ মিত্রশক্তির সামরিক শক্তি বাড়ায়।"},{"heading":"জার্মান আক্রমণের ব্যর্থতা","text":"১৯১৮ সালের জার্মান Spring Offensive কাঙ্ক্ষিত ফল অর্জন করতে পারেনি।"},{"heading":"১১ নভেম্বর ১৯১৮","text":"জার্মানি Armistice-এ স্বাক্ষর করে। এর মাধ্যমে যুদ্ধের সামরিক কার্যক্রম বন্ধ হয়।"}]},{"title":"Treaty of Versailles","desc":"১৯১৯ সালের ভার্সাই চুক্তি","items":[{"heading":"চুক্তির উদ্দেশ্য","text":"যুদ্ধের পরে জার্মানির সামরিক ও রাজনৈতিক শক্তি সীমিত করা এবং ক্ষতিগ্রস্ত দেশগুলির জন্য নতুন ব্যবস্থা তৈরি করা ছিল অন্যতম উদ্দেশ্য।"},{"heading":"Territorial Losses","text":"জার্মানি ইউরোপের কিছু ভূখণ্ড হারায় এবং উপনিবেশগুলিও তার নিয়ন্ত্রণ থেকে বেরিয়ে যায়।"},{"heading":"Military Restrictions","text":"জার্মান সেনাবাহিনীর আকার ও সামরিক সক্ষমতার ওপর কঠোর সীমাবদ্ধতা আরোপ করা হয়।"},{"heading":"Reparations","text":"জার্মানির ওপর ক্ষতিপূরণের দায় চাপানো হয়।"},{"heading":"War Guilt Clause","text":"চুক্তির Article 231-এ যুদ্ধের ক্ষতির জন্য জার্মানির দায় স্বীকারের ভিত্তি তৈরি হয়।"},{"heading":"অসন্তোষ","text":"চুক্তির কঠোর শর্ত জার্মান সমাজে অসন্তোষ ও ক্ষোভ সৃষ্টি করে।"}]},{"title":"Consequences","desc":"প্রথম বিশ্বযুদ্ধের ফলাফল","items":[{"heading":"মানবিক ক্ষতি","text":"লক্ষ লক্ষ মানুষ নিহত, আহত বা বাস্তুচ্যুত হয় এবং ইউরোপের জনজীবনে গভীর ক্ষতি হয়।"},{"heading":"সাম্রাজ্যের পতন","text":"জার্মান, অস্ট্রো-হাঙ্গেরীয়, অটোমান ও রুশ সাম্রাজ্যের পতন বা ব্যাপক পরিবর্তন ঘটে।"},{"heading":"নতুন রাষ্ট্র","text":"ইউরোপের মানচিত্র পরিবর্তিত হয় এবং নতুন রাষ্ট্র ও নতুন সীমান্ত গড়ে ওঠে।"},{"heading":"League of Nations","text":"ভবিষ্যতে আন্তর্জাতিক শান্তি রক্ষার উদ্দেশ্যে League of Nations প্রতিষ্ঠিত হয়।"},{"heading":"অর্থনৈতিক সংকট","text":"যুদ্ধের ঋণ, ধ্বংস ও মুদ্রাস্ফীতি ইউরোপীয় অর্থনীতিতে দীর্ঘমেয়াদি প্রভাব ফেলে।"},{"heading":"দ্বিতীয় বিশ্বযুদ্ধের পটভূমি","text":"ভার্সাই চুক্তির কঠোরতা, জার্মান অসন্তোষ ও পরবর্তী রাজনৈতিক-অর্থনৈতিক সংকট ভবিষ্যতে নাৎসিবাদের উত্থানের অনুকূল পরিবেশ তৈরিতে ভূমিকা রাখে।"}]}];
-function showLesson(i){
- const t=window.currentTopic[0], key=window.currentTopic[1][i];
- const detail=(stepDetails[t] && stepDetails[t][i]) ? stepDetails[t][i] : null;
- let lesson="";
- if(detail){
-   lesson=`<div class="answer">
-     <h4>✅ সঠিক উত্তর / ব্যাখ্যা</h4>
-     <p>${detail[1]}</p>
-   </div>`;
-   if(t==="World War I" && ww1DetailedAnswers[i]){
-     lesson += ww1DetailedAnswers[i].items.map((x,n)=>
-       `<section class="answer"><h4>${n+1}. ${x.heading}</h4><p>${x.text}</p></section>`
-     ).join("");
-   }
- }else{
-   lesson=`<div class="answer"><h4>উত্তর</h4><p>এই Step-এর তথ্য প্রস্তুত করা হচ্ছে।</p></div>`;
- }
- document.getElementById('lesson').innerHTML=`
-   <h3>Step ${i+1}: ${key}</h3>
-   ${lesson}
-   <div class="notice">📌 পরীক্ষার জন্য মনে রাখুন: সংজ্ঞা/কারণ → প্রধান ঘটনা → গুরুত্বপূর্ণ ব্যক্তি/সাল → ফলাফল</div>`;
-}
-function openTimeline(group,key,index){
- openTopic(group,key);
- setTimeout(()=>showLesson(index),0);
-}
-function backToList(){go(lastGroup==='euro'?'europe':'india');}
-function filter(input,id){let q=input.value.toLowerCase();document.querySelectorAll('#'+id+' .topicCard').forEach(x=>x.style.display=x.innerText.toLowerCase().includes(q)?'block':'none');}
+const DATA={"ancient": {"Ancient India Overview": [["Meaning & Period", "প্রাচীন ভারতের ইতিহাস প্রাগৈতিহাসিক যুগ থেকে প্রারম্ভিক মধ্যযুগ পর্যন্ত দীর্ঘ বিকাশকে বোঝায়।"], ["Sources", "প্রত্নতত্ত্ব, শিলালিপি, মুদ্রা, স্থাপত্য, সাহিত্য ও বিদেশি বিবরণ প্রধান উৎস।"], ["Major Phases", "প্রাগৈতিহাসিক যুগ, হরপ্পা, বৈদিক, মহাজনপদ, মৌর্য, মৌর্যোত্তর ও গুপ্ত যুগ প্রধান পর্যায়।"]], "Prehistoric India": [["Palaeolithic Age", "শিকার ও খাদ্য সংগ্রহ এবং পাথরের হাতিয়ার ছিল প্রধান বৈশিষ্ট্য।"], ["Mesolithic Age", "Microlith ব্যবহারের সঙ্গে শিকার, মাছ ধরা ও প্রাথমিক পশুপালনের বিকাশ ঘটে।"], ["Neolithic Age", "কৃষি, পশুপালন ও স্থায়ী বসতির বিকাশ ঘটে।"], ["Chalcolithic Age", "পাথরের পাশাপাশি তামার ব্যবহার শুরু হয়।"]], "Indus Valley Civilization": [["Discovery", "বিংশ শতকের প্রথম ভাগে প্রত্নখননের মাধ্যমে হরপ্পা সভ্যতা প্রকাশিত হয়।"], ["Major Sites", "হরপ্পা, মহেঞ্জোদারো, ধোলাভিরা, লোথাল ও কালীবঙ্গান গুরুত্বপূর্ণ কেন্দ্র।"], ["Town Planning", "গ্রিড পদ্ধতির রাস্তা, পাকা ইট ও পরিকল্পিত নগর ছিল প্রধান বৈশিষ্ট্য।"], ["Drainage System", "উন্নত নিকাশি ব্যবস্থা ছিল।"], ["Economy", "কৃষি, কারুশিল্প ও দূরবর্তী বাণিজ্য অর্থনীতির প্রধান ভিত্তি।"], ["Script", "হরপ্পা লিপি এখনও নিশ্চিতভাবে পাঠোদ্ধার হয়নি।"], ["Decline", "পরিবেশ, নদীপথ ও অর্থনৈতিক পরিবর্তনকে সম্ভাব্য কারণ হিসেবে দেখা হয়।"]], "Vedic Civilization": [["Early Vedic", "পশুপালন ও গোত্রভিত্তিক সমাজ গুরুত্বপূর্ণ ছিল।"], ["Later Vedic", "কৃষি, লোহা ও রাজশক্তির বিকাশ ঘটে।"], ["Political Life", "রাজা, সভা ও সমিতি রাজনৈতিক জীবনে ভূমিকা রাখত।"], ["Society", "পরবর্তী যুগে বর্ণব্যবস্থা আরও সুসংগঠিত হয়।"], ["Religion", "যজ্ঞ ও দেবোপাসনা থেকে পরে দার্শনিক চিন্তার বিকাশ ঘটে।"]], "Mahajanapadas": [["Sixteen States", "খ্রিস্টপূর্ব ষষ্ঠ শতকে ষোলোটি প্রধান মহাজনপদ ছিল।"], ["Rise of Magadha", "উর্বর ভূমি, লৌহসম্পদ ও নদীপথ মগধকে শক্তিশালী করে।"], ["Bimbisara", "কূটনীতি ও বিবাহ-জোটের মাধ্যমে শক্তি বৃদ্ধি করেন।"], ["Ajatashatru", "সামরিক সম্প্রসারণের মাধ্যমে মগধকে শক্তিশালী করেন।"]], "Jainism": [["Mahavira", "মহাবীর জৈনধর্মের ২৪তম তীর্থঙ্কর।"], ["Triratna", "সম্যক দর্শন, সম্যক জ্ঞান ও সম্যক চরিত্র।"], ["Five Vows", "অহিংসা, সত্য, অস্তেয়, অপরিগ্রহ ও ব্রহ্মচর্য।"], ["Impact", "অহিংসা ও নৈতিক জীবনের ধারণায় গভীর প্রভাব।"]], "Buddhism": [["Life of Buddha", "গৌতম বুদ্ধ দুঃখ ও মুক্তির পথ অনুসন্ধান করে শিক্ষা প্রচার করেন।"], ["Four Noble Truths", "দুঃখ, দুঃখের কারণ, নিরোধ এবং নিরোধের পথ।"], ["Eightfold Path", "নৈতিক ও মানসিক উন্নতির অষ্টাঙ্গিক মার্গ।"], ["Spread", "অশোক ও সন্ন্যাসীদের মাধ্যমে এশিয়ায় বিস্তার লাভ করে।"]], "Mauryan Empire": [["Chandragupta Maurya", "নন্দ শাসনের অবসান ঘটিয়ে মৌর্য সাম্রাজ্য প্রতিষ্ঠা করেন।"], ["Chanakya", "রাষ্ট্রনীতি ও প্রশাসনের গুরুত্বপূর্ণ চিন্তাবিদ।"], ["Ashoka", "মৌর্য সাম্রাজ্যের অন্যতম শ্রেষ্ঠ শাসক।"], ["Kalinga War", "যুদ্ধের প্রাণহানি অশোককে নৈতিক নীতির দিকে প্রভাবিত করে।"], ["Dhamma", "সহিষ্ণুতা, নৈতিকতা ও প্রজাকল্যাণের নীতি।"], ["Administration", "কেন্দ্র ও প্রদেশভিত্তিক শাসনব্যবস্থা।"]], "Gupta Empire": [["Rise", "চতুর্থ শতকে উত্তর ভারতে শক্তিশালী সাম্রাজ্য গড়ে ওঠে।"], ["Samudragupta", "সামরিক অভিযান ও রাজনৈতিক প্রভাবের জন্য পরিচিত।"], ["Chandragupta II", "তাঁর আমলে সাম্রাজ্য ও সংস্কৃতির বিকাশ ঘটে।"], ["Golden Age", "বিজ্ঞান, সাহিত্য ও শিল্পের বিকাশের জন্য স্বর্ণযুগ বলা হয়।"], ["Art & Literature", "কালিদাস ও আর্যভট্ট যুগের গুরুত্বপূর্ণ ব্যক্তিত্ব।"]]}, "modern": {"European Expansion in India": [["Portuguese Arrival", "১৪৯৮ সালে ভাস্কো দা গামার আগমন নতুন সমুদ্র যোগাযোগ শুরু করে।"], ["Dutch & French", "বিভিন্ন ইউরোপীয় শক্তি ভারতীয় বাণিজ্যে অংশ নেয়।"], ["East India Company", "বাণিজ্য থেকে ধীরে ধীরে রাজনৈতিক ক্ষমতার দিকে ব্রিটিশ প্রভাব বাড়ে।"]], "British Expansion": [["Battle of Plassey", "১৭৫৭ সালের পলাশীর যুদ্ধ বাংলায় ব্রিটিশ প্রভাব বৃদ্ধির মোড়।"], ["Battle of Buxar", "১৭৬৪ সালের বক্সারের যুদ্ধ ব্রিটিশ শক্তি আরও বাড়ায়।"], ["Subsidiary Alliance", "দেশীয় রাজ্যের উপর নিয়ন্ত্রণ বাড়ানোর নীতি।"], ["Doctrine of Lapse", "দত্তক উত্তরাধিকার অস্বীকার করে রাজ্য দখলের নীতি।"]], "Revolt of 1857": [["Causes", "রাজনৈতিক, অর্থনৈতিক, সামরিক ও সামাজিক অসন্তোষ বিদ্রোহের কারণ।"], ["Beginning", "১৮৫৭ সালে মীরাট থেকে বিদ্রোহ শুরু হয়।"], ["Leaders", "বাহাদুর শাহ জাফর, রানি লক্ষ্মীবাই, নানাসাহেব ও তাতিয়া টোপে গুরুত্বপূর্ণ নেতা।"], ["Results", "কোম্পানি শাসনের অবসান ও ক্রাউন শাসনের সূচনা।"]], "Indian National Congress": [["Foundation", "১৮৮৫ সালে কংগ্রেস প্রতিষ্ঠিত হয়।"], ["Moderates", "সাংবিধানিক পদ্ধতিতে দাবি জানানো হত।"], ["Extremists", "আরও দৃঢ় রাজনৈতিক কর্মসূচি ও স্বদেশি ভাবনার বিকাশ ঘটে।"]], "Swadeshi Movement": [["Partition of Bengal", "১৯০৫ সালের বঙ্গভঙ্গ আন্দোলনের পটভূমি।"], ["Boycott", "বিদেশি পণ্য বর্জন ছিল গুরুত্বপূর্ণ কর্মসূচি।"], ["National Education", "জাতীয় শিক্ষা ও স্বদেশি শিল্পের প্রসার ঘটে।"]], "Gandhian Era": [["Non-Cooperation", "১৯২০ সালে অসহযোগ আন্দোলন শুরু হয়।"], ["Civil Disobedience", "আইন অমান্য করে ব্রিটিশ নীতির বিরোধিতা।"], ["Salt March", "১৯৩০ সালের দান্ডি অভিযান একটি গুরুত্বপূর্ণ ঘটনা।"], ["Quit India", "১৯৪২ সালে ভারত ছাড়ো আন্দোলন শুরু হয়।"]], "Independence & Partition": [["Cabinet Mission", "ক্ষমতা হস্তান্তরের সাংবিধানিক সমাধানের চেষ্টা।"], ["Mountbatten Plan", "বিভাজনের ভিত্তিতে ক্ষমতা হস্তান্তরের পরিকল্পনা।"], ["Independence", "১৯৪৭ সালে ভারত স্বাধীনতা লাভ করে।"], ["Partition", "ভারত ও পাকিস্তান বিভাজনের সঙ্গে মানবিক সংকট সৃষ্টি হয়।"]]}, "europe": {"Ancient Europe": [["Greek Civilization", "দর্শন, রাজনীতি, নাটক ও শিল্পে প্রাচীন গ্রিসের গুরুত্বপূর্ণ অবদান।"], ["Roman Republic", "আইন ও নাগরিকত্বের গুরুত্বপূর্ণ প্রতিষ্ঠান বিকশিত হয়।"], ["Roman Empire", "প্রশাসন, আইন ও অবকাঠামোতে গভীর প্রভাব।"], ["Fall of Rome", "পশ্চিম রোমান সাম্রাজ্যের পতন নতুন যুগের সূচনা করে।"]], "Medieval Europe": [["Feudalism", "ভূমি ও আনুগত্যের সম্পর্ককে কেন্দ্র করে সামাজিক ব্যবস্থা।"], ["Church", "চার্চ সমাজ ও রাজনীতিতে শক্তিশালী প্রভাব রাখে।"], ["Crusades", "ধর্মীয় ও রাজনৈতিক সংঘাত ইউরোপকে প্রভাবিত করে।"], ["Change", "নগর ও বাণিজ্যের বিকাশ নতুন পরিবর্তনের পথ তৈরি করে।"]], "Renaissance & Reformation": [["Renaissance", "মানবতাবাদ ও শিল্পের নবজাগরণ।"], ["Humanism", "মানুষ ও যুক্তিবাদকে গুরুত্ব দেওয়া হয়।"], ["Martin Luther", "১৫১৭ সালে ধর্মীয় সংস্কার আন্দোলনের সূচনা।"], ["Results", "ধর্মীয় ও রাজনৈতিক বিভাজন ও পরিবর্তন ঘটে।"]], "Age of Discoveries": [["Causes", "বাণিজ্য ও নতুন পথের অনুসন্ধান সমুদ্রযাত্রাকে উৎসাহিত করে।"], ["Columbus", "১৪৯২ সালের যাত্রা নতুন আটলান্টিক যোগাযোগ তৈরি করে।"], ["Vasco da Gama", "সমুদ্রপথে ইউরোপ ও ভারতের যোগাযোগ প্রতিষ্ঠিত হয়।"], ["Consequences", "বিশ্ববাণিজ্য ও উপনিবেশবাদে বড় পরিবর্তন আসে।"]], "French Revolution": [["Causes", "সামাজিক বৈষম্য ও আর্থিক সংকট প্রধান কারণ।"], ["1789", "বাস্তিল দুর্গ পতন বিপ্লবের প্রতীকী ঘটনা।"], ["Rights of Man", "সমতা ও নাগরিক অধিকারের ধারণা প্রসারিত হয়।"], ["Napoleon", "ইউরোপীয় রাজনীতি ও আইনে গভীর প্রভাব।"]], "Industrial Revolution": [["Origins", "ব্রিটেনে শিল্পবিপ্লব শুরু হয়।"], ["Factories", "যন্ত্র ও কারখানাভিত্তিক উৎপাদন বৃদ্ধি পায়।"], ["Social Change", "নগরায়ণ ও নতুন শ্রেণির বিকাশ ঘটে।"], ["Global Impact", "বিশ্ব অর্থনীতি ও সাম্রাজ্যবাদে প্রভাব পড়ে।"]], "World War I": [["Causes", "জোটনীতি, সামরিকবাদ, সাম্রাজ্যবাদ ও জাতীয়তাবাদ প্রধান কারণ।"], ["Outbreak", "১৯১৪ সালে যুদ্ধ শুরু হয়।"], ["Trench Warfare", "পশ্চিম ফ্রন্টে পরিখা যুদ্ধ বিশেষ বৈশিষ্ট্য।"], ["End", "১৯১৮ সালে যুদ্ধ শেষ হয়।"]], "Interwar Europe": [["Versailles", "যুদ্ধোত্তর শান্তিব্যবস্থার গুরুত্বপূর্ণ অংশ।"], ["Economic Crisis", "মহামন্দায় বেকারত্ব ও অস্থিরতা বাড়ে।"], ["Fascism", "কর্তৃত্ববাদী ও চরম জাতীয়তাবাদী শক্তির উত্থান।"]], "World War II": [["Causes", "আগ্রাসী রাষ্ট্রনীতি ও ব্যর্থ কূটনীতি সংঘাতের পটভূমি।"], ["Outbreak", "১৯৩৯ সালে যুদ্ধ শুরু হয়।"], ["Major Fronts", "বিভিন্ন যুদ্ধক্ষেত্রে ব্যাপক সংঘর্ষ।"], ["Holocaust", "নাজি গণহত্যা ও নিপীড়নের ভয়াবহ অধ্যায়।"], ["End", "১৯৪৫ সালে যুদ্ধ শেষ হয়।"]], "Cold War & Modern Europe": [["Cold War", "দুই বৃহৎ শক্তির প্রতিদ্বন্দ্বিতা ইউরোপকে প্রভাবিত করে।"], ["European Integration", "অর্থনৈতিক ও রাজনৈতিক সহযোগিতা বৃদ্ধি পায়।"], ["Berlin Wall", "১৯৮৯ সালের পতন ইউরোপীয় বিভাজন ভাঙনের প্রতীক।"], ["Modern Europe", "গণতন্ত্র, অভিবাসন ও নিরাপত্তা আধুনিক ইউরোপের গুরুত্বপূর্ণ বিষয়।"]]}}, TL=[["c. 2600 BCE", "Indus Valley Civilization", "দক্ষিণ এশিয়ায় বৃহৎ নগরসভ্যতার বিকাশ।"], ["c. 1500 BCE", "Vedic Civilization", "বৈদিক সমাজ ও সংস্কৃতির বিকাশ।"], ["6th century BCE", "Mahajanapadas & New Religions", "মহাজনপদ, জৈন ও বৌদ্ধ চিন্তার বিকাশ।"], ["c. 322 BCE", "Mauryan Empire", "চন্দ্রগুপ্ত মৌর্যের অধীনে বৃহৎ সাম্রাজ্য।"], ["c. 320 CE", "Gupta Empire", "গুপ্ত শক্তি ও সাংস্কৃতিক বিকাশ।"], ["476", "Fall of Western Rome", "প্রাচীন থেকে মধ্যযুগীয় ইউরোপে পরিবর্তন।"], ["1492", "Columbus's Voyage", "নতুন আটলান্টিক যোগাযোগ।"], ["1498", "Vasco da Gama reaches India", "ইউরোপ-ভারত সমুদ্র যোগাযোগ।"], ["1517", "Reformation", "ইউরোপীয় ধর্মীয় সংস্কার।"], ["1757", "Battle of Plassey", "ভারতে ব্রিটিশ প্রভাব বৃদ্ধি।"], ["1789", "French Revolution", "নতুন রাজনৈতিক যুগ।"], ["1857", "Revolt of 1857", "ব্রিটিশ শাসনের বিরুদ্ধে বড় বিদ্রোহ।"], ["1885", "Indian National Congress", "সর্বভারতীয় রাজনৈতিক সংগঠনের সূচনা।"], ["1905", "Swadeshi Movement", "বঙ্গভঙ্গবিরোধী আন্দোলন।"], ["1914–1918", "World War I", "বিশ্বব্যাপী সংঘাত।"], ["1917", "Russian Revolution", "বিপ্লবী রাজনৈতিক পরিবর্তন।"], ["1920–22", "Non-Cooperation", "গণআন্দোলনের নতুন পর্যায়।"], ["1930", "Salt March", "আইন অমান্য আন্দোলনের প্রতীক।"], ["1939–1945", "World War II", "দ্বিতীয় বিশ্বযুদ্ধ।"], ["1942", "Quit India", "ব্রিটিশদের ভারত ছাড়ার দাবি।"], ["1947", "Independence & Partition", "স্বাধীনতা ও বিভাজন।"], ["1989", "Fall of Berlin Wall", "ইউরোপীয় বিভাজন ভাঙনের প্রতীক।"]], QUIZ=[["হরপ্পা সভ্যতার গুরুত্বপূর্ণ বৈশিষ্ট্য কী?", ["উন্নত নগর পরিকল্পনা", "১৭৫৭", "স্বদেশি আন্দোলন", "ফরাসি বিপ্লব"], 0], ["মৌর্য সাম্রাজ্যের প্রতিষ্ঠাতা কে?", ["১৭৫৭", "ব্রিটেন", "রোম", "চন্দ্রগুপ্ত মৌর্য"], 3], ["কলিঙ্গ যুদ্ধের পরে কোন শাসক ধম্ম প্রচার করেন?", ["গুপ্ত যুগ", "অশোক", "গান্ধী", "নেপোলিয়ন"], 1], ["চার আর্যসত্য কোন ধর্মের শিক্ষা?", ["স্বদেশি আন্দোলন", "রাশিয়া", "১৭৫৭", "বৌদ্ধধর্ম"], 3], ["জৈনধর্মের ২৪তম তীর্থঙ্কর কে?", ["মহাবীর", "রাশিয়া", "বৌদ্ধধর্ম", "ব্রিটেন"], 0], ["১৮৫৭ সালের বিদ্রোহের ফল কী?", ["কোম্পানি শাসনের অবসান", "স্বদেশি আন্দোলন", "নেপোলিয়ন", "গান্ধী"], 0], ["কংগ্রেস কবে প্রতিষ্ঠিত হয়?", ["গান্ধী", "১৮৮৫", "ব্রিটেন", "ফরাসি বিপ্লব"], 1], ["স্বদেশি আন্দোলনের পটভূমি কী?", ["বঙ্গভঙ্গ", "অশোক", "হরপ্পা", "জৈনধর্ম"], 0], ["অসহযোগ আন্দোলন কবে শুরু হয়?", ["মৌর্য সাম্রাজ্য", "১৯২০", "রোম", "লন্ডন"], 1], ["দাণ্ডি অভিযান কোন আন্দোলনের অংশ?", ["কলকাতা", "আইন অমান্য আন্দোলন", "ফরাসি বিপ্লব", "১৯৩৯"], 1], ["ভারত ছাড়ো আন্দোলন কবে?", ["নেপোলিয়ন", "অশোক", "লন্ডন", "১৯৪২"], 3], ["ফরাসি বিপ্লব কবে?", ["১৮৫৭", "১৭৮৯", "কলকাতা", "১৭৫৭"], 1], ["সংস্কার আন্দোলনের সঙ্গে কে যুক্ত?", ["মার্টিন লুথার", "জৈনধর্ম", "নেপোলিয়ন", "মৌর্য সাম্রাজ্য"], 0], ["কলম্বাসের যাত্রা কবে?", ["বৌদ্ধধর্ম", "স্বদেশি আন্দোলন", "কলকাতা", "১৪৯২"], 3], ["ভাস্কো দা গামা ভারতে পৌঁছান কবে?", ["১৮৫৭", "রোম", "১৪৯৮", "বৌদ্ধধর্ম"], 2], ["প্রথম বিশ্বযুদ্ধ কবে শুরু?", ["নেপোলিয়ন", "ফরাসি বিপ্লব", "১৯১৪", "হরপ্পা"], 2], ["দ্বিতীয় বিশ্বযুদ্ধ কবে শুরু?", ["১৯৩৯", "স্বদেশি আন্দোলন", "কলকাতা", "নেপোলিয়ন"], 0], ["বার্লিন প্রাচীর পতন কবে?", ["ফরাসি বিপ্লব", "১৯৮৯", "জৈনধর্ম", "স্বদেশি আন্দোলন"], 1], ["শিল্পবিপ্লব প্রথম কোথায় শুরু?", ["১৮৫৭", "বৌদ্ধধর্ম", "১৯৩৯", "ব্রিটেন"], 3], ["মহাজনপদ যুগে কোন রাষ্ট্র শক্তিশালী হয়?", ["গুপ্ত যুগ", "মগধ", "ব্রিটেন", "মৌর্য সাম্রাজ্য"], 1], ["হরপ্পা সভ্যতার গুরুত্বপূর্ণ বৈশিষ্ট্য কী?", ["উন্নত নগর পরিকল্পনা", "গুপ্ত যুগ", "জৈনধর্ম", "লন্ডন"], 0], ["মৌর্য সাম্রাজ্যের প্রতিষ্ঠাতা কে?", ["স্বদেশি আন্দোলন", "চন্দ্রগুপ্ত মৌর্য", "রাশিয়া", "গান্ধী"], 1], ["কলিঙ্গ যুদ্ধের পরে কোন শাসক ধম্ম প্রচার করেন?", ["অশোক", "ইউরোপ", "১৮৫৭", "ফরাসি বিপ্লব"], 0], ["চার আর্যসত্য কোন ধর্মের শিক্ষা?", ["ফরাসি বিপ্লব", "১৭৫৭", "বৌদ্ধধর্ম", "১৯৪৭"], 2], ["জৈনধর্মের ২৪তম তীর্থঙ্কর কে?", ["মহাবীর", "ইউরোপ", "ফরাসি বিপ্লব", "অশোক"], 0], ["১৮৫৭ সালের বিদ্রোহের ফল কী?", ["মৌর্য সাম্রাজ্য", "রোম", "কোম্পানি শাসনের অবসান", "ফরাসি বিপ্লব"], 2], ["কংগ্রেস কবে প্রতিষ্ঠিত হয়?", ["জৈনধর্ম", "লন্ডন", "ফরাসি বিপ্লব", "১৮৮৫"], 3], ["স্বদেশি আন্দোলনের পটভূমি কী?", ["হরপ্পা", "১৯৪৭", "বঙ্গভঙ্গ", "নেপোলিয়ন"], 2], ["অসহযোগ আন্দোলন কবে শুরু হয়?", ["১৯২০", "১৮৫৭", "রাশিয়া", "১৯৪৭"], 0], ["দাণ্ডি অভিযান কোন আন্দোলনের অংশ?", ["আইন অমান্য আন্দোলন", "মৌর্য সাম্রাজ্য", "জৈনধর্ম", "অশোক"], 0], ["ভারত ছাড়ো আন্দোলন কবে?", ["মৌর্য সাম্রাজ্য", "১৯৪২", "ইউরোপ", "১৯৩৯"], 1], ["ফরাসি বিপ্লব কবে?", ["অশোক", "রাশিয়া", "১৭৮৯", "১৯৪৭"], 2], ["সংস্কার আন্দোলনের সঙ্গে কে যুক্ত?", ["অশোক", "১৭৫৭", "১৯৪৭", "মার্টিন লুথার"], 3], ["কলম্বাসের যাত্রা কবে?", ["স্বদেশি আন্দোলন", "১৪৯২", "রোম", "ইউরোপ"], 1], ["ভাস্কো দা গামা ভারতে পৌঁছান কবে?", ["১৯৩৯", "১৪৯৮", "ফরাসি বিপ্লব", "ইউরোপ"], 1], ["প্রথম বিশ্বযুদ্ধ কবে শুরু?", ["১৯১৪", "মৌর্য সাম্রাজ্য", "জৈনধর্ম", "হরপ্পা"], 0], ["দ্বিতীয় বিশ্বযুদ্ধ কবে শুরু?", ["গান্ধী", "গুপ্ত যুগ", "১৯৩৯", "স্বদেশি আন্দোলন"], 2], ["বার্লিন প্রাচীর পতন কবে?", ["ব্রিটেন", "১৯৪৭", "১৯৮৯", "গান্ধী"], 2], ["শিল্পবিপ্লব প্রথম কোথায় শুরু?", ["১৭৫৭", "ব্রিটেন", "নেপোলিয়ন", "ইউরোপ"], 1], ["মহাজনপদ যুগে কোন রাষ্ট্র শক্তিশালী হয়?", ["১৯৪৭", "রাশিয়া", "মগধ", "ব্রিটেন"], 2], ["হরপ্পা সভ্যতার গুরুত্বপূর্ণ বৈশিষ্ট্য কী?", ["গান্ধী", "বৌদ্ধধর্ম", "উন্নত নগর পরিকল্পনা", "১৭৫৭"], 2], ["মৌর্য সাম্রাজ্যের প্রতিষ্ঠাতা কে?", ["রাশিয়া", "১৯৪৭", "চন্দ্রগুপ্ত মৌর্য", "জৈনধর্ম"], 2], ["কলিঙ্গ যুদ্ধের পরে কোন শাসক ধম্ম প্রচার করেন?", ["কলকাতা", "অশোক", "গুপ্ত যুগ", "ব্রিটেন"], 1], ["চার আর্যসত্য কোন ধর্মের শিক্ষা?", ["১৯৪৭", "বৌদ্ধধর্ম", "অশোক", "গুপ্ত যুগ"], 1], ["জৈনধর্মের ২৪তম তীর্থঙ্কর কে?", ["মহাবীর", "ব্রিটেন", "গুপ্ত যুগ", "মৌর্য সাম্রাজ্য"], 0], ["১৮৫৭ সালের বিদ্রোহের ফল কী?", ["কোম্পানি শাসনের অবসান", "গুপ্ত যুগ", "গান্ধী", "বৌদ্ধধর্ম"], 0], ["কংগ্রেস কবে প্রতিষ্ঠিত হয়?", ["গুপ্ত যুগ", "১৮৮৫", "নেপোলিয়ন", "১৯৩৯"], 1], ["স্বদেশি আন্দোলনের পটভূমি কী?", ["নেপোলিয়ন", "অশোক", "বঙ্গভঙ্গ", "বৌদ্ধধর্ম"], 2], ["অসহযোগ আন্দোলন কবে শুরু হয়?", ["১৯২০", "গান্ধী", "অশোক", "কলকাতা"], 0], ["দাণ্ডি অভিযান কোন আন্দোলনের অংশ?", ["মৌর্য সাম্রাজ্য", "অশোক", "আইন অমান্য আন্দোলন", "কলকাতা"], 2], ["ভারত ছাড়ো আন্দোলন কবে?", ["অশোক", "১৯৪২", "১৮৫৭", "জৈনধর্ম"], 1], ["ফরাসি বিপ্লব কবে?", ["বৌদ্ধধর্ম", "১৭৮৯", "কলকাতা", "রাশিয়া"], 1], ["সংস্কার আন্দোলনের সঙ্গে কে যুক্ত?", ["ফরাসি বিপ্লব", "লন্ডন", "কলকাতা", "মার্টিন লুথার"], 3], ["কলম্বাসের যাত্রা কবে?", ["১৪৯২", "জৈনধর্ম", "রাশিয়া", "রোম"], 0], ["ভাস্কো দা গামা ভারতে পৌঁছান কবে?", ["১৪৯৮", "লন্ডন", "রোম", "ফরাসি বিপ্লব"], 0], ["প্রথম বিশ্বযুদ্ধ কবে শুরু?", ["১৭৫৭", "কলকাতা", "১৯৩৯", "১৯১৪"], 3], ["দ্বিতীয় বিশ্বযুদ্ধ কবে শুরু?", ["ব্রিটেন", "স্বদেশি আন্দোলন", "১৯৩৯", "গান্ধী"], 2], ["বার্লিন প্রাচীর পতন কবে?", ["১৯৮৯", "১৯৪৭", "ফরাসি বিপ্লব", "বৌদ্ধধর্ম"], 0], ["শিল্পবিপ্লব প্রথম কোথায় শুরু?", ["ব্রিটেন", "হরপ্পা", "মৌর্য সাম্রাজ্য", "১৭৫৭"], 0], ["মহাজনপদ যুগে কোন রাষ্ট্র শক্তিশালী হয়?", ["মগধ", "নেপোলিয়ন", "লন্ডন", "স্বদেশি আন্দোলন"], 0], ["হরপ্পা সভ্যতার গুরুত্বপূর্ণ বৈশিষ্ট্য কী?", ["ফরাসি বিপ্লব", "উন্নত নগর পরিকল্পনা", "রোম", "হরপ্পা"], 1], ["মৌর্য সাম্রাজ্যের প্রতিষ্ঠাতা কে?", ["চন্দ্রগুপ্ত মৌর্য", "গান্ধী", "হরপ্পা", "স্বদেশি আন্দোলন"], 0], ["কলিঙ্গ যুদ্ধের পরে কোন শাসক ধম্ম প্রচার করেন?", ["অশোক", "১৭৫৭", "স্বদেশি আন্দোলন", "রোম"], 0], ["চার আর্যসত্য কোন ধর্মের শিক্ষা?", ["গুপ্ত যুগ", "বৌদ্ধধর্ম", "১৭৫৭", "ব্রিটেন"], 1], ["জৈনধর্মের ২৪তম তীর্থঙ্কর কে?", ["রাশিয়া", "লন্ডন", "মহাবীর", "হরপ্পা"], 2], ["১৮৫৭ সালের বিদ্রোহের ফল কী?", ["১৭৫৭", "কোম্পানি শাসনের অবসান", "অশোক", "লন্ডন"], 1], ["কংগ্রেস কবে প্রতিষ্ঠিত হয়?", ["গান্ধী", "১৮৮৫", "ফরাসি বিপ্লব", "১৮৫৭"], 1], ["স্বদেশি আন্দোলনের পটভূমি কী?", ["নেপোলিয়ন", "বঙ্গভঙ্গ", "ইউরোপ", "১৮৫৭"], 1], ["অসহযোগ আন্দোলন কবে শুরু হয়?", ["বৌদ্ধধর্ম", "গান্ধী", "১৯২০", "গুপ্ত যুগ"], 2], ["দাণ্ডি অভিযান কোন আন্দোলনের অংশ?", ["আইন অমান্য আন্দোলন", "অশোক", "জৈনধর্ম", "স্বদেশি আন্দোলন"], 0], ["ভারত ছাড়ো আন্দোলন কবে?", ["ইউরোপ", "মৌর্য সাম্রাজ্য", "১৭৫৭", "১৯৪২"], 3], ["ফরাসি বিপ্লব কবে?", ["অশোক", "হরপ্পা", "নেপোলিয়ন", "১৭৮৯"], 3], ["সংস্কার আন্দোলনের সঙ্গে কে যুক্ত?", ["মার্টিন লুথার", "১৯৪৭", "রোম", "জৈনধর্ম"], 0], ["কলম্বাসের যাত্রা কবে?", ["১৯৪৭", "রাশিয়া", "১৪৯২", "লন্ডন"], 2], ["ভাস্কো দা গামা ভারতে পৌঁছান কবে?", ["স্বদেশি আন্দোলন", "গান্ধী", "অশোক", "১৪৯৮"], 3], ["প্রথম বিশ্বযুদ্ধ কবে শুরু?", ["১৯১৪", "১৮৫৭", "মৌর্য সাম্রাজ্য", "গুপ্ত যুগ"], 0], ["দ্বিতীয় বিশ্বযুদ্ধ কবে শুরু?", ["ইউরোপ", "১৯৩৯", "লন্ডন", "নেপোলিয়ন"], 1], ["বার্লিন প্রাচীর পতন কবে?", ["জৈনধর্ম", "১৮৫৭", "১৯৮৯", "কলকাতা"], 2], ["শিল্পবিপ্লব প্রথম কোথায় শুরু?", ["ব্রিটেন", "রাশিয়া", "নেপোলিয়ন", "হরপ্পা"], 0], ["মহাজনপদ যুগে কোন রাষ্ট্র শক্তিশালী হয়?", ["১৭৫৭", "মগধ", "কলকাতা", "ব্রিটেন"], 1], ["হরপ্পা সভ্যতার গুরুত্বপূর্ণ বৈশিষ্ট্য কী?", ["১৮৫৭", "স্বদেশি আন্দোলন", "গুপ্ত যুগ", "উন্নত নগর পরিকল্পনা"], 3], ["মৌর্য সাম্রাজ্যের প্রতিষ্ঠাতা কে?", ["ফরাসি বিপ্লব", "১৯৪৭", "জৈনধর্ম", "চন্দ্রগুপ্ত মৌর্য"], 3], ["কলিঙ্গ যুদ্ধের পরে কোন শাসক ধম্ম প্রচার করেন?", ["ফরাসি বিপ্লব", "অশোক", "ব্রিটেন", "মৌর্য সাম্রাজ্য"], 1], ["চার আর্যসত্য কোন ধর্মের শিক্ষা?", ["ইউরোপ", "বৌদ্ধধর্ম", "মৌর্য সাম্রাজ্য", "গুপ্ত যুগ"], 1], ["জৈনধর্মের ২৪তম তীর্থঙ্কর কে?", ["বৌদ্ধধর্ম", "রোম", "স্বদেশি আন্দোলন", "মহাবীর"], 3], ["১৮৫৭ সালের বিদ্রোহের ফল কী?", ["ইউরোপ", "স্বদেশি আন্দোলন", "গান্ধী", "কোম্পানি শাসনের অবসান"], 3], ["কংগ্রেস কবে প্রতিষ্ঠিত হয়?", ["কলকাতা", "রাশিয়া", "১৮৮৫", "লন্ডন"], 2], ["স্বদেশি আন্দোলনের পটভূমি কী?", ["১৮৫৭", "বঙ্গভঙ্গ", "কলকাতা", "১৯৩৯"], 1], ["অসহযোগ আন্দোলন কবে শুরু হয়?", ["১৯২০", "নেপোলিয়ন", "জৈনধর্ম", "গুপ্ত যুগ"], 0], ["দাণ্ডি অভিযান কোন আন্দোলনের অংশ?", ["রাশিয়া", "মৌর্য সাম্রাজ্য", "রোম", "আইন অমান্য আন্দোলন"], 3], ["ভারত ছাড়ো আন্দোলন কবে?", ["ইউরোপ", "১৯৪২", "নেপোলিয়ন", "গান্ধী"], 1], ["ফরাসি বিপ্লব কবে?", ["অশোক", "ফরাসি বিপ্লব", "১৭৮৯", "লন্ডন"], 2], ["সংস্কার আন্দোলনের সঙ্গে কে যুক্ত?", ["১৭৫৭", "জৈনধর্ম", "মার্টিন লুথার", "নেপোলিয়ন"], 2], ["কলম্বাসের যাত্রা কবে?", ["স্বদেশি আন্দোলন", "নেপোলিয়ন", "১৪৯২", "ব্রিটেন"], 2], ["ভাস্কো দা গামা ভারতে পৌঁছান কবে?", ["অশোক", "গান্ধী", "১৪৯৮", "রাশিয়া"], 2], ["প্রথম বিশ্বযুদ্ধ কবে শুরু?", ["অশোক", "১৯১৪", "স্বদেশি আন্দোলন", "হরপ্পা"], 1], ["দ্বিতীয় বিশ্বযুদ্ধ কবে শুরু?", ["নেপোলিয়ন", "লন্ডন", "১৯৪৭", "১৯৩৯"], 3], ["বার্লিন প্রাচীর পতন কবে?", ["লন্ডন", "১৯৩৯", "জৈনধর্ম", "১৯৮৯"], 3], ["শিল্পবিপ্লব প্রথম কোথায় শুরু?", ["ব্রিটেন", "অশোক", "গুপ্ত যুগ", "মৌর্য সাম্রাজ্য"], 0], ["মহাজনপদ যুগে কোন রাষ্ট্র শক্তিশালী হয়?", ["গান্ধী", "মগধ", "১৯৪৭", "ফরাসি বিপ্লব"], 1], ["হরপ্পা সভ্যতার গুরুত্বপূর্ণ বৈশিষ্ট্য কী?", ["বৌদ্ধধর্ম", "১৭৫৭", "উন্নত নগর পরিকল্পনা", "১৯৩৯"], 2], ["মৌর্য সাম্রাজ্যের প্রতিষ্ঠাতা কে?", ["১৭৫৭", "চন্দ্রগুপ্ত মৌর্য", "লন্ডন", "১৯৩৯"], 1], ["কলিঙ্গ যুদ্ধের পরে কোন শাসক ধম্ম প্রচার করেন?", ["লন্ডন", "১৯৩৯", "রোম", "অশোক"], 3], ["চার আর্যসত্য কোন ধর্মের শিক্ষা?", ["বৌদ্ধধর্ম", "নেপোলিয়ন", "অশোক", "১৯৪৭"], 0], ["জৈনধর্মের ২৪তম তীর্থঙ্কর কে?", ["রোম", "মৌর্য সাম্রাজ্য", "স্বদেশি আন্দোলন", "মহাবীর"], 3], ["১৮৫৭ সালের বিদ্রোহের ফল কী?", ["১৮৫৭", "কোম্পানি শাসনের অবসান", "রাশিয়া", "কলকাতা"], 1], ["কংগ্রেস কবে প্রতিষ্ঠিত হয়?", ["১৮৫৭", "গান্ধী", "১৮৮৫", "কলকাতা"], 2], ["স্বদেশি আন্দোলনের পটভূমি কী?", ["হরপ্পা", "জৈনধর্ম", "বঙ্গভঙ্গ", "গান্ধী"], 2], ["অসহযোগ আন্দোলন কবে শুরু হয়?", ["জৈনধর্ম", "১৯২০", "লন্ডন", "কলকাতা"], 1], ["দাণ্ডি অভিযান কোন আন্দোলনের অংশ?", ["১৯৪৭", "নেপোলিয়ন", "রাশিয়া", "আইন অমান্য আন্দোলন"], 3], ["ভারত ছাড়ো আন্দোলন কবে?", ["গুপ্ত যুগ", "স্বদেশি আন্দোলন", "১৯৪৭", "১৯৪২"], 3], ["ফরাসি বিপ্লব কবে?", ["মৌর্য সাম্রাজ্য", "জৈনধর্ম", "১৭৮৯", "ফরাসি বিপ্লব"], 2], ["সংস্কার আন্দোলনের সঙ্গে কে যুক্ত?", ["মার্টিন লুথার", "মৌর্য সাম্রাজ্য", "১৯৪৭", "কলকাতা"], 0], ["কলম্বাসের যাত্রা কবে?", ["জৈনধর্ম", "মৌর্য সাম্রাজ্য", "স্বদেশি আন্দোলন", "১৪৯২"], 3], ["ভাস্কো দা গামা ভারতে পৌঁছান কবে?", ["নেপোলিয়ন", "বৌদ্ধধর্ম", "১৯৩৯", "১৪৯৮"], 3], ["প্রথম বিশ্বযুদ্ধ কবে শুরু?", ["১৯৪৭", "অশোক", "১৯৩৯", "১৯১৪"], 3], ["দ্বিতীয় বিশ্বযুদ্ধ কবে শুরু?", ["স্বদেশি আন্দোলন", "রাশিয়া", "১৯৪৭", "১৯৩৯"], 3], ["বার্লিন প্রাচীর পতন কবে?", ["নেপোলিয়ন", "কলকাতা", "১৯৮৯", "রোম"], 2], ["শিল্পবিপ্লব প্রথম কোথায় শুরু?", ["অশোক", "নেপোলিয়ন", "জৈনধর্ম", "ব্রিটেন"], 3], ["মহাজনপদ যুগে কোন রাষ্ট্র শক্তিশালী হয়?", ["মৌর্য সাম্রাজ্য", "লন্ডন", "মগধ", "রাশিয়া"], 2], ["হরপ্পা সভ্যতার গুরুত্বপূর্ণ বৈশিষ্ট্য কী?", ["উন্নত নগর পরিকল্পনা", "রাশিয়া", "১৯৩৯", "গান্ধী"], 0], ["মৌর্য সাম্রাজ্যের প্রতিষ্ঠাতা কে?", ["গুপ্ত যুগ", "চন্দ্রগুপ্ত মৌর্য", "ফরাসি বিপ্লব", "মৌর্য সাম্রাজ্য"], 1], ["কলিঙ্গ যুদ্ধের পরে কোন শাসক ধম্ম প্রচার করেন?", ["অশোক", "১৯৩৯", "লন্ডন", "নেপোলিয়ন"], 0], ["চার আর্যসত্য কোন ধর্মের শিক্ষা?", ["রোম", "মৌর্য সাম্রাজ্য", "১৭৫৭", "বৌদ্ধধর্ম"], 3], ["জৈনধর্মের ২৪তম তীর্থঙ্কর কে?", ["লন্ডন", "গুপ্ত যুগ", "মহাবীর", "ইউরোপ"], 2], ["১৮৫৭ সালের বিদ্রোহের ফল কী?", ["ফরাসি বিপ্লব", "কোম্পানি শাসনের অবসান", "রাশিয়া", "১৮৫৭"], 1], ["কংগ্রেস কবে প্রতিষ্ঠিত হয়?", ["স্বদেশি আন্দোলন", "জৈনধর্ম", "১৮৮৫", "রাশিয়া"], 2], ["স্বদেশি আন্দোলনের পটভূমি কী?", ["বঙ্গভঙ্গ", "অশোক", "রোম", "নেপোলিয়ন"], 0], ["অসহযোগ আন্দোলন কবে শুরু হয়?", ["ফরাসি বিপ্লব", "১৮৫৭", "অশোক", "১৯২০"], 3], ["দাণ্ডি অভিযান কোন আন্দোলনের অংশ?", ["১৭৫৭", "কলকাতা", "আইন অমান্য আন্দোলন", "নেপোলিয়ন"], 2], ["ভারত ছাড়ো আন্দোলন কবে?", ["বৌদ্ধধর্ম", "১৯৪২", "নেপোলিয়ন", "১৯৪৭"], 1], ["ফরাসি বিপ্লব কবে?", ["হরপ্পা", "ফরাসি বিপ্লব", "রোম", "১৭৮৯"], 3], ["সংস্কার আন্দোলনের সঙ্গে কে যুক্ত?", ["ফরাসি বিপ্লব", "অশোক", "মার্টিন লুথার", "মৌর্য সাম্রাজ্য"], 2], ["কলম্বাসের যাত্রা কবে?", ["নেপোলিয়ন", "রোম", "লন্ডন", "১৪৯২"], 3], ["ভাস্কো দা গামা ভারতে পৌঁছান কবে?", ["১৯৪৭", "গুপ্ত যুগ", "রোম", "১৪৯৮"], 3], ["প্রথম বিশ্বযুদ্ধ কবে শুরু?", ["হরপ্পা", "১৯১৪", "নেপোলিয়ন", "স্বদেশি আন্দোলন"], 1], ["দ্বিতীয় বিশ্বযুদ্ধ কবে শুরু?", ["গুপ্ত যুগ", "রাশিয়া", "ফরাসি বিপ্লব", "১৯৩৯"], 3], ["বার্লিন প্রাচীর পতন কবে?", ["১৯৮৯", "কলকাতা", "বৌদ্ধধর্ম", "নেপোলিয়ন"], 0], ["শিল্পবিপ্লব প্রথম কোথায় শুরু?", ["১৯৩৯", "ব্রিটেন", "জৈনধর্ম", "১৮৫৭"], 1], ["মহাজনপদ যুগে কোন রাষ্ট্র শক্তিশালী হয়?", ["রোম", "রাশিয়া", "নেপোলিয়ন", "মগধ"], 3], ["হরপ্পা সভ্যতার গুরুত্বপূর্ণ বৈশিষ্ট্য কী?", ["নেপোলিয়ন", "১৯৪৭", "কলকাতা", "উন্নত নগর পরিকল্পনা"], 3], ["মৌর্য সাম্রাজ্যের প্রতিষ্ঠাতা কে?", ["ব্রিটেন", "চন্দ্রগুপ্ত মৌর্য", "গুপ্ত যুগ", "১৯৪৭"], 1], ["কলিঙ্গ যুদ্ধের পরে কোন শাসক ধম্ম প্রচার করেন?", ["হরপ্পা", "স্বদেশি আন্দোলন", "১৮৫৭", "অশোক"], 3], ["চার আর্যসত্য কোন ধর্মের শিক্ষা?", ["রাশিয়া", "বৌদ্ধধর্ম", "রোম", "অশোক"], 1], ["জৈনধর্মের ২৪তম তীর্থঙ্কর কে?", ["কলকাতা", "গুপ্ত যুগ", "স্বদেশি আন্দোলন", "মহাবীর"], 3], ["১৮৫৭ সালের বিদ্রোহের ফল কী?", ["কোম্পানি শাসনের অবসান", "বৌদ্ধধর্ম", "রাশিয়া", "১৯৩৯"], 0], ["কংগ্রেস কবে প্রতিষ্ঠিত হয়?", ["১৮৮৫", "মৌর্য সাম্রাজ্য", "লন্ডন", "বৌদ্ধধর্ম"], 0], ["স্বদেশি আন্দোলনের পটভূমি কী?", ["বঙ্গভঙ্গ", "১৭৫৭", "ফরাসি বিপ্লব", "গান্ধী"], 0], ["অসহযোগ আন্দোলন কবে শুরু হয়?", ["১৯২০", "গুপ্ত যুগ", "জৈনধর্ম", "বৌদ্ধধর্ম"], 0], ["দাণ্ডি অভিযান কোন আন্দোলনের অংশ?", ["মৌর্য সাম্রাজ্য", "ফরাসি বিপ্লব", "রাশিয়া", "আইন অমান্য আন্দোলন"], 3], ["ভারত ছাড়ো আন্দোলন কবে?", ["গান্ধী", "১৯৪২", "অশোক", "মৌর্য সাম্রাজ্য"], 1], ["ফরাসি বিপ্লব কবে?", ["১৭৫৭", "ইউরোপ", "১৯৪৭", "১৭৮৯"], 3], ["সংস্কার আন্দোলনের সঙ্গে কে যুক্ত?", ["মার্টিন লুথার", "রোম", "নেপোলিয়ন", "১৯৪৭"], 0], ["কলম্বাসের যাত্রা কবে?", ["ব্রিটেন", "১৪৯২", "ফরাসি বিপ্লব", "লন্ডন"], 1], ["ভাস্কো দা গামা ভারতে পৌঁছান কবে?", ["১৪৯৮", "স্বদেশি আন্দোলন", "বৌদ্ধধর্ম", "ফরাসি বিপ্লব"], 0], ["প্রথম বিশ্বযুদ্ধ কবে শুরু?", ["১৯১৪", "স্বদেশি আন্দোলন", "মৌর্য সাম্রাজ্য", "১৮৫৭"], 0], ["দ্বিতীয় বিশ্বযুদ্ধ কবে শুরু?", ["হরপ্পা", "১৭৫৭", "১৯৩৯", "নেপোলিয়ন"], 2], ["বার্লিন প্রাচীর পতন কবে?", ["লন্ডন", "কলকাতা", "১৯৮৯", "ব্রিটেন"], 2], ["শিল্পবিপ্লব প্রথম কোথায় শুরু?", ["ব্রিটেন", "১৯৪৭", "বৌদ্ধধর্ম", "মৌর্য সাম্রাজ্য"], 0], ["মহাজনপদ যুগে কোন রাষ্ট্র শক্তিশালী হয়?", ["গুপ্ত যুগ", "কলকাতা", "মগধ", "স্বদেশি আন্দোলন"], 2], ["হরপ্পা সভ্যতার গুরুত্বপূর্ণ বৈশিষ্ট্য কী?", ["স্বদেশি আন্দোলন", "নেপোলিয়ন", "উন্নত নগর পরিকল্পনা", "গান্ধী"], 2], ["মৌর্য সাম্রাজ্যের প্রতিষ্ঠাতা কে?", ["অশোক", "কলকাতা", "চন্দ্রগুপ্ত মৌর্য", "ফরাসি বিপ্লব"], 2], ["কলিঙ্গ যুদ্ধের পরে কোন শাসক ধম্ম প্রচার করেন?", ["১৮৫৭", "হরপ্পা", "ফরাসি বিপ্লব", "অশোক"], 3], ["চার আর্যসত্য কোন ধর্মের শিক্ষা?", ["নেপোলিয়ন", "১৭৫৭", "লন্ডন", "বৌদ্ধধর্ম"], 3], ["জৈনধর্মের ২৪তম তীর্থঙ্কর কে?", ["লন্ডন", "মহাবীর", "স্বদেশি আন্দোলন", "বৌদ্ধধর্ম"], 1], ["১৮৫৭ সালের বিদ্রোহের ফল কী?", ["রাশিয়া", "অশোক", "কোম্পানি শাসনের অবসান", "নেপোলিয়ন"], 2], ["কংগ্রেস কবে প্রতিষ্ঠিত হয়?", ["ব্রিটেন", "১৮৮৫", "মৌর্য সাম্রাজ্য", "১৭৫৭"], 1], ["স্বদেশি আন্দোলনের পটভূমি কী?", ["বঙ্গভঙ্গ", "ব্রিটেন", "ইউরোপ", "মৌর্য সাম্রাজ্য"], 0], ["অসহযোগ আন্দোলন কবে শুরু হয়?", ["লন্ডন", "কলকাতা", "১৯২০", "১৯৩৯"], 2], ["দাণ্ডি অভিযান কোন আন্দোলনের অংশ?", ["আইন অমান্য আন্দোলন", "রাশিয়া", "স্বদেশি আন্দোলন", "কলকাতা"], 0], ["ভারত ছাড়ো আন্দোলন কবে?", ["১৭৫৭", "লন্ডন", "জৈনধর্ম", "১৯৪২"], 3], ["ফরাসি বিপ্লব কবে?", ["নেপোলিয়ন", "১৭৮৯", "১৭৫৭", "মৌর্য সাম্রাজ্য"], 1], ["সংস্কার আন্দোলনের সঙ্গে কে যুক্ত?", ["ব্রিটেন", "মার্টিন লুথার", "১৯৩৯", "১৭৫৭"], 1], ["কলম্বাসের যাত্রা কবে?", ["১৪৯২", "গুপ্ত যুগ", "অশোক", "নেপোলিয়ন"], 0], ["ভাস্কো দা গামা ভারতে পৌঁছান কবে?", ["স্বদেশি আন্দোলন", "জৈনধর্ম", "১৪৯৮", "১৯৪৭"], 2], ["প্রথম বিশ্বযুদ্ধ কবে শুরু?", ["ফরাসি বিপ্লব", "১৯১৪", "রোম", "ইউরোপ"], 1], ["দ্বিতীয় বিশ্বযুদ্ধ কবে শুরু?", ["১৯৩৯", "হরপ্পা", "রোম", "১৭৫৭"], 0], ["বার্লিন প্রাচীর পতন কবে?", ["গুপ্ত যুগ", "জৈনধর্ম", "১৮৫৭", "১৯৮৯"], 3], ["শিল্পবিপ্লব প্রথম কোথায় শুরু?", ["রোম", "ব্রিটেন", "বৌদ্ধধর্ম", "গান্ধী"], 1], ["মহাজনপদ যুগে কোন রাষ্ট্র শক্তিশালী হয়?", ["মগধ", "অশোক", "হরপ্পা", "মৌর্য সাম্রাজ্য"], 0], ["হরপ্পা সভ্যতার গুরুত্বপূর্ণ বৈশিষ্ট্য কী?", ["উন্নত নগর পরিকল্পনা", "কলকাতা", "অশোক", "গান্ধী"], 0], ["মৌর্য সাম্রাজ্যের প্রতিষ্ঠাতা কে?", ["গান্ধী", "অশোক", "মৌর্য সাম্রাজ্য", "চন্দ্রগুপ্ত মৌর্য"], 3], ["কলিঙ্গ যুদ্ধের পরে কোন শাসক ধম্ম প্রচার করেন?", ["ইউরোপ", "১৯৪৭", "১৭৫৭", "অশোক"], 3], ["চার আর্যসত্য কোন ধর্মের শিক্ষা?", ["হরপ্পা", "বৌদ্ধধর্ম", "ফরাসি বিপ্লব", "১৯৩৯"], 1], ["জৈনধর্মের ২৪তম তীর্থঙ্কর কে?", ["লন্ডন", "জৈনধর্ম", "মহাবীর", "ব্রিটেন"], 2], ["১৮৫৭ সালের বিদ্রোহের ফল কী?", ["কোম্পানি শাসনের অবসান", "লন্ডন", "রাশিয়া", "রোম"], 0], ["কংগ্রেস কবে প্রতিষ্ঠিত হয়?", ["ফরাসি বিপ্লব", "গুপ্ত যুগ", "১৮৮৫", "লন্ডন"], 2], ["স্বদেশি আন্দোলনের পটভূমি কী?", ["বঙ্গভঙ্গ", "ব্রিটেন", "কলকাতা", "গুপ্ত যুগ"], 0], ["অসহযোগ আন্দোলন কবে শুরু হয়?", ["১৯২০", "হরপ্পা", "মৌর্য সাম্রাজ্য", "গুপ্ত যুগ"], 0], ["দাণ্ডি অভিযান কোন আন্দোলনের অংশ?", ["আইন অমান্য আন্দোলন", "ইউরোপ", "১৯৪৭", "গান্ধী"], 0], ["ভারত ছাড়ো আন্দোলন কবে?", ["লন্ডন", "১৯৪২", "১৯৩৯", "ইউরোপ"], 1], ["ফরাসি বিপ্লব কবে?", ["১৭৮৯", "১৭৫৭", "রোম", "১৮৫৭"], 0], ["সংস্কার আন্দোলনের সঙ্গে কে যুক্ত?", ["১৯৩৯", "গান্ধী", "মার্টিন লুথার", "জৈনধর্ম"], 2], ["কলম্বাসের যাত্রা কবে?", ["১৪৯২", "গান্ধী", "রাশিয়া", "লন্ডন"], 0], ["ভাস্কো দা গামা ভারতে পৌঁছান কবে?", ["স্বদেশি আন্দোলন", "১৯৩৯", "১৪৯৮", "কলকাতা"], 2], ["প্রথম বিশ্বযুদ্ধ কবে শুরু?", ["কলকাতা", "মৌর্য সাম্রাজ্য", "১৮৫৭", "১৯১৪"], 3], ["দ্বিতীয় বিশ্বযুদ্ধ কবে শুরু?", ["১৯৩৯", "কলকাতা", "অশোক", "রোম"], 0], ["বার্লিন প্রাচীর পতন কবে?", ["ইউরোপ", "লন্ডন", "১৯৮৯", "ব্রিটেন"], 2], ["শিল্পবিপ্লব প্রথম কোথায় শুরু?", ["লন্ডন", "অশোক", "জৈনধর্ম", "ব্রিটেন"], 3], ["মহাজনপদ যুগে কোন রাষ্ট্র শক্তিশালী হয়?", ["গুপ্ত যুগ", "মগধ", "রোম", "রাশিয়া"], 1], ["হরপ্পা সভ্যতার গুরুত্বপূর্ণ বৈশিষ্ট্য কী?", ["স্বদেশি আন্দোলন", "উন্নত নগর পরিকল্পনা", "১৭৫৭", "১৯৪৭"], 1], ["মৌর্য সাম্রাজ্যের প্রতিষ্ঠাতা কে?", ["১৭৫৭", "ইউরোপ", "চন্দ্রগুপ্ত মৌর্য", "১৯৩৯"], 2], ["কলিঙ্গ যুদ্ধের পরে কোন শাসক ধম্ম প্রচার করেন?", ["১৮৫৭", "কলকাতা", "জৈনধর্ম", "অশোক"], 3], ["চার আর্যসত্য কোন ধর্মের শিক্ষা?", ["বৌদ্ধধর্ম", "নেপোলিয়ন", "ফরাসি বিপ্লব", "১৯৩৯"], 0], ["জৈনধর্মের ২৪তম তীর্থঙ্কর কে?", ["মহাবীর", "কলকাতা", "স্বদেশি আন্দোলন", "১৯৩৯"], 0], ["১৮৫৭ সালের বিদ্রোহের ফল কী?", ["কলকাতা", "হরপ্পা", "ব্রিটেন", "কোম্পানি শাসনের অবসান"], 3], ["কংগ্রেস কবে প্রতিষ্ঠিত হয়?", ["রোম", "রাশিয়া", "১৮৮৫", "বৌদ্ধধর্ম"], 2], ["স্বদেশি আন্দোলনের পটভূমি কী?", ["বঙ্গভঙ্গ", "মৌর্য সাম্রাজ্য", "ব্রিটেন", "জৈনধর্ম"], 0], ["অসহযোগ আন্দোলন কবে শুরু হয়?", ["বৌদ্ধধর্ম", "জৈনধর্ম", "১৮৫৭", "১৯২০"], 3], ["দাণ্ডি অভিযান কোন আন্দোলনের অংশ?", ["অশোক", "ইউরোপ", "আইন অমান্য আন্দোলন", "নেপোলিয়ন"], 2], ["ভারত ছাড়ো আন্দোলন কবে?", ["১৯৪২", "বৌদ্ধধর্ম", "রাশিয়া", "জৈনধর্ম"], 0], ["ফরাসি বিপ্লব কবে?", ["হরপ্পা", "১৭৫৭", "১৯৩৯", "১৭৮৯"], 3], ["সংস্কার আন্দোলনের সঙ্গে কে যুক্ত?", ["১৮৫৭", "ইউরোপ", "বৌদ্ধধর্ম", "মার্টিন লুথার"], 3], ["কলম্বাসের যাত্রা কবে?", ["ফরাসি বিপ্লব", "মৌর্য সাম্রাজ্য", "গুপ্ত যুগ", "১৪৯২"], 3], ["ভাস্কো দা গামা ভারতে পৌঁছান কবে?", ["হরপ্পা", "স্বদেশি আন্দোলন", "মৌর্য সাম্রাজ্য", "১৪৯৮"], 3], ["প্রথম বিশ্বযুদ্ধ কবে শুরু?", ["১৯১৪", "গান্ধী", "জৈনধর্ম", "রোম"], 0], ["দ্বিতীয় বিশ্বযুদ্ধ কবে শুরু?", ["১৯৩৯", "ব্রিটেন", "নেপোলিয়ন", "রাশিয়া"], 0], ["বার্লিন প্রাচীর পতন কবে?", ["নেপোলিয়ন", "স্বদেশি আন্দোলন", "১৯৮৯", "গান্ধী"], 2], ["শিল্পবিপ্লব প্রথম কোথায় শুরু?", ["লন্ডন", "ব্রিটেন", "জৈনধর্ম", "রোম"], 1], ["মহাজনপদ যুগে কোন রাষ্ট্র শক্তিশালী হয়?", ["অশোক", "মগধ", "হরপ্পা", "ফরাসি বিপ্লব"], 1], ["হরপ্পা সভ্যতার গুরুত্বপূর্ণ বৈশিষ্ট্য কী?", ["১৭৫৭", "১৯৪৭", "উন্নত নগর পরিকল্পনা", "মৌর্য সাম্রাজ্য"], 2], ["মৌর্য সাম্রাজ্যের প্রতিষ্ঠাতা কে?", ["ব্রিটেন", "রাশিয়া", "১৯৩৯", "চন্দ্রগুপ্ত মৌর্য"], 3], ["কলিঙ্গ যুদ্ধের পরে কোন শাসক ধম্ম প্রচার করেন?", ["অশোক", "ব্রিটেন", "গুপ্ত যুগ", "রাশিয়া"], 0], ["চার আর্যসত্য কোন ধর্মের শিক্ষা?", ["বৌদ্ধধর্ম", "গুপ্ত যুগ", "ব্রিটেন", "১৭৫৭"], 0], ["জৈনধর্মের ২৪তম তীর্থঙ্কর কে?", ["লন্ডন", "মহাবীর", "মৌর্য সাম্রাজ্য", "রোম"], 1], ["১৮৫৭ সালের বিদ্রোহের ফল কী?", ["কোম্পানি শাসনের অবসান", "বৌদ্ধধর্ম", "অশোক", "গুপ্ত যুগ"], 0], ["কংগ্রেস কবে প্রতিষ্ঠিত হয়?", ["ইউরোপ", "১৮৮৫", "ফরাসি বিপ্লব", "ব্রিটেন"], 1], ["স্বদেশি আন্দোলনের পটভূমি কী?", ["রোম", "নেপোলিয়ন", "বঙ্গভঙ্গ", "লন্ডন"], 2], ["অসহযোগ আন্দোলন কবে শুরু হয়?", ["১৭৫৭", "লন্ডন", "ফরাসি বিপ্লব", "১৯২০"], 3], ["দাণ্ডি অভিযান কোন আন্দোলনের অংশ?", ["আইন অমান্য আন্দোলন", "রাশিয়া", "১৭৫৭", "কলকাতা"], 0], ["ভারত ছাড়ো আন্দোলন কবে?", ["১৯৪৭", "১৯৪২", "মৌর্য সাম্রাজ্য", "গুপ্ত যুগ"], 1], ["ফরাসি বিপ্লব কবে?", ["১৭৮৯", "মৌর্য সাম্রাজ্য", "ফরাসি বিপ্লব", "নেপোলিয়ন"], 0], ["সংস্কার আন্দোলনের সঙ্গে কে যুক্ত?", ["গান্ধী", "রাশিয়া", "মার্টিন লুথার", "হরপ্পা"], 2], ["কলম্বাসের যাত্রা কবে?", ["১৯৩৯", "হরপ্পা", "বৌদ্ধধর্ম", "১৪৯২"], 3], ["ভাস্কো দা গামা ভারতে পৌঁছান কবে?", ["জৈনধর্ম", "১৪৯৮", "গান্ধী", "ব্রিটেন"], 1], ["প্রথম বিশ্বযুদ্ধ কবে শুরু?", ["রাশিয়া", "লন্ডন", "কলকাতা", "১৯১৪"], 3], ["দ্বিতীয় বিশ্বযুদ্ধ কবে শুরু?", ["জৈনধর্ম", "নেপোলিয়ন", "১৯৩৯", "হরপ্পা"], 2], ["বার্লিন প্রাচীর পতন কবে?", ["মৌর্য সাম্রাজ্য", "অশোক", "নেপোলিয়ন", "১৯৮৯"], 3], ["শিল্পবিপ্লব প্রথম কোথায় শুরু?", ["জৈনধর্ম", "রাশিয়া", "ব্রিটেন", "১৯৩৯"], 2], ["মহাজনপদ যুগে কোন রাষ্ট্র শক্তিশালী হয়?", ["ফরাসি বিপ্লব", "মগধ", "১৯৪৭", "জৈনধর্ম"], 1], ["হরপ্পা সভ্যতার গুরুত্বপূর্ণ বৈশিষ্ট্য কী?", ["লন্ডন", "উন্নত নগর পরিকল্পনা", "জৈনধর্ম", "রাশিয়া"], 1], ["মৌর্য সাম্রাজ্যের প্রতিষ্ঠাতা কে?", ["১৯৪৭", "চন্দ্রগুপ্ত মৌর্য", "হরপ্পা", "গান্ধী"], 1], ["কলিঙ্গ যুদ্ধের পরে কোন শাসক ধম্ম প্রচার করেন?", ["বৌদ্ধধর্ম", "ফরাসি বিপ্লব", "ইউরোপ", "অশোক"], 3], ["চার আর্যসত্য কোন ধর্মের শিক্ষা?", ["রাশিয়া", "বৌদ্ধধর্ম", "লন্ডন", "রোম"], 1], ["জৈনধর্মের ২৪তম তীর্থঙ্কর কে?", ["মহাবীর", "১৯৪৭", "১৮৫৭", "হরপ্পা"], 0], ["১৮৫৭ সালের বিদ্রোহের ফল কী?", ["হরপ্পা", "১৯৪৭", "কোম্পানি শাসনের অবসান", "১৭৫৭"], 2], ["কংগ্রেস কবে প্রতিষ্ঠিত হয়?", ["ইউরোপ", "কলকাতা", "রাশিয়া", "১৮৮৫"], 3], ["স্বদেশি আন্দোলনের পটভূমি কী?", ["ব্রিটেন", "জৈনধর্ম", "ফরাসি বিপ্লব", "বঙ্গভঙ্গ"], 3], ["অসহযোগ আন্দোলন কবে শুরু হয়?", ["১৮৫৭", "বৌদ্ধধর্ম", "১৯২০", "রোম"], 2], ["দাণ্ডি অভিযান কোন আন্দোলনের অংশ?", ["ইউরোপ", "আইন অমান্য আন্দোলন", "গুপ্ত যুগ", "স্বদেশি আন্দোলন"], 1], ["ভারত ছাড়ো আন্দোলন কবে?", ["১৯৪২", "কলকাতা", "গান্ধী", "ফরাসি বিপ্লব"], 0], ["ফরাসি বিপ্লব কবে?", ["১৭৮৯", "রোম", "হরপ্পা", "নেপোলিয়ন"], 0], ["সংস্কার আন্দোলনের সঙ্গে কে যুক্ত?", ["১৭৫৭", "কলকাতা", "রাশিয়া", "মার্টিন লুথার"], 3], ["কলম্বাসের যাত্রা কবে?", ["রাশিয়া", "১৯৪৭", "ইউরোপ", "১৪৯২"], 3], ["ভাস্কো দা গামা ভারতে পৌঁছান কবে?", ["স্বদেশি আন্দোলন", "ইউরোপ", "১৪৯৮", "জৈনধর্ম"], 2], ["প্রথম বিশ্বযুদ্ধ কবে শুরু?", ["১৯১৪", "মৌর্য সাম্রাজ্য", "গুপ্ত যুগ", "ইউরোপ"], 0], ["দ্বিতীয় বিশ্বযুদ্ধ কবে শুরু?", ["বৌদ্ধধর্ম", "১৯৩৯", "লন্ডন", "১৮৫৭"], 1], ["বার্লিন প্রাচীর পতন কবে?", ["ফরাসি বিপ্লব", "১৯৮৯", "১৮৫৭", "হরপ্পা"], 1], ["শিল্পবিপ্লব প্রথম কোথায় শুরু?", ["গান্ধী", "লন্ডন", "ব্রিটেন", "ইউরোপ"], 2], ["মহাজনপদ যুগে কোন রাষ্ট্র শক্তিশালী হয়?", ["হরপ্পা", "মগধ", "১৯৩৯", "মৌর্য সাম্রাজ্য"], 1], ["হরপ্পা সভ্যতার গুরুত্বপূর্ণ বৈশিষ্ট্য কী?", ["উন্নত নগর পরিকল্পনা", "রাশিয়া", "রোম", "স্বদেশি আন্দোলন"], 0], ["মৌর্য সাম্রাজ্যের প্রতিষ্ঠাতা কে?", ["হরপ্পা", "কলকাতা", "১৯৪৭", "চন্দ্রগুপ্ত মৌর্য"], 3], ["কলিঙ্গ যুদ্ধের পরে কোন শাসক ধম্ম প্রচার করেন?", ["লন্ডন", "মৌর্য সাম্রাজ্য", "অশোক", "জৈনধর্ম"], 2], ["চার আর্যসত্য কোন ধর্মের শিক্ষা?", ["গান্ধী", "১৯৩৯", "ইউরোপ", "বৌদ্ধধর্ম"], 3], ["জৈনধর্মের ২৪তম তীর্থঙ্কর কে?", ["মহাবীর", "ব্রিটেন", "ফরাসি বিপ্লব", "মৌর্য সাম্রাজ্য"], 0], ["১৮৫৭ সালের বিদ্রোহের ফল কী?", ["কলকাতা", "বৌদ্ধধর্ম", "ব্রিটেন", "কোম্পানি শাসনের অবসান"], 3], ["কংগ্রেস কবে প্রতিষ্ঠিত হয়?", ["১৮৮৫", "অশোক", "১৭৫৭", "মৌর্য সাম্রাজ্য"], 0], ["স্বদেশি আন্দোলনের পটভূমি কী?", ["রাশিয়া", "কলকাতা", "বঙ্গভঙ্গ", "১৯৩৯"], 2], ["অসহযোগ আন্দোলন কবে শুরু হয়?", ["১৯২০", "হরপ্পা", "বৌদ্ধধর্ম", "১৮৫৭"], 0], ["দাণ্ডি অভিযান কোন আন্দোলনের অংশ?", ["আইন অমান্য আন্দোলন", "রোম", "লন্ডন", "কলকাতা"], 0], ["ভারত ছাড়ো আন্দোলন কবে?", ["ইউরোপ", "১৯৪২", "অশোক", "নেপোলিয়ন"], 1], ["ফরাসি বিপ্লব কবে?", ["১৭৮৯", "নেপোলিয়ন", "১৮৫৭", "১৯৩৯"], 0], ["সংস্কার আন্দোলনের সঙ্গে কে যুক্ত?", ["১৯৪৭", "মার্টিন লুথার", "ব্রিটেন", "হরপ্পা"], 1], ["কলম্বাসের যাত্রা কবে?", ["রাশিয়া", "হরপ্পা", "১৪৯২", "কলকাতা"], 2], ["ভাস্কো দা গামা ভারতে পৌঁছান কবে?", ["১৪৯৮", "হরপ্পা", "বৌদ্ধধর্ম", "স্বদেশি আন্দোলন"], 0], ["প্রথম বিশ্বযুদ্ধ কবে শুরু?", ["লন্ডন", "বৌদ্ধধর্ম", "১৯১৪", "অশোক"], 2], ["দ্বিতীয় বিশ্বযুদ্ধ কবে শুরু?", ["গান্ধী", "অশোক", "১৮৫৭", "১৯৩৯"], 3], ["বার্লিন প্রাচীর পতন কবে?", ["ফরাসি বিপ্লব", "কলকাতা", "১৯৮৯", "হরপ্পা"], 2], ["শিল্পবিপ্লব প্রথম কোথায় শুরু?", ["কলকাতা", "ব্রিটেন", "নেপোলিয়ন", "গুপ্ত যুগ"], 1], ["মহাজনপদ যুগে কোন রাষ্ট্র শক্তিশালী হয়?", ["মগধ", "হরপ্পা", "নেপোলিয়ন", "মৌর্য সাম্রাজ্য"], 0], ["হরপ্পা সভ্যতার গুরুত্বপূর্ণ বৈশিষ্ট্য কী?", ["১৯৩৯", "১৮৫৭", "উন্নত নগর পরিকল্পনা", "লন্ডন"], 2], ["মৌর্য সাম্রাজ্যের প্রতিষ্ঠাতা কে?", ["ফরাসি বিপ্লব", "চন্দ্রগুপ্ত মৌর্য", "১৮৫৭", "গান্ধী"], 1], ["কলিঙ্গ যুদ্ধের পরে কোন শাসক ধম্ম প্রচার করেন?", ["অশোক", "ফরাসি বিপ্লব", "নেপোলিয়ন", "জৈনধর্ম"], 0], ["চার আর্যসত্য কোন ধর্মের শিক্ষা?", ["১৮৫৭", "১৯৪৭", "বৌদ্ধধর্ম", "গুপ্ত যুগ"], 2], ["জৈনধর্মের ২৪তম তীর্থঙ্কর কে?", ["গুপ্ত যুগ", "মহাবীর", "ফরাসি বিপ্লব", "অশোক"], 1], ["১৮৫৭ সালের বিদ্রোহের ফল কী?", ["গুপ্ত যুগ", "ফরাসি বিপ্লব", "রোম", "কোম্পানি শাসনের অবসান"], 3], ["কংগ্রেস কবে প্রতিষ্ঠিত হয়?", ["বৌদ্ধধর্ম", "হরপ্পা", "১৮৮৫", "ব্রিটেন"], 2], ["স্বদেশি আন্দোলনের পটভূমি কী?", ["মৌর্য সাম্রাজ্য", "ব্রিটেন", "বঙ্গভঙ্গ", "১৮৫৭"], 2], ["অসহযোগ আন্দোলন কবে শুরু হয়?", ["বৌদ্ধধর্ম", "ব্রিটেন", "ফরাসি বিপ্লব", "১৯২০"], 3], ["দাণ্ডি অভিযান কোন আন্দোলনের অংশ?", ["আইন অমান্য আন্দোলন", "ব্রিটেন", "নেপোলিয়ন", "রাশিয়া"], 0], ["ভারত ছাড়ো আন্দোলন কবে?", ["১৭৫৭", "গান্ধী", "১৯৪২", "ব্রিটেন"], 2], ["ফরাসি বিপ্লব কবে?", ["ইউরোপ", "মৌর্য সাম্রাজ্য", "১৭৮৯", "গান্ধী"], 2], ["সংস্কার আন্দোলনের সঙ্গে কে যুক্ত?", ["মার্টিন লুথার", "১৯৩৯", "মৌর্য সাম্রাজ্য", "রোম"], 0], ["কলম্বাসের যাত্রা কবে?", ["রোম", "কলকাতা", "লন্ডন", "১৪৯২"], 3], ["ভাস্কো দা গামা ভারতে পৌঁছান কবে?", ["১৪৯৮", "অশোক", "১৯৩৯", "ব্রিটেন"], 0], ["প্রথম বিশ্বযুদ্ধ কবে শুরু?", ["১৯৩৯", "ইউরোপ", "১৯১৪", "রাশিয়া"], 2], ["দ্বিতীয় বিশ্বযুদ্ধ কবে শুরু?", ["রোম", "লন্ডন", "১৯৩৯", "বৌদ্ধধর্ম"], 2], ["বার্লিন প্রাচীর পতন কবে?", ["রোম", "ব্রিটেন", "কলকাতা", "১৯৮৯"], 3], ["শিল্পবিপ্লব প্রথম কোথায় শুরু?", ["বৌদ্ধধর্ম", "ব্রিটেন", "গুপ্ত যুগ", "১৯৪৭"], 1], ["মহাজনপদ যুগে কোন রাষ্ট্র শক্তিশালী হয়?", ["মগধ", "নেপোলিয়ন", "১৭৫৭", "রোম"], 0]];let currentCat='home',currentSub='',qi=0,answered=false;
 
-const questions=[
-["French Revolution began in:",["1789","1815","1848","1914"],0],
-["Renaissance began prominently in:",["Italy","Russia","India","Spain"],0],
-["Who is associated with the 95 Theses?",["Martin Luther","Newton","Rousseau","Bismarck"],0],
-["Industrial Revolution first developed on a large scale in:",["Britain","France","Russia","Italy"],0],
-["World War I lasted:",["1914–1918","1939–1945","1905–1908","1917–1920"],0],
-["Immediate trigger of World War I was the assassination of:",["Archduke Franz Ferdinand","Kaiser Wilhelm II","Tsar Nicholas II","Woodrow Wilson"],0],
-["Russian Revolution's Bolshevik leader was:",["Lenin","Cavour","Clemenceau","Churchill"],0],
-["World War II began in Europe in:",["1939","1941","1942","1945"],0],
-["Indian National Congress was founded in:",["1885","1905","1857","1942"],0],
-["Revolt of 1857 began at:",["Meerut","Delhi","Kanpur","Lucknow"],0],
-["Permanent Settlement is associated with:",["Cornwallis","Dalhousie","Wellesley","Curzon"],0],
-["Doctrine of Lapse is associated with:",["Dalhousie","Bentinck","Ripon","Curzon"],0],
-["Swadeshi Movement followed the:",["Partition of Bengal","Jallianwala Bagh","Quit India","Salt March"],0],
-["Non-Cooperation Movement was launched in:",["1920","1919","1930","1942"],0],
-["Salt March began in:",["1930","1922","1942","1915"],0],
-["Quit India Movement was launched in:",["1942","1930","1920","1947"],0],
-["Jallianwala Bagh massacre occurred in:",["1919","1920","1930","1942"],0],
-["Champaran Satyagraha took place in:",["1917","1919","1922","1930"],0],
-["Who led the INA prominently?",["Subhas Chandra Bose","Dadabhai Naoroji","Gopal Krishna Gokhale","Bal Gangadhar Tilak"],0],
-["India became independent in:",["1947","1942","1950","1935"],0],
-
-["Who painted the Mona Lisa?",["Leonardo da Vinci","Michelangelo","Raphael","Donatello"],0],
-["The printing press in Europe is associated with:",["Johannes Gutenberg","Galileo","Copernicus","Newton"],0],
-["The Protestant Reformation is traditionally dated from:",["1517","1492","1648","1789"],0],
-["The Peace of Augsburg was associated with:",["Religious settlement in Germany","French Revolution","Industrial Revolution","Italian unification"],0],
-["Who wrote The Social Contract?",["Jean-Jacques Rousseau","John Locke","Voltaire","Montesquieu"],0],
-["Separation of powers is strongly associated with:",["Montesquieu","Rousseau","Luther","Mazzini"],0],
-["Who discovered the sea route to India around the Cape of Good Hope?",["Vasco da Gama","Columbus","Magellan","Cortés"],0],
-["Columbus reached the Americas in:",["1492","1453","1517","1600"],0],
-["The French Revolution's Bastille was stormed on:",["14 July 1789","4 July 1776","18 June 1815","5 May 1789"],0],
-["The Reign of Terror is associated with:",["Robespierre","Cavour","Bismarck","Garibaldi"],0],
-["Napoleon was defeated at:",["Waterloo","Verdun","Trafalgar","Sedan"],0],
-["Congress of Vienna was held after:",["Napoleonic Wars","World War I","Crimean War","World War II"],0],
-["The Zollverein helped promote:",["German economic unity","Italian religious unity","French monarchy","Russian expansion"],0],
-["Who was the chief architect of German unification?",["Otto von Bismarck","Mazzini","Garibaldi","Metternich"],0],
-["Who was known as the 'Sword of Italy' in unification?",["Garibaldi","Cavour","Mazzini","Victor Emmanuel II"],0],
-["The Triple Entente included:",["Britain, France and Russia","Germany, Italy and Japan","Britain, Germany and Austria","France, Germany and Russia"],0],
-["The Treaty of Versailles was signed in:",["1919","1918","1920","1945"],0],
-["The League of Nations was created after:",["World War I","World War II","French Revolution","Crimean War"],0],
-["The Bolsheviks seized power in:",["October 1917","February 1905","March 1918","January 1919"],0],
-["The immediate cause of World War II in Europe was:",["German invasion of Poland","Pearl Harbor","Russian Revolution","Munich Conference"],0],
-["D-Day took place in:",["1944","1939","1941","1945"],0],
-["Pearl Harbor was attacked in:",["1941","1939","1942","1944"],0],
-["The United Nations was established in:",["1945","1919","1947","1950"],0],
-["The Cold War was mainly between:",["USA and USSR","Britain and France","Germany and Italy","India and China"],0],
-
-["The first Battle of Panipat took place in:",["1526","1556","1761","1757"],0],
-["The Battle of Plassey was fought in:",["1757","1764","1857","1773"],0],
-["The Battle of Buxar was fought in:",["1764","1757","1784","1799"],0],
-["The Regulating Act was passed in:",["1773","1784","1813","1858"],0],
-["The Permanent Settlement was introduced in:",["1793","1773","1813","1857"],0],
-["The Subsidiary Alliance was developed by:",["Lord Wellesley","Lord Dalhousie","Lord Cornwallis","Lord Curzon"],0],
-["The Doctrine of Lapse was applied extensively by:",["Lord Dalhousie","Lord Ripon","Lord Wellesley","Lord Canning"],0],
-["The last Mughal emperor was:",["Bahadur Shah II","Akbar II","Shah Alam II","Aurangzeb"],0],
-["The Revolt of 1857 is also called:",["First War of Independence","Swadeshi Movement","Civil Disobedience","Home Rule Movement"],0],
-["Who led the revolt at Jhansi?",["Rani Lakshmibai","Begum Hazrat Mahal","Sarojini Naidu","Annie Besant"],0],
-["Who led the revolt at Kanpur?",["Nana Sahib","Kunwar Singh","Bahadur Shah II","Bakht Khan"],0],
-["Who led the revolt in Bihar?",["Kunwar Singh","Nana Sahib","Tantia Tope","Mangal Pandey"],0],
-["The Government of India Act 1858 transferred power to:",["British Crown","East India Company","Indian National Congress","Mughal emperor"],0],
-["Brahmo Samaj was founded by:",["Raja Rammohan Roy","Swami Dayanand","Vivekananda","Sir Syed Ahmad Khan"],0],
-["Arya Samaj was founded by:",["Swami Dayanand Saraswati","Raja Rammohan Roy","Vivekananda","Sir Syed Ahmad Khan"],0],
-["Aligarh Movement is associated with:",["Sir Syed Ahmad Khan","Rammohan Roy","Tilak","Gokhale"],0],
-["Indian National Congress first met at:",["Bombay","Calcutta","Madras","Allahabad"],0],
-["The first president of the INC was:",["W.C. Bonnerjee","A.O. Hume","Dadabhai Naoroji","Surendranath Banerjee"],0],
-["Partition of Bengal took place in:",["1905","1906","1911","1919"],0],
-["The Partition of Bengal was annulled in:",["1911","1905","1919","1920"],0],
-["The Surat Split occurred in:",["1907","1905","1916","1920"],0],
-["The Lucknow Pact was signed in:",["1916","1907","1919","1922"],0],
-["The Rowlatt Act was passed in:",["1919","1917","1920","1930"],0],
-["Gandhi launched the Champaran Satyagraha mainly for:",["Indigo cultivators","Textile workers","Salt workers","Tea workers"],0],
-["The Jallianwala Bagh massacre took place at:",["Amritsar","Delhi","Lahore","Calcutta"],0],
-["The Non-Cooperation Movement was withdrawn after:",["Chauri Chaura incident","Dandi March","Jallianwala Bagh","Simon Commission"],0],
-["The Simon Commission came to India in:",["1928","1927","1930","1932"],0],
-["The Lahore Congress of 1929 declared:",["Purna Swaraj","Dominion Status","Separate electorates","Quit India"],0],
-["The Dandi March began from:",["Sabarmati Ashram","Wardha","Champaran","Bombay"],0],
-["The Gandhi-Irwin Pact was signed in:",["1931","1930","1932","1942"],0],
-["The Poona Pact was signed in:",["1932","1930","1931","1935"],0],
-["The Government of India Act 1935 provided for:",["Provincial autonomy","Complete independence","Partition","Republic"],0],
-["The Quit India resolution was passed at:",["Bombay","Lahore","Calcutta","Delhi"],0],
-["The slogan 'Do or Die' is associated with:",["Quit India Movement","Non-Cooperation","Swadeshi","Civil Disobedience"],0],
-["The Cabinet Mission came to India in:",["1946","1942","1945","1947"],0],
-["The Mountbatten Plan was announced in:",["1947","1946","1942","1950"],0],
-["The Indian Independence Act was passed in:",["1947","1946","1950","1935"],0],
-["The Constitution of India came into force on:",["26 January 1950","15 August 1947","26 November 1949","9 December 1946"],0]
+const PDFS = [
+  {
+    name: "Ancient India – R.S. Sharma",
+    file: "Ancient-India-RS-Sharma%20(1).pdf",
+    desc: "প্রাচীন ভারতের ইতিহাস — R.S. Sharma"
+  }
 ];
-let qi=0,score=0;
-function startQuiz(){qi=0;score=0;renderQ();}
-function renderQ(){
- if(qi>=questions.length){document.getElementById('q').innerHTML='<h3>🎉 Quiz Complete</h3>';document.getElementById('opts').innerHTML='';document.getElementById('qmsg').innerText=`Final Score: ${score}/${questions.length}`;return;}
- const x=questions[qi];document.getElementById('q').innerHTML=`<b>Question ${qi+1} of ${questions.length}</b><p>${x[0]}</p>`;
- document.getElementById('opts').innerHTML=x[1].map((o,i)=>`<button class="option" onclick="answer(${i})">${o}</button>`).join('');
- document.getElementById('qmsg').innerText='';document.getElementById('scorepill').innerText=`Score: ${score}`;
-}
-function answer(i){
- const bs=document.querySelectorAll('.option');bs.forEach(b=>b.disabled=true);
- if(i===questions[qi][2]){bs[i].classList.add('correct');score++;document.getElementById('qmsg').innerText='✓ Correct!';}
- else{bs[i].classList.add('wrong');bs[questions[qi][2]].classList.add('correct');document.getElementById('qmsg').innerText='✗ Wrong — correct answer is green.';}
- document.getElementById('scorepill').innerText=`Score: ${score}`;
- setTimeout(()=>{qi++;renderQ()},900);
-}
-</script>
-
-<a class="telegram-contact" href="https://t.me/Subrata230306" target="_blank" rel="noopener" aria-label="Contact @Subrata230306 on Telegram" title="@Subrata230306">✈</a>
-</body>
-</html>
+function renderPDFs(){const box=document.getElementById('pdfList');if(!PDFS.length){box.innerHTML='<div class="answer"><h3>📖 এখনও কোনো PDF যোগ করা হয়নি</h3><p>Owner GitHub repository-তে PDF যোগ করলে এখানে বইগুলোর তালিকা দেখা যাবে।</p></div>';return;}box.innerHTML=PDFS.map(x=>`<div class="pdf-item"><span>📕</span><div><b>${x.name}</b><small>${x.desc||'History PDF'}</small></div><div class="pdf-actions"><a class="pdf-btn" href="${x.file}" target="_blank">Open PDF</a></div></div>`).join('');}
+function previewOwnerPdf(){const f=document.getElementById('ownerPdfInput').files[0];const box=document.getElementById('ownerPdfPreview');if(!f){box.innerHTML='<p class="notice">প্রথমে একটি PDF নির্বাচন করুন।</p>';return;}const u=URL.createObjectURL(f);box.innerHTML=`<div class="answer"><h3>📄 ${f.name}</h3><iframe src="${u}" style="width:100%;height:520px;border:1px solid #ddd;border-radius:10px"></iframe><p><small>এটি শুধু আপনার বর্তমান browser preview। স্থায়ীভাবে সাইটে যোগ করতে PDF-টি GitHub repository-তে upload করতে হবে।</small></p></div>`;}
+function go(id,btn){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');if(id!=='topic')currentCat=id;document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});if(id==='quiz')renderQuiz();if(id==='pdf')renderPDFs();}
+function openSubject(cat,sub){currentCat=cat;currentSub=sub;document.getElementById('topicTitle').textContent=sub;let a=DATA[cat][sub];document.getElementById('steps').innerHTML=a.map((x,i)=>`<button class="step" onclick="showAns(${i})"><span class="num">${i+1}</span><span><b>Step ${i+1}</b><small>${x[0]}</small></span><i style="margin-left:auto">›</i></button>`).join('');document.getElementById('answer').innerHTML='<div class="answer">👆 একটি Step নির্বাচন করুন।</div>';go('topic');}
+function showAns(i){let x=DATA[currentCat][currentSub][i];document.getElementById('answer').innerHTML=longAnswer(x);document.getElementById('answer').scrollIntoView({behavior:'smooth',block:'start'});}
+function showTL(i){let x=TL[i];document.getElementById('tlAnswer').innerHTML=`<div class="answer"><h3>${x[0]} — ${x[1]}</h3><p>${x[2]}</p><div class="notice">📅 ঐতিহাসিক গুরুত্ব: এই ঘটনা পরবর্তী পরিবর্তনের একটি গুরুত্বপূর্ণ মোড়।</div></div>`;document.getElementById('tlAnswer').scrollIntoView({behavior:'smooth'});}
+function renderQuiz(){let q=QUIZ[qi];answered=false;document.getElementById('quizBox').innerHTML=`<div class="quizhead"><b>Question ${qi+1} / 300</b><span>History Quiz</span></div><div class="question">${q[0]}</div><div class="opts">${q[1].map((o,i)=>`<button class="opt" onclick="check(${i})">${String.fromCharCode(65+i)}. ${o}</button>`).join('')}</div><div id="result"></div><button class="next" onclick="nextQ()">Next Question →</button>`;}
+function check(i){if(answered)return;answered=true;let q=QUIZ[qi],b=document.querySelectorAll('.opt');b.forEach((x,n)=>{x.disabled=true;if(n===q[2])x.classList.add('correct');if(n===i&&i!==q[2])x.classList.add('wrong')});document.getElementById('result').innerHTML=i===q[2]?'<p style="color:#16813a;font-weight:bold">✅ Correct!</p>':'<p style="color:#c12626;font-weight:bold">❌ Wrong! সঠিক উত্তরটি সবুজ।</p>';}
+function nextQ(){qi=(qi+1)%300;renderQuiz();}
+</script></body></html>
