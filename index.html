@@ -35,20 +35,17 @@ footer{text-align:center;color:#666;padding:25px 15px 45px;font-size:18px}
 @media(max-width:650px){.grid,.step-grid{grid-template-columns:1fr}.hero{padding:30px 24px}.page{padding:18px 12px 40px}}
 </style>
 <style>
-.robot-telegram{font-size:0!important;overflow:visible}
-.robot{position:relative;display:block;width:48px;height:56px;animation:robotFloat 2s ease-in-out infinite}
-.antenna{position:absolute;left:22px;top:0;width:4px;height:9px;border-radius:4px;background:#fff}
-.antenna:after{content:"";position:absolute;left:-3px;top:-5px;width:10px;height:10px;border-radius:50%;background:#fff}
-.robot-head{position:absolute;left:5px;top:9px;width:38px;height:27px;border:3px solid #fff;border-radius:10px;background:#2497d0}
-.eye{position:absolute;top:8px;width:7px;height:7px;border-radius:50%;background:#fff;animation:robotBlink 2.8s infinite}
-.eye.left{left:8px}.eye.right{right:8px}
-.robot-body{position:absolute;left:11px;top:39px;width:26px;height:16px;border:3px solid #fff;border-radius:6px;background:#2497d0}
-.arm{position:absolute;top:2px;width:13px;height:4px;border-radius:4px;background:#fff}
-.left-arm{left:-15px;transform-origin:right center;animation:robotWave 1.2s ease-in-out infinite}
-.right-arm{right:-15px;transform-origin:left center;animation:robotWave 1.2s ease-in-out infinite reverse}
-@keyframes robotBlink{0%,42%,47%,100%{transform:scaleY(1)}44%{transform:scaleY(.1)}}
-@keyframes robotWave{0%,100%{transform:rotate(15deg)}50%{transform:rotate(-30deg)}}
-@keyframes robotFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.robot-telegram{font-size:0!important;overflow:visible;background:transparent!important;box-shadow:none!important}
+.robot{position:relative;display:block;width:66px;height:74px;animation:robotFloat 2.4s ease-in-out infinite;filter:drop-shadow(0 9px 7px rgba(0,0,0,.3))}
+.antenna{position:absolute;left:31px;top:0;width:4px;height:13px;border-radius:5px;background:linear-gradient(#f8fbff,#8199a8)}
+.antenna:after{content:"";position:absolute;left:-4px;top:-6px;width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#72d8ff 35%,#1475a4 75%);box-shadow:0 0 9px #67dfff}
+.robot-head{position:absolute;left:6px;top:12px;width:54px;height:38px;border-radius:13px 13px 16px 16px;border:2px solid #dff6ff;background:linear-gradient(145deg,#a5e4ff 0%,#319dcc 38%,#0b527b 100%);box-shadow:inset 4px 4px 6px rgba(255,255,255,.35),inset -5px -6px 8px rgba(0,0,0,.35),0 4px 6px rgba(0,0,0,.25)}
+.robot-head:after{content:"";position:absolute;left:9px;right:9px;bottom:6px;height:4px;border-radius:4px;background:#092f43;box-shadow:0 0 5px rgba(100,220,255,.5)}
+.eye{position:absolute;top:10px;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0 20%,#dffaff 25% 42%,#50ddff 55% 100%);box-shadow:0 0 8px #59e5ff;animation:robotBlink 3.4s infinite}.eye.left{left:11px}.eye.right{right:11px}
+.robot-body{position:absolute;left:12px;top:49px;width:42px;height:25px;border-radius:10px;border:2px solid #dff6ff;background:linear-gradient(145deg,#9de2ff,#2a92c0 48%,#0a557d);box-shadow:inset 3px 3px 6px rgba(255,255,255,.3),inset -4px -5px 7px rgba(0,0,0,.35)}
+.robot-body:after{content:"";position:absolute;left:15px;top:8px;width:11px;height:5px;border-radius:3px;background:#73e8ff;box-shadow:0 0 7px #5fe5ff}
+.arm{position:absolute;top:1px;width:20px;height:7px;border-radius:7px;background:linear-gradient(#eafaff,#8ca8b7);box-shadow:0 2px 4px rgba(0,0,0,.3)}.left-arm{left:-20px;transform-origin:right center;animation:robotWave 1.15s ease-in-out infinite}.right-arm{right:-20px;transform-origin:left center;animation:robotWave 1.15s ease-in-out infinite reverse}
+@keyframes robotBlink{0%,43%,47%,100%{transform:scaleY(1)}45%{transform:scaleY(.08)}}@keyframes robotWave{0%,100%{transform:rotate(18deg)}50%{transform:rotate(-38deg)}}@keyframes robotFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px) rotate(-1deg)}}
 </style></head>
 <body>
 <header><h1>📚 History With Subrata Paria</h1><p>India & Europe History • Step-by-Step Learning</p></header>
@@ -114,8 +111,9 @@ footer{text-align:center;color:#666;padding:25px 15px 45px;font-size:18px}
 
 <section id="pdf" class="page">
 <div class="hero"><h2>📚 PDF Books</h2><p>আপনার GitHub repository-তে আপলোড করা বইগুলো সরাসরি ওয়েবসাইট থেকে পড়ুন অথবা Download করুন।</p></div>
-<div class="card"><h3>📕 Ancient-India-RS-Sharma (1).pdf</h3><p>প্রাচীন ভারতের ইতিহাস সম্পর্কিত PDF বই।</p><div class="pdf-actions"><a class="btn" href="Ancient-India-RS-Sharma%20(1).pdf" target="_blank">📖 Open PDF</a><a class="btn green" href="Ancient-India-RS-Sharma%20(1).pdf" download>⬇️ Download PDF</a></div></div>
-<div class="card"><h3>📕 jess301 (1).pdf</h3><p>Repository-তে আপলোড করা দ্বিতীয় History PDF বই।</p><div class="pdf-actions"><a class="btn" href="jess301%20(1).pdf" target="_blank">📖 Open PDF</a><a class="btn green" href="jess301%20(1).pdf" download>⬇️ Download PDF</a></div></div><div class="card"><h3>📕 History of Medieval India – Satish Chandra</h3><p>AR_History-of-Medieval -India-by-Satish-Chand ra.pdf</p><div class="pdf-actions"><a class="btn" href="AR_History-of-Medieval%20-India-by-Satish-Chand%20ra.pdf" target="_blank" rel="noopener">📖 Open PDF</a><a class="btn green" href="AR_History-of-Medieval%20-India-by-Satish-Chand%20ra.pdf" download>⬇️ Download PDF</a></div></div>
+<div class="card"><h3>📕 Ancient-India-RS-Sharma (1).pdf</h3><p>প্রাচীন ভারতের ইতিহাস সম্পর্কিত PDF বই।</p><div class="pdf-actions"><a class="btn" href="Ancient-India-RS-Sharma%20(1).pdf" target="_blank" rel="noopener">🌐 Website View</a><a class="btn green" href="Ancient-India-RS-Sharma%20(1).pdf" download>📥 Download PDF</a></div></div>
+<div class="card"><h3>📕 jess301 (1).pdf</h3><p>Repository-তে আপলোড করা দ্বিতীয় History PDF বই।</p><div class="pdf-actions"><a class="btn" href="jess301%20(1).pdf" target="_blank" rel="noopener">🌐 Website View</a><a class="btn green" href="jess301%20(1).pdf" download>📥 Download PDF</a></div></div>
+<div class="card"><h3>📕 Satischandra Book</h3><p>Satischandra.book.pdf</p><div class="pdf-actions"><a class="btn" href="Satischandra.book.pdf" target="_blank" rel="noopener">🌐 Website View</a><a class="btn green" href="Satischandra.book.pdf" download="Satischandra.book.pdf">📥 Download PDF</a></div></div>
 </section>
 
 <section id="about" class="page">
